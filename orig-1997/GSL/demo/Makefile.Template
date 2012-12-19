@@ -1,0 +1,58 @@
+
+# Makefile Template.  Use this file as the basis for the Makefile
+# for your own applications that use GSL.
+
+# Define the GSL macro to be the absolute path name of the directory
+# where you have installed the library:
+
+GSL=..
+
+# These lines shouldn't change, unless you have multiple binaries,
+# in which case the GSLLIB macro should be the directory that has
+# the binaries for the target machine.
+
+GSLINCL=$(GSL)/include
+GSLLIB=$(GSL)/lib
+
+# If you are going to compile applications that use the XFORMS user
+# interface package, edit these macros to point to the FORMS
+# directory and X11 libraries on your system.  This is where you
+# can define other libraries your application uses.
+
+FORMSDIR=/local/apps/xforms/FORMS
+XINCLUDE=/usr/openwin/share/include
+XLIB=/lib/X11
+
+# The CCFLAGS macro specifies the C++ compiler options to use.
+# Some systems have other macro names, e.g. IRIX calls them CXXFLAGS.
+# At a minimum you need a -I option to point to the directory that
+# holds the header files for the GSL library.
+
+CCFLAGS=-I$(FORMSDIR) -I$(XINCLUDE) -I$(GSLINCL) -O3
+
+# The LDFLAGS macro tells the linker where to find libraries.  At
+# a minimum you need a -L option to point to the directory where
+# you installed libgen.a.  List the libraries your application uses
+# in the LIBS macro.
+
+LDFLAGS=-L$(FORMSDIR) -L$(XLIB) -L$(GSLLIB)
+LIBS=-lm -lforms -lX -lgen
+
+# Finally, define one rule for each module in your application,
+# plus one rule that puts all the pieces together.  This example
+# shows how to build an application called "app" that is built
+# from two source files, parta.C and partb.C.
+
+app:	parta.o partb.o $(GSLLIB)/libgen.a
+	CC -o app parta.o partb.o $(LDFLAGS) $(LIBS)
+
+parta.o:	parta.c
+partb.o:	partb.c
+
+# A common rule that is used to clean out backup files, core
+# files, and other junk that tends to accumulate:
+
+clean:
+	/bin/rm -f core *~ *.o
+
+

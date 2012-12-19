@@ -1,0 +1,232 @@
+Magic: 13000
+
+Internal Form Definition File
+    (do not change)
+
+Number of forms: 1
+Unit of measure: FL_COORD_PIXEL
+
+=============== FORM ===============
+Name: rgui
+Width: 670
+Height: 510
+Number of Objects: 12
+
+--------------------
+class: FL_BOX
+type: UP_BOX
+box: 0 0 670 510
+boxtype: FL_UP_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_NORMAL_STYLE
+size: FL_DEFAULT_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+--------------------
+class: FL_XYPLOT
+type: FILL_XYPLOT
+box: 40 160 590 320
+boxtype: FL_DOWN_BOX
+colors: FL_PALEGREEN FL_RIGHT_BCOL
+alignment: FL_ALIGN_BOTTOM
+style: FL_NORMAL_STYLE
+size: FL_MEDIUM_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: xyplot
+callback: 
+argument: 
+
+--------------------
+class: FL_INPUT
+type: FLOAT_INPUT
+box: 280 30 80 30
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_LEFT
+style: FL_FIXED_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: A
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: AEntry
+callback: 
+argument: 0
+
+--------------------
+class: FL_INPUT
+type: FLOAT_INPUT
+box: 280 70 80 30
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_LEFT
+style: FL_FIXED_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: B
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: BEntry
+callback: 
+argument: 0
+
+--------------------
+class: FL_INPUT
+type: INT_INPUT
+box: 280 110 80 30
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_LEFT
+style: FL_FIXED_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: N
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: NEntry
+callback: 
+argument: 0
+
+--------------------
+class: FL_CHOICE
+type: NORMAL_CHOICE
+box: 100 30 100 30
+boxtype: FL_SHADOW_BOX
+colors: FL_COL1 FL_BLACK
+alignment: FL_ALIGN_LEFT
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Distribution
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: DistributionChoice
+callback: DistributionChoiceCB
+argument: 0
+
+--------------------
+class: FL_BUTTON
+type: NORMAL_BUTTON
+box: 120 80 60 50
+boxtype: FL_UP_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Plot
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: PlotButton
+callback: PlotButtonCB
+argument: 0
+
+--------------------
+class: FL_BUTTON
+type: NORMAL_BUTTON
+box: 580 30 50 50
+boxtype: FL_UP_BOX
+colors: FL_COL1 FL_COL1
+alignment: FL_ALIGN_CENTER
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Quit
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: QuitButton
+callback: QuitButtonCB
+argument: 0
+
+--------------------
+class: FL_SLIDER
+type: HOR_FILL_SLIDER
+box: 60 180 550 20
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_BLUE
+alignment: FL_ALIGN_BOTTOM
+style: FL_NORMAL_STYLE
+size: FL_TINY_SIZE
+lcol: FL_BLACK
+label: 
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: ProgressSlider
+callback: 
+argument: 
+
+--------------------
+class: FL_INPUT
+type: FLOAT_INPUT
+box: 420 70 80 30
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_LEFT
+style: FL_FIXED_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Min
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: MinEntry
+callback: 
+argument: 0
+
+--------------------
+class: FL_INPUT
+type: FLOAT_INPUT
+box: 420 110 80 30
+boxtype: FL_DOWN_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_LEFT
+style: FL_FIXED_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Max
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: MaxEntry
+callback: 
+argument: 0
+
+--------------------
+class: FL_TEXT
+type: NORMAL_TEXT
+box: 420 40 80 30
+boxtype: FL_FLAT_BOX
+colors: FL_COL1 FL_MCOL
+alignment: FL_ALIGN_CENTER|FL_ALIGN_INSIDE
+style: FL_BOLD_STYLE
+size: FL_NORMAL_SIZE
+lcol: FL_BLACK
+label: Plot Range
+shortcut: 
+resize: FL_RESIZE_ALL
+gravity: FL_NoGravity FL_NoGravity
+name: 
+callback: 
+argument: 
+
+==============================
+create_the_forms

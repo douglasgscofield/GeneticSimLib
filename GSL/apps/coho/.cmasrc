@@ -1,0 +1,45 @@
+# cmas 2.0
+
+# To change a default setting uncomment the corresponding line
+# and edit the value of the parameter.  Note: any line that does
+# not begin with a comment character must start with the name of
+# a parameter.
+
+# Default params
+# Note: K = 32 = 3.47, R = 2 = 0.69
+
+# NPopulations	100
+# MaxGenerations  100
+PopSizeM 	3.47
+PopSizeSD 	0.0
+ReproRateM 	0.69
+ReproRateSD 	0.0
+# FemaleP	0.401
+# MaleP		0.506
+# JackP		0.093
+# CeresNP	1
+# PyrosNP	0
+# AerosNP	0
+# GeosNP	0
+
+# Parameters for collecting data -- change PopSize and ReproRate to
+# actual values from a particular river
+
+# Winchester
+
+# PopSizeM 	6.49
+# PopSizeSD 	0.57
+# ReproRateM 	0.90
+# ReproRateSD 	0.89
+
+# Coos
+
+# PopSizeM 	9.58
+# PopSizeSD 	0.60
+# ReproRateM 	1.03
+# ReproRateSD 	0.69
+
+CeresNP		0
+PyrosNP		0
+AerosNP		5
+GeosNP		5

@@ -1,0 +1,1434 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.02 [en] (X11; I; SunOS 5.5.1 sun4u) [Netscape]">
+   <TITLE>Genetic Simulation Classes</TITLE>
+<! Genetic Simulation Documentation and Reference>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<CENTER>&nbsp;</CENTER>
+
+<HR>
+<CENTER>
+<H2>
+Genetic Simulation Library</H2></CENTER>
+
+<CENTER>
+<H4>Class Structure and User Documentation</H4>
+<H4>John Conery<br>University of Oregon</H4>
+<A href="#copyright">Copyright</A> &#169 1997, University of Oregon
+<P>
+</CENTER>
+
+<HR>
+<H2>Contents</H2>
+
+<UL>
+<LI>
+<A HREF="#overview">Overview</A></LI>
+
+<LI>
+<A HREF="#philosophy">Philosophy</A></LI>
+
+<LI>
+<A HREF="#usage">Compiling and Linking</A></LI>
+
+<LI>
+<A HREF="#classes">Class Descriptions</A></LI>
+
+<UL>
+<LI>
+<TT><A HREF="#genome">Genome</A></TT></LI>
+
+<LI>
+<TT><A HREF="#individual">Individual</A></TT></LI>
+
+<LI>
+<TT><A HREF="#generation">Generation</A></TT></LI>
+
+<LI>
+<TT><A HREF="#population">Population</A></TT></LI>
+
+<LI>
+<TT><A HREF="#rng">RNG</A></TT> (random number generators)</LI>
+
+<LI>
+<TT><A HREF="#statistics">Statistics</A></TT></LI>
+</UL>
+
+<LI>
+<A HREF="#examples">Examples and Demo Programs</A></LI>
+</UL>
+<A NAME="overview"></A>
+<H2>Overview</H2>
+The Genetic Simulation Library (GSL) is a collection of C++ classes and
+procedures that can be used to represent genetic information in population
+simulations. The main goals in designing this library were to
+<UL>
+<LI>
+organize the library as a set of C++ classes that can be used independently
+of one another; for example, users can write code that uses the Population
+class to represent an entire population, or they can implement their own
+population representations and use only a genome representation from the
+library.</LI><P>
+
+<LI>
+design the classes so they can be easily extended for more complex or detailed
+simulations; for example, the Individual class contains only the most basic
+attributes of individual organisms, but it can be used as a base class
+from which more detailed or species-specific data structures can be derived.</LI><P>
+</UL>
+
+Our goal was not to define a completely general set of procedures that
+can be used in any possible genetic simulations. Rather we wanted to
+define conceptually simple and easily extensible set of tools that we (and
+other users) can adapt and extend as we develop new simulations.
+
+<P>The GSL distribution includes a set of demo and driver programs that
+were used to test the classes during development. This documentation includes
+links to those programs where appropriate to show examples of how the classes
+are used.
+
+<P>The distribution also includes two complete simulations. The first is
+a simple mutation accumulation simulation (@ref), and shows how all of
+the classes can be put together into a complete simulation program. The
+second is a coho salmon model that illustrates how more detailed species
+information can be implemented in a class derived from classes in the GSL
+library.&nbsp;
+
+<A NAME="philosophy"></A>
+<H2>Philosophy</H2>
+
+<H4>
+Abstract Data Types</H4>
+The main goal of the classes defined in this library is to implement abstract
+data types. The classes are used to hide the implementation of the genetic
+functions of individual organisms and collections of individuals. All operations
+that change or update the representation of an individual are provided
+by abstract operators.
+
+<P>An example is the Genome class. As a data type, Genome is used to represent
+the genes in an individual. Operations on genes include adding mutations
+or crossing two sets of genes to produce new offspring. The representation
+of the genes is hidden from users. In fact, the library contains two different
+subclasses that have the same behavior (i.e. the same set of functions)
+but very different representations. Users can choose the subclass that
+best suits the need of their simulation in terms of tradeoffs between efficient
+execution and biological reality.
+<H4>
+Extensibility</H4>
+The classes have been defined in such a way that they form the foundation
+for future development. Instead of defining prepackaged monolithic functions
+that would try to be general enough to be used in any population simulation,
+we defined the classes to be sufficient to represent very simple organisms
+and populations.
+
+<P>An example of this policy is in the representation of an organism as
+an object of the class Individual. The only attributes of objects defined
+by the class in the library are an ID, a sex, and a set of genes (which
+are in turn defined by the Genome class). The constructor for the class
+assigns a unique ID for the individual, but leaves the sex undefined and
+creates a new "blank" genome (one with no mutations or any other genetic
+information). It would be possible to define a constructor as a function
+that takes two other individuals as arguments and (a) allocates space for
+the new individual, (b) randomly assigns the sex to male or female, (c)
+combines the genes of the parents to produce the genes of the new individual,
+and (d) adds random new mutations to the offspring. This is a very likely
+packaging of low-level functions. However, it would be hard for new simulations
+to change any of these pieces, e.g. it might force implementers to define
+new alternative constructors. Instead, the constructor in the class Individual
+creates a "blank" individual by simply allocating the space used by the
+object. The class has member functions to assign the sex, to fill in the
+genes as a funtion of two parent genotypes, and so on. Future classes derived
+from Individual will be able to define additional member functions as needed.
+<H4>
+Future Derived Classes</H4>
+To anticipate future changes, the private members of a class are defined
+to be "protected" instead of "private". This allows the future classes
+to have access to the data members. For example, in a simulation of salmon
+populations, a programmer can define a new class called Salmon that is
+derived from Individual, and code in the Salmon class will have direct
+access to the ID, sex, and genes of the individual as defined in the base
+class.
+
+<P>This policy is frowned upon in most class libraries, but it is consistent
+with the goals of the Genetic Simulation Library in that we want to make
+it as easy as possible for future programmers to build upon the simple
+classes in the library.
+<H4>
+Inititialization</H4>
+There are two types of initialization procedures in the class library.
+
+<P>The first type of initialization occurs in constructor functions. As
+described above, these functions do the mimimum amount of work. They allocate
+space for the new objects and, if it is defined, assign a default value
+to data members.
+
+<P>The second type of initializer is a procedure defined as a static member
+of the class. It is used to initialize the static data members of the class,
+i.e. those variables that are not part of any object but which are accessible
+by the member functions and used to define operations on the objects. For
+example, in mutation accumulation simulations a top level simulation parameter
+is the mutation rate, which is used to compute how many mutations to add
+to a new individual. The Population class contains procedures which selects
+two individuals from a population, creates their offspring, and adds mutations
+to the new individuals. The class initialization routine for the Population
+class will store the mutation rate parameter in a static variable that
+is accessible only to members of the Population class so that this parameter
+does not have to be passed to the <TT>build_generation()</TT> procedure
+each time.
+
+<P>The class initialization procedures have the same name in every class.
+They are:
+<DL>
+<DT>
+<TT>reset_class()</TT></DT>
+
+<DD>
+This procedure will reset all the static class variables to their initial
+values. It will most likely be called between simulations. For example,
+one of the implementations of the Genome class includes a garbage collector
+that keeps information about all existing genome objects. The reset procedure
+will make sure all genotypes from the previous run have been deallocated
+and reinitialize the garbage collector.</DD><P>
+
+<DT>
+<TT>set_parameters(ParamBlock *pb)</TT></DT>
+
+<DD>
+A parameter block is a set of values organized into a single structure
+that can be passed as a group to the class initialization procedure. Each
+class has its own definition of a parameter block; these definitions mirror
+the class hierarchy. For example, there is a general GenomeParamBlock with
+values common to all implementations of the Genome class, and a SparseGenomeParamBlock
+derived from ParamBlock with values that are specific to the "sparse" implementation
+of the Genome class.</DD><P>
+
+
+<P>Note: <TT>set_parameters()</TT> always calls <TT>reset_class()</TT>
+to make sure the class is initialized.</DL>
+Since they are static function members, the class initialization functions
+need to be fully qualified when called from user code. For example, to
+call the <TT>reset_class()</TT> procedure of the Individual class, the
+call is
+<PRE>&nbsp;&nbsp;&nbsp; Individual::reset_class();</PRE>
+Each class must be initialized separately. This may seem like extra work
+that could be automated, but it is necessary in order to make the classes
+work independently of one another. For example, since every individual
+has a genome, it might make sense to have <TT>Individual::reset_class()</TT>
+call <TT>reset_class()</TT> in Genome. But the question is, which Genome
+class? Since users can select any genome representation, we can't compile
+a call to any particular genome initialization function in with the Individual
+class and instead have to let users call the initialization procedure of
+the classes they use.
+
+<A name="usage"></A>
+<H2>Compiling and Linking</H2>
+The sources, include files, and library files are all in subdirectories
+under the main "root" directory named GSL.  The subdirectories are:
+<DL>
+<DT><tt>lib</tt>
+<DD>The library directory.  Contains <tt>libgen.a</tt>, an archive
+file with the binaries that will be linked with your application,
+plus a few other miscellaneous files that might be useful in
+applications.<P>
+<DT><tt>include</tt>
+<DD>C++ include files.<P>
+<DT><tt>src</tt>
+<DD>C++ source files.<P>
+<DT><tt>doc</tt>
+<DD>HTML documentation.<P>
+<DT><tt>demo</tt>
+<DD>Demo programs, sample applications, and "<A href="#movies">movies</A>".<P>
+</UL>
+
+<P>
+To use a GSL class in an application, all you need to do is
+include the header file for that class in the source code of
+the module that will use it, and then link the application
+using <tt>libgen.a</tt>.
+<P>
+The names of the include files are the same as the names of
+the classes.  For example, the interface for the Individual class is 
+defined in <tt>individual.h</tt>.  For convenience, if you are
+going to use several classes, you can include the file <tt>gsl.h</tt>
+to get all the include files in the library.
+
+<P>
+To compile and link the GSL classes with your program, the best plan is
+put the following
+definitions in your project Makefile:
+<PRE>
+   GSL=&ltpath&gt/GSL
+   GSLINCL=$(GSL)/include
+   GSLLIB=$(GSL)/lib
+</PRE>
+where &ltpath&gt is the path name to the directory where you
+installed GSL.
+Then use the macros <TT>GSLINCL</TT> and <TT>GSLLIB</TT> where
+appropriate in the make rules for your application.  
+For example, a simple line to compile and link
+an application named "foo" would be:
+<PRE>
+   CC -I$(GSLINCL) -o foo foo.C -L$(GSLLIB) -lgen
+</PRE>
+A template Makefile that includes these definitions is in the
+main source directory.  You can also copy a Makefile from one
+of the demo or application programs and use it as the basis
+for your own Makefile.
+
+<A NAME="classes"></A>
+<H2>Class Hierarchy</H2>
+The classes in the Genetic Simulation Library are shown in the following
+diagram:
+
+<P><A NAME="hierarchy"></A>
+<CENTER><IMG SRC="images/class.hierarchy.gif" ></CENTER>
+
+<DL>
+<DT>
+<TT><A HREF="#genome">Genome</A></TT></DT>
+
+<DD>
+The Genome class represents the genetic information from a single type
+of organism. An object of this class is a genotype; it will hold the genes
+of a single individual in a population. Operations on a genotype include
+creating a new genotype as a combination of two existing genotypes (a "deep
+copy" operator is provided to make a copy of a genotype for simulations
+of asexual organisms), adding new mutations to a genotype, and computing
+the relative fitness of a genotype.</DD><P>
+
+<DT>
+<TT><A HREF="#individual">Individual</A></TT></DT>
+
+<DD>
+An instance of this class is the representation of a single organism. The
+class in the library is intended to be a base class. Each individual contains
+only an ID, sex, and a genome. This module also defines a container class,
+called an <TT>ISet</TT>, for maintaining sets of individuals.</DD><P>
+
+<DT>
+<TT><A HREF="#generation">Generation</A></TT></DT>
+
+<DD>
+A generation is a group of individuals all born in the same reproductive
+cycle. Operations on generations include adding new individuals, removing
+individuals, and accessing a random individual or a specific individual.</DD><P>
+
+<DT>
+<TT><A HREF="#population">Population</A></TT></DT>
+
+<DD>
+A population is at the top of the class hierarchy. Data members include
+one or more generations, and function members include operations for building
+new generations from existing generations.</DD><P>
+
+<DT>
+<TT><A HREF="#rng">RNG</A></TT></DT>
+
+<DD>
+Implementation of several random number generators, including uniform,
+Gaussian, binomial, Poisson, and others used in various simulators
+that have been constructed using the GSL.</DD><P>
+
+<DT>
+<TT><A HREF="#statistics">Statistics</A></TT></DT>
+
+<DD>
+Procedures to compute parametric statistics.</DD><P>
+
+<DT>
+<TT><A HREF="#gbase">GBase</A></TT></DT>
+
+<DD>
+A "genome database" class.  A utility program called <tt>mkgbase</tt>
+that is distributed with the library will make a database of genotypes
+with initial mutations drawn from a theoretically infinite population.
+Procedures in the GBase class can be used to take random samples from
+the database to initialize a simulation run.</DD><P>
+</DL>
+<A NAME="genome"></A>
+<H3>
+Genome</H3>
+The Genome class is an abstract class (aka interface class). It does not define
+any particular representation, but instead defines virtual functions that
+must be supplied by an actual implementation in a derived class. Three
+derived classes -- <A HREF="#infinitegenome">infinite genome</A>, 
+<A HREF="#sparsegenome">sparse genome</A>, and
+<A HREF="#virtualgenome">virtual genome</A> -- are included in the library
+and described below.
+
+<P>We decided to define the genome through an abstract class in order to
+give users a choice of representations without having to change the code
+that uses the class. Although there
+is a slight runtime overhead associated with using abstract classes, the
+gains from choosing the right representation for each simulation will make
+up for it.
+<H5>
+Types</H5>
+The main type defined by the class is Genome. Since Genome is an abstract
+class, user code can only define pointers to Genomes.
+A variable of type <tt>Genome*</tt>
+will be a pointer to the set of genes for a single organism in the population
+being simulated.
+
+<P>Another type defined in the header file is <TT>fitness_t</TT>, which
+will be used to represent the relative fitness of a genotype. The relative
+fitness will be a real number between 0.0 and 1.0. A fitness of 1.0 means the
+genotype is perfectly healthy, i.e. it has no deleterious mutation;
+a fitness of 0.0 means the genotype has a mutation that is invariably
+fatal.
+
+<P>The header file also defines a type <TT>mutation_t</TT> to represent
+the effect of a mutation.  The range of values for <TT>mutation_t</TT>
+is also 0.0 to 1.0, where larger values mean more harmful mutations.
+A mutation value of 0.0 means the mutation has no effect, and mutation
+with value 1.0 is fatal.
+
+<H5>
+Constructor and Destructor</H5>
+The Genome class uses a programming idiom known as "examplars" to implement
+the effect of a virtual constructor. The base class defines a procedure
+named <TT>make_genome()</TT> which can be called to create a genome object
+defined by any of the derived classes. 
+
+<P>Before calling <TT>make_genome()</TT>, the application must first initialize
+the genome class via a call to the <TT>set_parameters()</TT> procedure of the
+derived class the application will use.
+In addition to using values in the parameter block passed as an
+argument, this call will set an internal "switch"
+so that subsequent calls to <TT>make_genome()</TT> will return an object
+of that derived type. For example, to use the infinite genome representation,
+the program must call <TT>InfiniteGenome::set_parameters()</TT> before
+creating any genome object.  After this call, every call to
+<TT>make_genome()</TT> will return a Genome object built with the 
+infinite genome representation.
+
+<P>The policy for constructors in the derived types is for the constructor
+to return a new genotype of a perfectly healthy individual, i.e. there
+are no mutations at any locus and the fitness of the genotype will be 1.0.
+
+<P>The abstract class defines a virtual destructor, in-lined in the class
+header file, which does nothing. This destructor will be called when an
+object pointed to by a <TT>Genome*</TT> but initialized as a derived class
+object is destroyed. The destructor should have no observable effect on
+the simulation. If a constructor updates class variables the destructor
+should perform the analogous updates when a genotype is deallocated, e.g.
+if a constructor increments a genotype count the destructor would decrement
+the count.
+<H5>
+Member Functions</H5>
+Operations defined for Genome objects include:
+<UL>
+<LI>
+Setting the genes of an object by combining the genes of
+two other objects (<A href="GSL.ref.html#combine">combine()</A>).<p>
+<LI>
+Set the genes at any given locus to a pair of mutation values
+(<A href="GSL.ref.html#set_locus">set_locus()</A>).<p>
+<LI>
+Add a random number of new mutations 
+(<A href="GSL.ref.html#add_mutations">add_mutations()</A>).<p>
+</UL>
+
+The header file also contains an in-line function that overloads the <TT>&lt;&lt;</TT>
+operator. When an application prints an instance of any concrete genome
+object this operator will be invoked to pretty-print the object; it will
+not be necessary to define <TT>&lt;&lt;</TT> in any of the derived classes
+since this in-line function will automatically call the <TT>print()</TT>
+function for that class.
+
+<P>The <TT>combine()</TT> function is clearly intended for simulations
+of sexually reproducing organisms. We decided not to define a "combine"
+function with one argument for asexual populations since a simulation can
+just use the copy operator to make a child that is an identical copy of
+the parent.
+
+<P>In addition to the virtual functions listed above, a derived class is
+allowed to define friends and member functions that are specific to that
+type of genome.
+
+<H5>Other Functions</H5>
+The Genome class defines two functions that can be used to evaluate
+the relative fitness of a locus.  Users can call these functions if
+their simulators will use the same fitness functions, or use these
+functions as examples of how to create their own fitness functions.
+
+<A NAME="infinitegenome"></A>
+<H4>InfiniteGenome</H4>
+In spite of what the name of this class implies, this implementation of
+a genome actually uses the least amount of space and the operations on
+genomes are faster than the same operations in the <A HREF="#sparsegenome">sparse
+genome</A> representation.
+
+<P>The properties of this representation are:
+<UL>
+<LI>
+Each new mutation will occur at a unique location within the genotype.</LI><P>
+
+<LI>
+The implementation only needs to keep track of loci that have incurred
+mutations, since all other loci contribute no ill effects to the fitness
+of the genotype.</LI><P>
+
+<LI>
+In long-running simulations, the number of loci managed by the class will
+grow as new mutations are introduced into the population; in principle
+the number of loci in the genotype could keep growing indefinitely (hence
+the name of the class).</LI><P>
+
+<LI>
+In order to use this representation, every mutation must have the same
+effect.</LI><P>
+</UL>
+To keep the genotype size manageable, the class implements a "garbage collection"
+algorithm to reuse loci that no longer hold mutations. For example, a mutation
+might be introduced into an individual but not passed on to successive
+generations. When the allele at this locus reverts to the "wild" state
+in every individual it can be reused for a new mutation in some future
+generation. The garbage collection operations are invisible to user code
+and are invoked automatically via calls to <TT>add_mutations</TT> and other
+member functions.
+
+<P>The implementation of the infinite genome is based on a bit vector representation.
+Since every mutation has the same effect, a
+chromosome can be represented as an array of bits, where bit <I>i</I> of
+the array is 1 if locus number <I>i</I> of the genotype has a mutation.
+Bit-array operations are very efficient.  The program uses bitwise logical
+operators and can operate on an entire "word" at a time, e.g. on a machine
+with 64-bit data words the system can update 64 loci in one step.
+
+<CENTER><IMG SRC="images/infgenome.gif" ></CENTER>
+
+As an example, the figure above shows a snapshot of a simulation. Each
+haploid chromosome is stored in a single 32-bit word; in a sexually reproducing
+population, each genotype will be a diploid chromosome, which takes two
+words per individual. The free loci -- loci that can be used for new mutations
+-- can be computed by simply ORing together all the chromosomes. When all
+the loci are in use (i.e. when the "free locus pointer" reaches the end
+of a word boundary) the system automatically extends the length of the
+genome and adds a new word to each chromosome.
+
+<P><A NAME="sparsegenome"></A>
+<H4>
+SparseGenome</H4>
+The SparseGenome class gets its name from the sparse vector used as the
+underlying data type. Sparse vector and matrix operations are commonly
+used in the physical sciences to implement data structures that have few
+non-zero elements. In the case of genetic simulations, the date type is
+appropriate for simulations of populations where most of the loci in a
+genotype are not mutated. In other words, we need to store only those few
+locations that have mutations.
+
+<P>Since each mutated locus is represented explicitly, each mutation can
+have a different effect. The <TT>add_mutations()</TT> member functions
+uses a log normal random number generator to compute the effect of each
+new mutation. The mean and standard deviation of mutation effects are passed
+as parameters to <TT>SparseGenome::set_parameters()</TT> (note that it
+is possible to build a model that has constant mutation effects by setting
+the standard deviation to 0.0).
+<CENTER></CENTER>
+
+<CENTER><IMG SRC="images/sparsegenome.gif" ></CENTER>
+
+
+<P>An example illustrating the sparse genome structure is shown above.
+The genes of an individual are stored in a linked list. Each item in the
+list contains the locus number where the mutation occurs (the maximum number
+of loci, i.e. the length of the genome, is an input parameter); the values
+of the two genes at this locus; and a pointer to the next locus that contains
+a mutation. <TT>add_mutations()</TT>, <TT>combine()</TT>, and other member
+functions are linked list updates that require an amount of time that is
+linear in the number of mutations in the genotype.
+
+<P>The SparseGenome class also implements a chromosome structure and cross-overs
+between strands of a chromosome. In terms of the underlying linked list
+structure, there will be one linked list per diploid chromosome. The InfiniteGenome
+class is based on free recombination: the gene passed on to a descendant
+is chosen at random in each locus. In the SparseGenome class, at the start
+of each new chromosome the <TT>combine()</TT> function begins with a random
+gene and then continues to pass genes from the same strand until it decides
+to cross over to the other strand. The number of diploid chromosomes per
+genome and the cross-over frequencies are also parameters passed to <TT>SparseGenome::set_parameters()</TT>.
+
+<P>The actual representation of the "linked list" of loci is determined by
+the class named Strand.  In order to improve the locality of reference
+(and thereby improving cache performance) the Strand class distributed
+with the library uses a segmented vector representation instead of a
+simple linked list.  Loci are
+allocated in groups of 10; when an 11th mutation is added, another
+segment is added to the vector.
+
+<H4>VirtualGenome</H4>
+The virtual genome class simply uses a floating point variable to represent
+the relative fitness of a genotype.  Instead of representing individual
+loci within a gene and computing fitness as a function of the number of
+mutations, it just stores a single value to represent the fitness.
+<P>
+As in the other derived genome classes, a new genotype has fitness 1.0.
+A call to <tt>combine</tt> gives the genome a random fitness, drawn from
+a distribution that is specified when the genome class is initialized.
+This fitness value is independent of the fitness of the two parents.
+For compatibility with other genome types, the <tt>add_mutations</tt>
+member function will decrease the fitness by an amount determined
+by a random number of new mutations.
+<P>
+This representation can be used as a "place-holder" during the development
+of new applications.  The operations on genotypes are obviously much faster
+and genotypes take up far less space, so testing of new versions will
+be simpler.  The representation is also useful for applications where
+the accumulations of new mutations is not likely to be a factor, but
+where the distribution of fitness values and the effect of fitness on
+survival do need to be modeled.  
+
+<A NAME="individual"></A>
+<H3>Individual</H3>
+An individual consists of a genotype (an instance of the Genome class),
+a sex, and a unique ID that is assigned by the class constructor when the
+individual is created.
+
+<P>The Individual class is the first step up in the class hierarchy above
+Genome, and thus it is the class that calls constructor functions in one
+of the derived Genome classes in order to create the genotype of a new
+individual.
+
+<P>A note about class data members: usually a good class design hides data
+members and provides manipulator and accessor functions to get and change
+the state of internal data structures. We decided to break this rule and
+make the genes of an individual public and thus accessible to any code
+that uses an individual. The public data member is defined as
+<PRE>&nbsp;&nbsp;&nbsp; Genome *const genes;</PRE>
+The <TT>const</TT> keyword leads to the following behavior:
+<UL>
+<LI>
+The <tt>genes</tt> variable is a constant pointer to a genome object. User code
+can read the value of the pointer, i.e. find out which genotype belongs
+to this individual, but it cannot change the pointer to point to a different
+genotype. Thus the genotype of an individual is set once and for all when
+the individual is created.</LI><P>
+
+<LI>
+Even though the pointer is constant, the genotype object pointed to is
+not. User code can update the genes by calling a member function defined
+in Genome. For example, if <TT>x</TT> is a variable of type Individual,
+the following code is legal:</LI><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; x.genes->add_mutations(3);</PRE>
+This call will add three new mutations somewhere in the genotype of <TT>x</TT>.<P>
+
+<LI>
+The rules for initializing constant data members in C++ require the genes
+of an individual to be created at the same time the individual is created.
+This is done by using <TT>make_genome()</TT>, the "virtual constructor"
+of the Genome class, in the the definition of the constructor for the individual.
+The code for the constructor in the Individual is:</LI><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; Individual::Individual : genes(make_genome()) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp; }</PRE>
+This means the genome class must be initialized by a call to the <TT>set_parameters()</TT>
+function of one of the genome representations before any individual is
+created; this call is necessary to define the type of genome that will
+be used in the new individuals.</UL>
+There are several reasons for making the genes of an individual publicly
+available. The first is convenience: operations on genes are likely to
+be very common. Adding an accessor function that returns a pointer to a
+genome object would add an extra nuisance for programmers and wouldn't
+accomplish anything: the calling code will just end up with a pointer to
+a Genome object, which is what it gets directly from the public member.
+
+<P>The second reason is that the abstraction of the genome is already hidden
+inside the Genome class. Making a pointer to a Genome object available
+through an Individual is not revealing very much information about the
+implementation or structure of an Individual.
+
+<P>Finally, the information that is revealed -- individuals have a genotype
+-- is hardly surprising. The whole point of the library is to simulate
+the genetics of individual organisms, so there is not much point in hiding
+the fact that objects from the Individual class have a genotype. It is
+not likely to be the case that individuals will ever have more than one
+genotype or some other variation in structure that will make us want to
+hide this variable.
+<H5>
+Types</H5>
+The header file defines a type sex_t:
+<PRE>&nbsp;&nbsp;&nbsp; enum sex_t {NONE, FEMALE, MALE};</PRE>
+The <TT>NONE</TT> value can be used in simulations of asexual populations,
+or it can be used to flag uninitialized individuals in sexual populations.
+
+<P>The class <tt>IndividualParamBlock</tt> is defined, and
+an object of this type should be
+passed as a parameter to <tt>Individual::set_parameters()</tt>, but
+it currently contains no members since there are no operating parameters
+for class Individual.
+<H5>
+Constructor and Destructor</H5>
+The only constructor is the default constructor. It initializes the three
+state variables of the new individual by creating a new genotype with
+no mutations, setting the sex to <tt>NONE</tt>, and assigning the
+new individual a unique ID.
+<P>
+Note that the application
+must set the sex of new individuals in sexual populations after the 
+individual is created.
+We could have written the constructor to give each new individual a random sex, 
+but this policy
+allows for simulations that want to control sex ratios in different generations
+or populations.
+
+<P>Similarly it is up to the users to fill the genes of the new individual,
+either by calling the <TT>combine()</TT> function in the Genome class or
+copying the genes from a parent.
+
+<P>The destructor is needed to deallocate the genotype: since the genome
+is an abstract class the variable here is a pointer to a genome and the
+allocated object must be deallocated.
+<H5>
+Member Functions and Operators</H5>
+The member functions basically just allow user code to set
+the values of the sex or to return the values of sex, ID,
+and a pointer to the genes.
+
+<H5>Sets of Individuals</H5>
+ISet is a container class for building collections of individuals. The
+class is defined in the same header file as the Individual class (<TT>individual.h</TT>).
+<P>
+The constructor creates a new set, initially empty. The destructor deallocates
+all the internal information used to maintain the set.  
+<BLOCKQUOTE>
+<EM><BOLD>NOTE:</BOLD></EM>
+Deallocating a set does NOT deallocate any individuals that
+are currently elements of the set.
+</BLOCKQUOTE>
+The destructor must be called when
+the set is no longer needed, even if the set is known to be empty.
+<P>
+The <tt>insert()</tt> function is used to add a new individual to a set.
+Individuals are identified according to their
+location in the set.  If a set holds <n> items, they are indexed from
+0 to <tt>n-1</tt>.  A new individual is always added at the end; so
+for example, if a set has 4 individuals (identifed as 0 through 3)
+the next individual will become element number 4.
+<P>
+
+<A NAME="isetremove">
+Removing an element from a set changes the indices of the remaining
+elements.  For example if there
+are 5 individuals, they are numbered 0 through 4; removing individual 3
+means the new index of what used to be number 4 is now 3. This convention
+makes it easy to implement a queue (FIFO list) -- after inserting the individuals,
+continually remove individual 0 until the set is empty.</DD><P>
+<P>
+In addition to the <tt>remove()</tt> member function, which removes
+an element at a specific location in the set, there is a function 
+named <tt>select()</tt> that removes a random element.
+
+</DL>
+<A NAME="generation"></A>
+<H3>
+Generation</H3>
+A generation is a collection of individuals born in the same reproductive
+cycle. Currently this class is simply a set of individuals implemented
+using the <A HREF="#iset">ISet</A> container class.
+
+<H5>Types</H5>
+<P>The class <tt>GenerationParamBlock</tt> is defined, and 
+an object of this type should be
+passed as a parameter to <tt>Generation::set_parameters()</tt>, but
+it currently contains no members since there are no operating parameters
+for class Generation.
+
+<H5>
+Constructor and Destructor</H5>
+The constructor creates a new generation containing no individuals.
+
+<H5>
+Member Functions</H5>
+The member functions and operators have the same names and perform the
+same functions as the members and operators of the <A HREF="#iset">ISet</A>
+class.  There are functions to add an individual to a generation,
+return a pointer to a random individual or a specified individual,
+and remove an individual.
+
+<P>
+Reference Manual:
+<BLOCKQUOTE>
+<A href="GSL.ref.html#Generation">class Generation</A><br>
+<A href="GSL.ref.html#GenerationParamBlock">class GenerationParamBlock</A>
+</BLOCKQUOTE>
+
+<A NAME="population"></A>
+<H3>Population</H3>
+A population is at the top of the class hierarchy. Structurally it consists
+of a set of generations and procedures to build up a new generation of
+individuals by combining genes from a single existing generation.
+Again this is a very simple population, and is useful in its current
+form only for the simplest types of organisms.  Most simulations will
+use this class as a base class for more complex structures.
+The demo program for Coho Salmon populations is an example
+of how to create a derived class based on Population that has
+an age structure and uses several Generation objects.
+
+<H5>Types</H5>
+A <TT>PopulationParamBlock</TT> is used to pass parameters to a new population.
+The parameters that control the operation of a simple Population
+object are:
+<DL>
+<DT><tt>double kmax</tt></DT>
+<DD>Carrying capacity, or the mean size of the new generation.
+<DT><tt>double sdk</tt></DT>
+<DD>Standard deviation of the carrying capacity.
+<DT><tt>double rmax</tt></DT>
+<DD>Reproductive rate, the mean number of offsping to generate
+for each reproducing adult.
+<DT><tt>double sdr</tt></DT>
+<DD>Standard deviation of the reproductive rate.
+<DT><tt>double u</tt></DT>
+<DD>The gametic mutation rate, used to draw the random number 
+of mutations added to each new individual.
+</DL>
+
+<P>A second parameter block is a <TT>ResultBlock</TT>; an object of this
+type is returned as the result of running a simulation.  A result
+block will contain the number of generations simulated for this
+population and the number of individuals in the current generation.
+
+<H5>Constructor and Destructor</H5>
+There is only one constructor. It has one parameter, a <TT>PopulationParamBlock</TT>
+object. To initialize a simulation, create a parameter block object, fill
+it with the desired simulation parameters, and then use it as the parameter
+to the class constructor to create a new Population object.
+
+<H5>Member Functions</H5>
+The two member functions of this class are used to control a simulation.
+One function, named <tt>run()</tt>, runs the simulation for a specified
+number of cycles.  The other, named <tt>step()</tt>, executes a single
+cycle.<p>
+
+In the simple class included in the library, a generation cycle consists
+of trying to fill a new generation with surviving offspring produced by
+random pairing of individuals from the current generation.  The number
+of pairings is a function of the current generation size and the 
+reproductive rate.  The number of offspring in the new generation is
+either the carrying capacity or the number of surviving offspring,
+whichever is smaller.<p>
+
+<A NAME="rng"></A>
+<H3>RNG</H3>
+The random number generating prodedures are all defined in the class named
+RNG (Random Number Generators). There are two ways to generate a random
+deviate:
+<UL>
+<LI>
+Call a global function defined in the class; for example, to generate a
+deviate from a normal distribution with mean <TT>m</TT> and standard deviation
+<TT>s</TT>:</LI><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; x = rnormal(m,s);</PRE>
+
+<LI>
+Create a <I>random number generator object</I> and invoke a member function;
+the same example using a normal distribution object is:</LI><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; NormalRNG rn(m,s);
+&nbsp;&nbsp;&nbsp; x = rn++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // The ++ operator gets the&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // next deviate from 'rn'</PRE>
+</UL>
+The advantage of using an RNG object is that any complex initializations
+are done only once, when the object is created. The disadvantage is that
+parameters such as the mean and standard deviation are fixed when the object
+is created. If you need to draw random numbers from different distributions,
+e.g. ten normal distributions, each with a different standard deviation,
+you would have to create ten different objects, so in this case calling
+the stand-alone function would be better.
+
+<P>RNG is an abstract class that is the base class for the actual random
+number generator classes. Objects constructed from one of the derived classes
+are random number generators that return values from a specifed distribution.
+NormalRNG is a derived class, and objects of this class can be used to
+generate normally distributed floating point values.
+
+<P>The syntax used to communicate with an RNG object is based on a standard
+syntax for interacting with "iterators". From this point of view, a random
+distribution is a sequence of values, and the object iterates over that
+collection to return values from the distribution. The iterator is initialized
+with parameters of the distribution, e.g the mean and standard deviation
+of a Gaussian distribution, and the iterator will cycle infinitely over
+the entire sequence.
+
+<P>The base class defines two operators. One is implemented in the base
+class and is common to all derived classes. The other must be implemented
+in each derived class. The two operators are:
+<DL>
+<DT>
+<TT>virtual double operator ++() =0;</TT></DT>
+
+<DD>
+The "pre-increment" operator ++ is used to draw the next sample from a
+distribution. As an example, the following code defines a uniform random
+number generator that returns values between 0 and 10 and then fills a
+vector with 10 random deviates from this distribution:</DD><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; double x[10];
+&nbsp;&nbsp;&nbsp; UniformRNG r(0.0,10.0);
+
+&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; 10; i++)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x[i] = ++r;</PRE>
+
+<DT>
+<TT>operator const double();</TT></DT>
+
+<DD>
+This is the "operator without a name". It is invoked whenever the name
+of an RNG object is used in a context where the compiler expects a double
+precision floating point number. For example, if <TT>r</TT> is defined
+as</DD><P>
+
+<PRE>&nbsp;&nbsp;&nbsp; UniformRNG r(0,1);</PRE>
+then a reference to <TT>r</TT> will return the last value drawn from the
+distribution:
+<PRE>&nbsp;&nbsp;&nbsp; double x = ++r;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // draw a random deviate
+&nbsp;&nbsp;&nbsp; if (x == r) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // always true
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp; }</PRE>
+Since this operator does the same thing for every distribution it is defined
+in the base class.</DL>
+The following table lists all the distributions defined in the RNG class.
+Each table entry gives the name of the constructor used to create an object
+that can be used to draw several values from the distribution and the name
+of the corresponding stand-alone function that draws one deviate at a time. The constructors
+and stand-alone functions take the same parameters; e.g. for a normal distribution
+both the constructor <TT>NormalRNG</TT> and the stand-alone function <TT>rnormal</TT>
+take two floating point parameters, the mean and standard deviation of
+the distribution. The <TT>++</TT> operator for the RNG objects and the
+stand-alone functions all return double precision floating
+point values.
+
+<P>
+<CENTER><TABLE BORDER CELLPADDING=10 >
+<TR>
+<TH ALIGN=LEFT>Constructor Name /&nbsp;
+<BR>Function Name&nbsp;</TH>
+
+<TH ALIGN=LEFT>Parameters&nbsp;</TH>
+
+<TH ALIGN=LEFT>Description&nbsp;</TH>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>BinomialRNG</TT>
+<BR><TT>rbinomial</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double p</TT>
+<BR><TT>int n</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>An integer valued floating point number between 0 and <TT>n</TT>
+corresponding to the number of successes in <TT>n</TT> trials, where each
+trial has probability <TT>p</TT>.&nbsp;</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>ExponentialRNG</TT>
+<BR><TT>rexponential</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>(none)&nbsp;</TD>
+
+<TD VALIGN=TOP>A positive real value with exponentially decreasing probability
+of higher values.&nbsp;</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>GammaRNG</TT>
+<BR><TT>rgamma</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double a</TT>
+<BR><TT>double b</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>Gamma distribution with mean <TT>a</TT> and standard deviation
+<TT>b</TT>. Note: when <TT>a == b</TT> the distribution is an exponential
+distribution; when <TT>a &lt; b</TT> the distribution is more L-shaped,
+and when <TT>a > b</TT> the distribution is similar to a log-normal distribution.&nbsp;</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>LogNormalRNG</TT>
+<BR><TT>rlognormal</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double m</TT>
+<BR><TT>double s</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>A value from a Log-normal distribution with mean <TT>m</TT>
+and standard deviation <TT>s</TT>.</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>LogNormalLogRNG</TT>
+<BR><TT>rlognormallog</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double m</TT>
+<BR><TT>double s</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>Another way of building a Log-normal distribution; in
+this distribution, the mean <TT>m</TT> 
+and standard deviation <TT>s</TT> are specified on the log scale.
+The mean of the deviates generated will be
+exp(m+s*s/2).
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>NormalRNG</TT>
+<BR><TT>rnormal</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double m</TT>
+<BR><TT>double s</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>A value from a Gaussian distribution with mean <TT>m</TT>
+and standard deviation <TT>s</TT>.&nbsp;</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>PoissonRNG</TT>
+<BR><TT>rpoisson</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double lambda</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>An integer-valued floating point number with expected value
+<TT>lambda</TT> and exponentially decreasing probability of higher values.&nbsp;</TD>
+</TR>
+
+<TR>
+<TD VALIGN=TOP><TT>UniformRNG</TT>
+<BR><TT>runiform</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP><TT>double a</TT>
+<BR><TT>double b</TT>&nbsp;</TD>
+
+<TD VALIGN=TOP>A real number in the range <TT>[a,b]</TT>; <TT>a</TT> must
+be lower than <TT>b</TT>; both can be negative.&nbsp;</TD>
+</TR>
+</TABLE></CENTER>
+
+<P>
+Note that the two integer valued distributions (Binomial and Poisson) return
+floating point values to be consistent with the other classes, but the
+number returned will always have an integer value.
+
+<H5>Uniformly Distributed Random Integers</H5>
+<P>Two stand-alone functions can be used to generate
+uniformly distributed integer values. There are no corresponding class
+constructors for these two functions.
+<DL>
+<DT>
+<TT>unsigned int rword();</TT></DT>
+
+<DD>
+Return a random integer between 0 and 2^32-1.</DD><P>
+
+<DT>
+<TT>unsigned int rword(int n);</TT></DT>
+
+<DD>
+Return a random integer between 0 and <TT>n</TT>.</DD><P>
+</DL>
+
+<A name="CDFRNG">
+<H5>Arbitrary Distributions</H5>
+A class called CDFRNG can be used to generate random deviates from any
+arbitrary distribution.  The CDF stands for "cumulative density
+function."  Users supply an input file that contains a histogram
+of any probability density function.  The class constructor uses this
+file to create an internal cumulative density function, and then
+draws random deviates using the internal CDF.
+
+<P>The first part of the input file may contain comment lines
+that start with a # character.  There must be
+one comment line that defines the number
+of points in the input distribution.  The format of this line is
+<P>
+<pre>
+# N &ltnumber&gt
+</pre>
+where &ltnumber&gt is the number of data points.  This
+line must occur before any data line.
+<P>
+In the remainder of the file, use one line for each data point.
+For each data point, list the X and Y coordinates (in that order)
+for a point in the probability density function.
+<P>
+The resolution of the data file -- i.e. the distance between
+successive X values -- is arbitrary, and does not have to be
+consistent.  It is also possible to have "gaps" between X
+values, e.g. in a bi-modal distribution.  For example, the
+following input is legal:
+<pre>
+    # N 6
+    0.2     1
+    0.3     2
+    0.4     1
+    0.65    1
+    0.7     2
+    0.75    1
+</pre>
+Deviates drawn from this distribution will be real numbers
+between 0 and 1.  There is one mode at the value 0.3, and
+another at 0.7.  The group on the left, from 0.2 to 0.4,
+is wider than the group on the right, which goes from
+0.65 to 0.75.
+<P>
+The values returned from this distribution will always be
+one of the X values listed in the input file.  The program
+does not try to interpolate between values.  In order to
+approximate a real-valued distribution, it is necessary to
+provide an input file with the necessary resolution.  For
+example, here is the same bimodal distribution, but with 
+twice as many data points:
+<pre>
+    # N 12
+    0.15    1
+    0.2     2
+    0.25    3
+    0.3     5
+    0.35    3
+    0.4     2
+    0.45    1
+    0.65    1
+    0.675   2
+    0.7     4
+    0.725   2
+    0.75    1
+</pre>
+<P>
+The CDFRNG class is derived from the RNG base class, so it can
+be used interchangably with other RNG objects.  Use the <tt>++</tt>
+operator to draw samples from the distribution.
+
+<P>
+There is no corresponding stand-alone function; to generate a deviate
+from a CDF it is necessary to create a CDFRNG object.
+
+<H5>Seeds</H5>
+The pseudo-random words used to produce the sequences of values from RNG
+and the derived classes are produced by the <TT>rand48</TT> package of
+mixed congruential generators. 
+
+<P>By default, all RNG objects and all stand-alone functions use the
+same seed.  When an application that uses any RNG function is loaded,
+the global seed is automatically initialized from the system clock.
+
+<P>For those applications that want to do their own management of random seeds,
+the library defines a type called RNGSeed.  Users can create an object
+of this type and pass it either to a constructor for an RNG object or
+to a stand-alone function.  In both cases, the corresponding functions
+will create a random deviate using the user's seed.  Since the seed object
+is passed by reference, it will be updated, so the same seed object can
+be used in subsequent calls to generate new random deviates.  
+
+<P>Every stand-alone function and every RNG object constructor in the
+library can be called with a pointer to an RNGSeed object
+as the final parameter.  All the functions and constructors
+have been defined so the last parameter is a pointer to an RNGSeed,
+and the parameters have been given a default value of NULL.  If
+called with the last parameter missing (or if it is present but has
+a value of NULL) the procedure will use the global default seed;
+otherwise it will use the RNGSeed object passed as a parameter.
+
+<P>There are two constructors for RNGSeed objects:
+<DL>
+<DT><tt>RNGSeed();</tt>
+<DD>Create a new seed using the current value of the system clock.<p>
+<DT><tt>RNGSeed(unsigned int x);</tt>
+<DD>Create a new seed an initialize it with the integer x.<p>
+</DL>
+
+<P>In order to use seeds, the RNG base class defines the a
+set of functions which can make a copy of the current seed,
+replace the seed object with another one, and increment
+the value of a seed.
+
+<P>As an example of how an application can manage its own seeds, consider
+a situation where you want to create a consistent set of normally
+distributed random numbers.  For example, you might be adding a new
+set of functions to an existing application, and to debug the code you
+need to test the new function with the same sequence of random numbers.
+You would create a random seed object X, and then pass X as a parameter
+to the constructor for the NormalRNG object used in the new functions.
+The other part of your code would still use the global seed that is
+used by default.
+
+<P>Another example of "seed management" is in parallel applications.
+MPI (the Message Passing Interface standard for distributed programming)
+initializes all processes with identical copies of global variables,
+which means all processes will have the same default random number
+seed.  Usually an application will want each process to have a unique
+seed.  A call to <tt>inc_seed(n)</tt> will add the
+integer <tt>n</tt> to the seed value.  The initialization code for a
+parallel application could be written as:
+<p>
+<pre>
+    MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
+    RNGSeed s;
+    s.inc_seed(n);
+</pre>
+<p>
+This declares a global seed named <tt>s</tt> and then adds the
+process ID (or "rank", in MPI terminology) to the seed.  After
+this each process will have a different seed, and if <tt>s</tt>
+is passed to the random number functions the sequence of values
+produced by each process will be unique.
+
+<H3>Statistics</H3>
+The operation of a Statistics object is analogous to the statistical
+functions implemented
+in a hand-held calculator. Users call a function to add values to a set,
+and then invoke a function that will compute the mean, standard deviation,
+and other summary statistics of the set.
+
+<H5>Types</H5>
+All statistics are computed in one call and returned in a single structure
+called a StatsBlock:
+<PRE>&nbsp;&nbsp;&nbsp; class StatsBlock {
+&nbsp;&nbsp;&nbsp; public:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int n;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // number of items in group
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double mean;&nbsp;&nbsp; // mean value of all items
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double sd;&nbsp;&nbsp;&nbsp;&nbsp; // standard deviation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double cv;&nbsp;&nbsp;&nbsp;&nbsp; // coefficient of variation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int min;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // minimum value in group
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int max;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // maximum value
+&nbsp;&nbsp;&nbsp; };</PRE>
+
+<H5>
+Constructors and Destructors</H5>
+The constructor has no parameters. When an object of type Statistics is
+created, the constructor allocates a data structure to hold a count of
+the number of items, their sum, the sum of their squares, and other values
+needed to compute the statistics.
+<H5>
+Member Functions</H5>
+Member functions add a new data item to the set and return the
+statistics.
+
+<A NAME="examples"></A>
+<H2>Examples and Demo Programs</H2>
+This section of the documentation contains brief descriptions of test programs
+and complete applications built with GSL and distributed along with the
+library sources.
+
+<P>The programs consist of complete applications, smaller demo programs,
+and test drivers. Driver programs differ from demo programs in that drivers
+are designed to exercise the GSL classes by (a) testing all of the member
+functions and (b) repeating tests several million times to makes sure constructors
+and destructors are working properly and there are no "memory leaks." Demo
+programs are meant to illustrate how classes work by giving a few intuitive
+examples of how objects are created and used; driver programs exercise
+every function and "stress" the classes as much as possible.
+
+<P>Some of these applications use XForms, a public domain graphical user
+interface package. XForms includes predefined code for creating windows,
+displaying a variety of widgets (buttons, menus, etc), and controlling
+user interaction. It also comes with a powerful and easy to use "forms
+designer" to help lay out widgets. XForms is a great package that makes
+it very easy to build sophisticated GUI front-ends to C and C++ programs.
+It's well worth installing, even if you don't need it for the GSL programs.
+On-line documentation for XForms, including information about how to
+obtain the current version via FTP, can be found on the XForms home page
+at <A HREF="http://bragg.phys.uwm.edu/xforms">http://bragg.phys.uwm.edu/xforms</A>.
+<H4>
+Applications</H4>
+
+Two complete application programs are included with the source distribution
+under the <tt>apps</tt> directory.
+
+<P>
+The first is named MAS, which stands for Mutation Accumulation Simulation.
+This is a GSL version of the simulator used by Lynch, Conery, and
+B&#252rger in their studies of the "mutational meltdown" phenomenon
+(see "Mutation accumulation and the extinction of small populations",
+<em>American Naturalist 146</em>(4), 1995, pp. 489-518).
+In this simulation, a small population of <em>K</em> individuals
+starts out perfectly healthy, i.e. no individual has any mutations.
+A new generation is created by producing up to <em>K*R</em> offspring,
+where <em>R</em> is the average reproductive rate of each adult.
+A child is created by crossing the genes from two random adults,
+adding a random number of new mutations, computing the fitness
+of the child, and then testing for mortality.  The simulation
+continues until a population is unable to replace itself,
+i.e. when all offspring die as a result of the buildup of
+harmful mutations.  
+<P>
+The second simulation, in the directory named <tt>coho</tt>,
+models the genetics of Coho salmon populations.  It has the same
+basic structure as the mutation accumulation simulation -- new
+generations are created from existing generations by selecting
+parents, producing children, and adding mutations to offspring --
+but the demographics are based on the age structure of Coho salmon
+populations.  New individuals are assigned a sex at birth,
+and then put into age groups.  All females will reproduce at
+age 3 and then die.  Most males will also reproduce at age 3,
+but some (the "jacks") will return in 2 years, reproduce, and
+then die.
+<P>
+Both applications show how the various parts of the library
+can be used in C++ based simulation programs.  The Coho simulation
+also gives an example of how the classes in GSL can be used as
+base classes for more complicated simulations.  See the file
+named <tt>coho.h</tt> for definitions of a class named 
+<tt>Coho</tt>, which is derived from <tt>Individual</tt>,
+and <tt>CohoPopulation</tt>, which is derived from
+<tt>Population</tt>.
+
+<H4>
+Demo Programs</H4>
+
+<DL>
+<DT>
+<TT>gdemo</TT></DT>
+
+<DD>
+<TT>gdemo</TT> is an XForms based demo for the genome classes. It creates
+a few individuals, displays (in a predefined text format) the genome of
+each individual, and then cycles through the following steps as the user
+clicks a button in the interface:</DD><P>
+
+<UL>
+<LI>
+Add a random number of mutations to each individual.</LI><P>
+
+<LI>
+Compute the relative fitness of each individual.</LI><P>
+
+<LI>
+Replace any individual whose fitness has dropped below a predefined threshold
+value.</LI><P>
+</UL>
+This demo is particularly useful for the infinite genome representation
+to help verify that the internal garbage collection procedures are working
+properly.<P>
+
+<DT>
+<TT>idemo</TT></DT>
+
+<DD>
+This demo shows how to create new individuals using the Individual class,
+how to store them generations, and how to access objects in a generation.</DD><P>
+
+<DT>
+<TT>rnddemo</TT></DT>
+
+<DD>
+This program uses an XForms XY-plot widget to display the sample distributions
+generated by the RNG class. Use a button to select one of the distributions,
+enter the parameters for the distribution (e.g. enter the mean and standard
+deviation for a normal distribution), enter the number of samples to draw,
+and click the "sample" button. The results are stored in a histogram and plotted.
+The display also shows the mean and standard deviation of the samples so
+they can be compared to the underlying "real" mean and standard deviation.</DD><P>
+</DL>
+
+<H4>
+Test Drivers</H4>
+
+<DL>
+<DT>
+<TT>gdriver</TT></DT>
+
+<DD>
+This driver program exercises every member function in the Genome class
+except the deep copy operator. Global constants define the number of individuals
+to create and the number of repetitions to run.</DD><P>
+
+
+<P>The program maintains two sets of individuals, named "current" and "next".
+On each cycle, the program:<p>
+<UL>
+<LI>
+Creates new individuals and puts them in "next".</LI><P>
+
+<LI>
+For each new individual, select two individuals at random from "current",
+call <TT>combine()</TT> to mix their genes and put them in the new individual.</LI><P>
+
+<LI>
+Replace any individual that falls below a fitness threshold with a new
+(completely healthy) individual.</LI><P>
+
+<LI>
+Deallocate every individual in "current", and make "next" the new current
+generation.</LI><P>
+</UL>
+At the end of the last cycle the program prints the execution time and
+memory used. This program should use a constant amount of memory; if more
+memory is used when the number of repetitions is increased there is probably
+a memory leak.</DL>
+
+<A name="movies">
+<H4>Movies</H4>
+We used algorithm animation
+to debug many of the application programs and GSL library routines.
+The "movies" directory in the demo
+area contains the text of some of the animations, which were created
+with the <A HREF="http://www.cc.gatech.edu/gvu/softviz/algoanim/algoanim.html">Samba</A>
+algorithm animation system. 
+Samba is freely available via FTP
+from the Georgia Tech Graphics, Visualization, and Usability Center. 
+To view these
+movies, install Samba on your system, and then load and run the movies.
+
+<P>Animations currently in the <TT>movies</TT> subdirectory:
+<DL>
+<DT>
+<TT>coho.ani</TT></DT>
+
+<DD>
+This movie tracks the first few generation cycles in a mutation accumulation
+simulation for coho salmon.</DD><P>
+
+<DT>
+<TT>crossover.ani</TT></DT>
+
+<DD>
+This movie illistrates the steps in combining the genes from two parents
+to create the genes for offspring. In each replication step, parent chromosomes
+are unwound into a single strand; the unwinding starts on a random chromosome
+and then crosses over to the other chromosome a random number of times
+(the mean number of cross-overs is 1.5 per chromosome).</DD><P>
+
+<DT>
+<TT>mut.ani</TT></DT>
+
+<DD>
+This movie was used to display the progress of an early version of a genome
+class test driver program. 10 individuals were created, each with around
+100 mutations. On each cycle of the demo, a genome was replaced with a
+cross between the genome and a perfect individual. The idea was to see
+how long it would take to "flush" the mutations from the population. On
+average each new individual should have half as many mutations as its parent,
+and the population should be close to perfectly healthy in seven generations.
+</DD><P>
+</DL>
+
+<HR>
+<A name=copyright>
+Copyright &#169 1997 by the University of Oregon.<br>  
+ALL RIGHTS RESERVED.
+<P>
+Permission to use, copy, and distribute this software in 
+its entirety for non-commercial purposes and without fee, 
+is hereby granted, provided that the above copyright notice 
+and this permission notice appear in all copies and their 
+documentation. 
+<P>
+Software developers, consultants, or anyone else who wishes 
+to use all or part of the software or its documentation for 
+commercial purposes should contact the Technology Transfer 
+Office at the University of Oregon to arrange a commercial
+license agreement.
+<P>
+This software is provided "as is" without expressed or 
+implied warranty of any kind.
+<HR>
+
+<P> <EM> Last update: 21 Nov 97  09:50:07 </EM> </P>
+</BODY>
+</HTML>

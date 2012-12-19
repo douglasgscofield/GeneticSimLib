@@ -1,0 +1,8124 @@
+coords 0 0 35 35
+text yr0label 1 33 0 black 0
+text yr1label 1 30 0 black 1
+text yr2label 1 27 0 black 2
+text yr3label 1 24 0 black 3
+text yr4label 1 21 0 black 4
+text yr5label 1 18 0 black 5
+text poollabel 1 15 0 black Returns:
+text parentslabel 1 12 0 black Parents:
+text grouplabel 1 8 0 black Mating Groups:
+text message 10 1 0 black Initializing
+circle dummy 35 35 1 white outline
+% k = 16, r = 5
+% k = 16, r = 5
+% k = 16, r = 5
+% k = 16, r = 5
+% k = 16, r = 5
+% Mean fitness of 400 fish = 0.354007
+{
+{
+circle head93 3 30 0.5 lightskyblue solid
+polygon tail93 5 lightskyblue solid 3 29.8 2.2 29.5 2.5 30 2.2 30.5 3 30.2
+text tag93 3 30 1 black ..
+set fish93 3 head93 tail93 tag93
+}
+{
+circle head84 4.5 30 0.5 lightskyblue solid
+polygon tail84 5 lightskyblue solid 4.5 29.8 3.7 29.5 4 30 3.7 30.5 4.5 30.2
+text tag84 4.5 30 1 black ...
+set fish84 3 head84 tail84 tag84
+}
+{
+circle head76 6 30 0.5 lightskyblue solid
+polygon tail76 5 lightskyblue solid 6 29.8 5.2 29.5 5.5 30 5.2 30.5 6 30.2
+text tag76 6 30 1 black ..
+set fish76 3 head76 tail76 tag76
+}
+{
+circle head67 7.5 30 0.5 lightskyblue solid
+polygon tail67 5 lightskyblue solid 7.5 29.8 6.7 29.5 7 30 6.7 30.5 7.5 30.2
+text tag67 7.5 30 1 black ..
+set fish67 3 head67 tail67 tag67
+}
+{
+circle head63 9 30 0.5 lightskyblue solid
+polygon tail63 5 lightskyblue solid 9 29.8 8.2 29.5 8.5 30 8.2 30.5 9 30.2
+text tag63 9 30 1 black ..
+set fish63 3 head63 tail63 tag63
+}
+{
+circle head51 10.5 30 0.5 lightskyblue solid
+polygon tail51 5 lightskyblue solid 10.5 29.8 9.7 29.5 10 30 9.7 30.5 10.5 30.2
+text tag51 10.5 30 1 black ...
+set fish51 3 head51 tail51 tag51
+}
+{
+circle head47 12 30 0.5 lightskyblue solid
+polygon tail47 5 lightskyblue solid 12 29.8 11.2 29.5 11.5 30 11.2 30.5 12 30.2
+text tag47 12 30 1 black ..
+set fish47 3 head47 tail47 tag47
+}
+{
+circle head46 13.5 30 0.5 lightskyblue solid
+polygon tail46 5 lightskyblue solid 13.5 29.8 12.7 29.5 13 30 12.7 30.5 13.5 30.2
+text tag46 13.5 30 1 black ..
+set fish46 3 head46 tail46 tag46
+}
+{
+circle head43 15 30 0.5 lightskyblue solid
+polygon tail43 5 lightskyblue solid 15 29.8 14.2 29.5 14.5 30 14.2 30.5 15 30.2
+text tag43 15 30 1 black .
+set fish43 3 head43 tail43 tag43
+}
+{
+circle head30 16.5 30 0.5 lightskyblue solid
+polygon tail30 5 lightskyblue solid 16.5 29.8 15.7 29.5 16 30 15.7 30.5 16.5 30.2
+text tag30 16.5 30 1 black ..
+set fish30 3 head30 tail30 tag30
+}
+{
+circle head19 18 30 0.5 lightskyblue solid
+polygon tail19 5 lightskyblue solid 18 29.8 17.2 29.5 17.5 30 17.2 30.5 18 30.2
+text tag19 18 30 1 black ..
+set fish19 3 head19 tail19 tag19
+}
+}
+{
+{
+circle head94 3 29 0.5 pink solid
+polygon tail94 5 pink solid 3 28.8 2.2 28.5 2.5 29 2.2 29.5 3 29.2
+text tag94 3 29 1 black ..
+set fish94 3 head94 tail94 tag94
+}
+{
+circle head89 4.5 29 0.5 pink solid
+polygon tail89 5 pink solid 4.5 28.8 3.7 28.5 4 29 3.7 29.5 4.5 29.2
+text tag89 4.5 29 1 black ..
+set fish89 3 head89 tail89 tag89
+}
+{
+circle head82 6 29 0.5 pink solid
+polygon tail82 5 pink solid 6 28.8 5.2 28.5 5.5 29 5.2 29.5 6 29.2
+text tag82 6 29 1 black ..
+set fish82 3 head82 tail82 tag82
+}
+{
+circle head77 7.5 29 0.5 pink solid
+polygon tail77 5 pink solid 7.5 28.8 6.7 28.5 7 29 6.7 29.5 7.5 29.2
+text tag77 7.5 29 1 black ..
+set fish77 3 head77 tail77 tag77
+}
+{
+circle head73 9 29 0.5 pink solid
+polygon tail73 5 pink solid 9 28.8 8.2 28.5 8.5 29 8.2 29.5 9 29.2
+text tag73 9 29 1 black ..
+set fish73 3 head73 tail73 tag73
+}
+{
+circle head70 10.5 29 0.5 pink solid
+polygon tail70 5 pink solid 10.5 28.8 9.7 28.5 10 29 9.7 29.5 10.5 29.2
+text tag70 10.5 29 1 black ..
+set fish70 3 head70 tail70 tag70
+}
+{
+circle head62 12 29 0.5 pink solid
+polygon tail62 5 pink solid 12 28.8 11.2 28.5 11.5 29 11.2 29.5 12 29.2
+text tag62 12 29 1 black ..
+set fish62 3 head62 tail62 tag62
+}
+{
+circle head61 13.5 29 0.5 pink solid
+polygon tail61 5 pink solid 13.5 28.8 12.7 28.5 13 29 12.7 29.5 13.5 29.2
+text tag61 13.5 29 1 black ..
+set fish61 3 head61 tail61 tag61
+}
+{
+circle head59 15 29 0.5 pink solid
+polygon tail59 5 pink solid 15 28.8 14.2 28.5 14.5 29 14.2 29.5 15 29.2
+text tag59 15 29 1 black ..
+set fish59 3 head59 tail59 tag59
+}
+{
+circle head35 16.5 29 0.5 pink solid
+polygon tail35 5 pink solid 16.5 28.8 15.7 28.5 16 29 15.7 29.5 16.5 29.2
+text tag35 16.5 29 1 black ..
+set fish35 3 head35 tail35 tag35
+}
+{
+circle head34 18 29 0.5 pink solid
+polygon tail34 5 pink solid 18 28.8 17.2 28.5 17.5 29 17.2 29.5 18 29.2
+text tag34 18 29 1 black ..
+set fish34 3 head34 tail34 tag34
+}
+{
+circle head31 19.5 29 0.5 pink solid
+polygon tail31 5 pink solid 19.5 28.8 18.7 28.5 19 29 18.7 29.5 19.5 29.2
+text tag31 19.5 29 1 black ..
+set fish31 3 head31 tail31 tag31
+}
+{
+circle head23 21 29 0.5 pink solid
+polygon tail23 5 pink solid 21 28.8 20.2 28.5 20.5 29 20.2 29.5 21 29.2
+text tag23 21 29 1 black ..
+set fish23 3 head23 tail23 tag23
+}
+{
+circle head20 22.5 29 0.5 pink solid
+polygon tail20 5 pink solid 22.5 28.8 21.7 28.5 22 29 21.7 29.5 22.5 29.2
+text tag20 22.5 29 1 black ..
+set fish20 3 head20 tail20 tag20
+}
+{
+circle head17 24 29 0.5 pink solid
+polygon tail17 5 pink solid 24 28.8 23.2 28.5 23.5 29 23.2 29.5 24 29.2
+text tag17 24 29 1 black ..
+set fish17 3 head17 tail17 tag17
+}
+}
+{
+{
+circle head171 3 27 0.5 lightskyblue solid
+polygon tail171 5 lightskyblue solid 3 26.8 2.2 26.5 2.5 27 2.2 27.5 3 27.2
+text tag171 3 27 1 black ...
+set fish171 3 head171 tail171 tag171
+}
+{
+circle head170 4.5 27 0.5 lightskyblue solid
+polygon tail170 5 lightskyblue solid 4.5 26.8 3.7 26.5 4 27 3.7 27.5 4.5 27.2
+text tag170 4.5 27 1 black ...
+set fish170 3 head170 tail170 tag170
+}
+{
+circle head166 6 27 0.5 lightskyblue solid
+polygon tail166 5 lightskyblue solid 6 26.8 5.2 26.5 5.5 27 5.2 27.5 6 27.2
+text tag166 6 27 1 black ..
+set fish166 3 head166 tail166 tag166
+}
+{
+circle head162 7.5 27 0.5 lightskyblue solid
+polygon tail162 5 lightskyblue solid 7.5 26.8 6.7 26.5 7 27 6.7 27.5 7.5 27.2
+text tag162 7.5 27 1 black ..
+set fish162 3 head162 tail162 tag162
+}
+{
+circle head160 9 27 0.5 lightskyblue solid
+polygon tail160 5 lightskyblue solid 9 26.8 8.2 26.5 8.5 27 8.2 27.5 9 27.2
+text tag160 9 27 1 black ..
+set fish160 3 head160 tail160 tag160
+}
+{
+circle head154 10.5 27 0.5 lightskyblue solid
+polygon tail154 5 lightskyblue solid 10.5 26.8 9.7 26.5 10 27 9.7 27.5 10.5 27.2
+text tag154 10.5 27 1 black .
+set fish154 3 head154 tail154 tag154
+}
+{
+circle head146 12 27 0.5 lightskyblue solid
+polygon tail146 5 lightskyblue solid 12 26.8 11.2 26.5 11.5 27 11.2 27.5 12 27.2
+text tag146 12 27 1 black ..
+set fish146 3 head146 tail146 tag146
+}
+{
+circle head142 13.5 27 0.5 lightskyblue solid
+polygon tail142 5 lightskyblue solid 13.5 26.8 12.7 26.5 13 27 12.7 27.5 13.5 27.2
+text tag142 13.5 27 1 black ..
+set fish142 3 head142 tail142 tag142
+}
+{
+circle head127 15 27 0.5 lightskyblue solid
+polygon tail127 5 lightskyblue solid 15 26.8 14.2 26.5 14.5 27 14.2 27.5 15 27.2
+text tag127 15 27 1 black .
+set fish127 3 head127 tail127 tag127
+}
+{
+circle head125 16.5 27 0.5 lightskyblue solid
+polygon tail125 5 lightskyblue solid 16.5 26.8 15.7 26.5 16 27 15.7 27.5 16.5 27.2
+text tag125 16.5 27 1 black ..
+set fish125 3 head125 tail125 tag125
+}
+{
+circle head102 18 27 0.5 lightskyblue solid
+polygon tail102 5 lightskyblue solid 18 26.8 17.2 26.5 17.5 27 17.2 27.5 18 27.2
+text tag102 18 27 1 black ..
+set fish102 3 head102 tail102 tag102
+}
+{
+circle head101 19.5 27 0.5 lightskyblue solid
+polygon tail101 5 lightskyblue solid 19.5 26.8 18.7 26.5 19 27 18.7 27.5 19.5 27.2
+text tag101 19.5 27 1 black ...
+set fish101 3 head101 tail101 tag101
+}
+}
+{
+{
+circle head169 3 26 0.5 pink solid
+polygon tail169 5 pink solid 3 25.8 2.2 25.5 2.5 26 2.2 26.5 3 26.2
+text tag169 3 26 1 black ..
+set fish169 3 head169 tail169 tag169
+}
+{
+circle head164 4.5 26 0.5 pink solid
+polygon tail164 5 pink solid 4.5 25.8 3.7 25.5 4 26 3.7 26.5 4.5 26.2
+text tag164 4.5 26 1 black ..
+set fish164 3 head164 tail164 tag164
+}
+{
+circle head157 6 26 0.5 pink solid
+polygon tail157 5 pink solid 6 25.8 5.2 25.5 5.5 26 5.2 26.5 6 26.2
+text tag157 6 26 1 black ..
+set fish157 3 head157 tail157 tag157
+}
+{
+circle head156 7.5 26 0.5 pink solid
+polygon tail156 5 pink solid 7.5 25.8 6.7 25.5 7 26 6.7 26.5 7.5 26.2
+text tag156 7.5 26 1 black ..
+set fish156 3 head156 tail156 tag156
+}
+{
+circle head155 9 26 0.5 pink solid
+polygon tail155 5 pink solid 9 25.8 8.2 25.5 8.5 26 8.2 26.5 9 26.2
+text tag155 9 26 1 black ..
+set fish155 3 head155 tail155 tag155
+}
+{
+circle head141 10.5 26 0.5 pink solid
+polygon tail141 5 pink solid 10.5 25.8 9.7 25.5 10 26 9.7 26.5 10.5 26.2
+text tag141 10.5 26 1 black ..
+set fish141 3 head141 tail141 tag141
+}
+{
+circle head131 12 26 0.5 pink solid
+polygon tail131 5 pink solid 12 25.8 11.2 25.5 11.5 26 11.2 26.5 12 26.2
+text tag131 12 26 1 black ..
+set fish131 3 head131 tail131 tag131
+}
+{
+circle head120 13.5 26 0.5 pink solid
+polygon tail120 5 pink solid 13.5 25.8 12.7 25.5 13 26 12.7 26.5 13.5 26.2
+text tag120 13.5 26 1 black ..
+set fish120 3 head120 tail120 tag120
+}
+{
+circle head117 15 26 0.5 pink solid
+polygon tail117 5 pink solid 15 25.8 14.2 25.5 14.5 26 14.2 26.5 15 26.2
+text tag117 15 26 1 black ..
+set fish117 3 head117 tail117 tag117
+}
+{
+circle head113 16.5 26 0.5 pink solid
+polygon tail113 5 pink solid 16.5 25.8 15.7 25.5 16 26 15.7 26.5 16.5 26.2
+text tag113 16.5 26 1 black ..
+set fish113 3 head113 tail113 tag113
+}
+{
+circle head109 18 26 0.5 pink solid
+polygon tail109 5 pink solid 18 25.8 17.2 25.5 17.5 26 17.2 26.5 18 26.2
+text tag109 18 26 1 black ..
+set fish109 3 head109 tail109 tag109
+}
+}
+{
+{
+circle head253 3 24 0.5 lightskyblue solid
+polygon tail253 5 lightskyblue solid 3 23.8 2.2 23.5 2.5 24 2.2 24.5 3 24.2
+text tag253 3 24 1 black .
+set fish253 3 head253 tail253 tag253
+}
+{
+circle head241 4.5 24 0.5 lightskyblue solid
+polygon tail241 5 lightskyblue solid 4.5 23.8 3.7 23.5 4 24 3.7 24.5 4.5 24.2
+text tag241 4.5 24 1 black .
+set fish241 3 head241 tail241 tag241
+}
+{
+circle head239 6 24 0.5 lightskyblue solid
+polygon tail239 5 lightskyblue solid 6 23.8 5.2 23.5 5.5 24 5.2 24.5 6 24.2
+text tag239 6 24 1 black ..
+set fish239 3 head239 tail239 tag239
+}
+{
+circle head238 7.5 24 0.5 lightskyblue solid
+polygon tail238 5 lightskyblue solid 7.5 23.8 6.7 23.5 7 24 6.7 24.5 7.5 24.2
+text tag238 7.5 24 1 black .
+set fish238 3 head238 tail238 tag238
+}
+{
+circle head236 9 24 0.5 lightskyblue solid
+polygon tail236 5 lightskyblue solid 9 23.8 8.2 23.5 8.5 24 8.2 24.5 9 24.2
+text tag236 9 24 1 black .
+set fish236 3 head236 tail236 tag236
+}
+{
+circle head232 10.5 24 0.5 lightskyblue solid
+polygon tail232 5 lightskyblue solid 10.5 23.8 9.7 23.5 10 24 9.7 24.5 10.5 24.2
+text tag232 10.5 24 1 black ..
+set fish232 3 head232 tail232 tag232
+}
+{
+circle head231 12 24 0.5 lightskyblue solid
+polygon tail231 5 lightskyblue solid 12 23.8 11.2 23.5 11.5 24 11.2 24.5 12 24.2
+text tag231 12 24 1 black .
+set fish231 3 head231 tail231 tag231
+}
+{
+circle head223 13.5 24 0.5 lightskyblue solid
+polygon tail223 5 lightskyblue solid 13.5 23.8 12.7 23.5 13 24 12.7 24.5 13.5 24.2
+text tag223 13.5 24 1 black ..
+set fish223 3 head223 tail223 tag223
+}
+{
+circle head220 15 24 0.5 lightskyblue solid
+polygon tail220 5 lightskyblue solid 15 23.8 14.2 23.5 14.5 24 14.2 24.5 15 24.2
+text tag220 15 24 1 black ..
+set fish220 3 head220 tail220 tag220
+}
+{
+circle head219 16.5 24 0.5 lightskyblue solid
+polygon tail219 5 lightskyblue solid 16.5 23.8 15.7 23.5 16 24 15.7 24.5 16.5 24.2
+text tag219 16.5 24 1 black .
+set fish219 3 head219 tail219 tag219
+}
+{
+circle head206 18 24 0.5 lightskyblue solid
+polygon tail206 5 lightskyblue solid 18 23.8 17.2 23.5 17.5 24 17.2 24.5 18 24.2
+text tag206 18 24 1 black ..
+set fish206 3 head206 tail206 tag206
+}
+{
+circle head205 19.5 24 0.5 lightskyblue solid
+polygon tail205 5 lightskyblue solid 19.5 23.8 18.7 23.5 19 24 18.7 24.5 19.5 24.2
+text tag205 19.5 24 1 black ..
+set fish205 3 head205 tail205 tag205
+}
+{
+circle head204 21 24 0.5 lightskyblue solid
+polygon tail204 5 lightskyblue solid 21 23.8 20.2 23.5 20.5 24 20.2 24.5 21 24.2
+text tag204 21 24 1 black .
+set fish204 3 head204 tail204 tag204
+}
+{
+circle head202 22.5 24 0.5 lightskyblue solid
+polygon tail202 5 lightskyblue solid 22.5 23.8 21.7 23.5 22 24 21.7 24.5 22.5 24.2
+text tag202 22.5 24 1 black ...
+set fish202 3 head202 tail202 tag202
+}
+{
+circle head199 24 24 0.5 lightskyblue solid
+polygon tail199 5 lightskyblue solid 24 23.8 23.2 23.5 23.5 24 23.2 24.5 24 24.2
+text tag199 24 24 1 black ..
+set fish199 3 head199 tail199 tag199
+}
+{
+circle head198 25.5 24 0.5 lightskyblue solid
+polygon tail198 5 lightskyblue solid 25.5 23.8 24.7 23.5 25 24 24.7 24.5 25.5 24.2
+text tag198 25.5 24 1 black ..
+set fish198 3 head198 tail198 tag198
+}
+{
+circle head191 27 24 0.5 lightskyblue solid
+polygon tail191 5 lightskyblue solid 27 23.8 26.2 23.5 26.5 24 26.2 24.5 27 24.2
+text tag191 27 24 1 black ..
+set fish191 3 head191 tail191 tag191
+}
+{
+circle head188 28.5 24 0.5 lightskyblue solid
+polygon tail188 5 lightskyblue solid 28.5 23.8 27.7 23.5 28 24 27.7 24.5 28.5 24.2
+text tag188 28.5 24 1 black ...
+set fish188 3 head188 tail188 tag188
+}
+{
+circle head187 30 24 0.5 lightskyblue solid
+polygon tail187 5 lightskyblue solid 30 23.8 29.2 23.5 29.5 24 29.2 24.5 30 24.2
+text tag187 30 24 1 black .
+set fish187 3 head187 tail187 tag187
+}
+}
+{
+{
+circle head254 3 23 0.5 pink solid
+polygon tail254 5 pink solid 3 22.8 2.2 22.5 2.5 23 2.2 23.5 3 23.2
+text tag254 3 23 1 black ..
+set fish254 3 head254 tail254 tag254
+}
+{
+circle head250 4.5 23 0.5 pink solid
+polygon tail250 5 pink solid 4.5 22.8 3.7 22.5 4 23 3.7 23.5 4.5 23.2
+text tag250 4.5 23 1 black ..
+set fish250 3 head250 tail250 tag250
+}
+{
+circle head228 6 23 0.5 pink solid
+polygon tail228 5 pink solid 6 22.8 5.2 22.5 5.5 23 5.2 23.5 6 23.2
+text tag228 6 23 1 black ..
+set fish228 3 head228 tail228 tag228
+}
+{
+circle head227 7.5 23 0.5 pink solid
+polygon tail227 5 pink solid 7.5 22.8 6.7 22.5 7 23 6.7 23.5 7.5 23.2
+text tag227 7.5 23 1 black ..
+set fish227 3 head227 tail227 tag227
+}
+{
+circle head226 9 23 0.5 pink solid
+polygon tail226 5 pink solid 9 22.8 8.2 22.5 8.5 23 8.2 23.5 9 23.2
+text tag226 9 23 1 black ..
+set fish226 3 head226 tail226 tag226
+}
+{
+circle head225 10.5 23 0.5 pink solid
+polygon tail225 5 pink solid 10.5 22.8 9.7 22.5 10 23 9.7 23.5 10.5 23.2
+text tag225 10.5 23 1 black ..
+set fish225 3 head225 tail225 tag225
+}
+{
+circle head217 12 23 0.5 pink solid
+polygon tail217 5 pink solid 12 22.8 11.2 22.5 11.5 23 11.2 23.5 12 23.2
+text tag217 12 23 1 black ..
+set fish217 3 head217 tail217 tag217
+}
+{
+circle head209 13.5 23 0.5 pink solid
+polygon tail209 5 pink solid 13.5 22.8 12.7 22.5 13 23 12.7 23.5 13.5 23.2
+text tag209 13.5 23 1 black ..
+set fish209 3 head209 tail209 tag209
+}
+{
+circle head207 15 23 0.5 pink solid
+polygon tail207 5 pink solid 15 22.8 14.2 22.5 14.5 23 14.2 23.5 15 23.2
+text tag207 15 23 1 black ..
+set fish207 3 head207 tail207 tag207
+}
+{
+circle head203 16.5 23 0.5 pink solid
+polygon tail203 5 pink solid 16.5 22.8 15.7 22.5 16 23 15.7 23.5 16.5 23.2
+text tag203 16.5 23 1 black ..
+set fish203 3 head203 tail203 tag203
+}
+{
+circle head201 18 23 0.5 pink solid
+polygon tail201 5 pink solid 18 22.8 17.2 22.5 17.5 23 17.2 23.5 18 23.2
+text tag201 18 23 1 black ..
+set fish201 3 head201 tail201 tag201
+}
+{
+circle head186 19.5 23 0.5 pink solid
+polygon tail186 5 pink solid 19.5 22.8 18.7 22.5 19 23 18.7 23.5 19.5 23.2
+text tag186 19.5 23 1 black ..
+set fish186 3 head186 tail186 tag186
+}
+{
+circle head183 21 23 0.5 pink solid
+polygon tail183 5 pink solid 21 22.8 20.2 22.5 20.5 23 20.2 23.5 21 23.2
+text tag183 21 23 1 black ..
+set fish183 3 head183 tail183 tag183
+}
+{
+circle head182 22.5 23 0.5 pink solid
+polygon tail182 5 pink solid 22.5 22.8 21.7 22.5 22 23 21.7 23.5 22.5 23.2
+text tag182 22.5 23 1 black ..
+set fish182 3 head182 tail182 tag182
+}
+}
+{
+{
+circle head335 3 21 0.5 lightskyblue solid
+polygon tail335 5 lightskyblue solid 3 20.8 2.2 20.5 2.5 21 2.2 21.5 3 21.2
+text tag335 3 21 1 black ..
+set fish335 3 head335 tail335 tag335
+}
+{
+circle head318 4.5 21 0.5 lightskyblue solid
+polygon tail318 5 lightskyblue solid 4.5 20.8 3.7 20.5 4 21 3.7 21.5 4.5 21.2
+text tag318 4.5 21 1 black ...
+set fish318 3 head318 tail318 tag318
+}
+{
+circle head306 6 21 0.5 lightskyblue solid
+polygon tail306 5 lightskyblue solid 6 20.8 5.2 20.5 5.5 21 5.2 21.5 6 21.2
+text tag306 6 21 1 black ..
+set fish306 3 head306 tail306 tag306
+}
+{
+circle head304 7.5 21 0.5 lightskyblue solid
+polygon tail304 5 lightskyblue solid 7.5 20.8 6.7 20.5 7 21 6.7 21.5 7.5 21.2
+text tag304 7.5 21 1 black ..
+set fish304 3 head304 tail304 tag304
+}
+{
+circle head301 9 21 0.5 lightskyblue solid
+polygon tail301 5 lightskyblue solid 9 20.8 8.2 20.5 8.5 21 8.2 21.5 9 21.2
+text tag301 9 21 1 black ...
+set fish301 3 head301 tail301 tag301
+}
+{
+circle head295 10.5 21 0.5 lightskyblue solid
+polygon tail295 5 lightskyblue solid 10.5 20.8 9.7 20.5 10 21 9.7 21.5 10.5 21.2
+text tag295 10.5 21 1 black ..
+set fish295 3 head295 tail295 tag295
+}
+{
+circle head293 12 21 0.5 lightskyblue solid
+polygon tail293 5 lightskyblue solid 12 20.8 11.2 20.5 11.5 21 11.2 21.5 12 21.2
+text tag293 12 21 1 black ..
+set fish293 3 head293 tail293 tag293
+}
+{
+circle head291 13.5 21 0.5 lightskyblue solid
+polygon tail291 5 lightskyblue solid 13.5 20.8 12.7 20.5 13 21 12.7 21.5 13.5 21.2
+text tag291 13.5 21 1 black ..
+set fish291 3 head291 tail291 tag291
+}
+{
+circle head288 15 21 0.5 lightskyblue solid
+polygon tail288 5 lightskyblue solid 15 20.8 14.2 20.5 14.5 21 14.2 21.5 15 21.2
+text tag288 15 21 1 black ...
+set fish288 3 head288 tail288 tag288
+}
+{
+circle head279 16.5 21 0.5 lightskyblue solid
+polygon tail279 5 lightskyblue solid 16.5 20.8 15.7 20.5 16 21 15.7 21.5 16.5 21.2
+text tag279 16.5 21 1 black ..
+set fish279 3 head279 tail279 tag279
+}
+{
+circle head277 18 21 0.5 lightskyblue solid
+polygon tail277 5 lightskyblue solid 18 20.8 17.2 20.5 17.5 21 17.2 21.5 18 21.2
+text tag277 18 21 1 black ..
+set fish277 3 head277 tail277 tag277
+}
+{
+circle head266 19.5 21 0.5 lightskyblue solid
+polygon tail266 5 lightskyblue solid 19.5 20.8 18.7 20.5 19 21 18.7 21.5 19.5 21.2
+text tag266 19.5 21 1 black ..
+set fish266 3 head266 tail266 tag266
+}
+}
+{
+{
+circle head333 3 20 0.5 pink solid
+polygon tail333 5 pink solid 3 19.8 2.2 19.5 2.5 20 2.2 20.5 3 20.2
+text tag333 3 20 1 black ..
+set fish333 3 head333 tail333 tag333
+}
+{
+circle head327 4.5 20 0.5 pink solid
+polygon tail327 5 pink solid 4.5 19.8 3.7 19.5 4 20 3.7 20.5 4.5 20.2
+text tag327 4.5 20 1 black ..
+set fish327 3 head327 tail327 tag327
+}
+{
+circle head326 6 20 0.5 pink solid
+polygon tail326 5 pink solid 6 19.8 5.2 19.5 5.5 20 5.2 20.5 6 20.2
+text tag326 6 20 1 black ..
+set fish326 3 head326 tail326 tag326
+}
+{
+circle head323 7.5 20 0.5 pink solid
+polygon tail323 5 pink solid 7.5 19.8 6.7 19.5 7 20 6.7 20.5 7.5 20.2
+text tag323 7.5 20 1 black ..
+set fish323 3 head323 tail323 tag323
+}
+{
+circle head315 9 20 0.5 pink solid
+polygon tail315 5 pink solid 9 19.8 8.2 19.5 8.5 20 8.2 20.5 9 20.2
+text tag315 9 20 1 black ..
+set fish315 3 head315 tail315 tag315
+}
+{
+circle head311 10.5 20 0.5 pink solid
+polygon tail311 5 pink solid 10.5 19.8 9.7 19.5 10 20 9.7 20.5 10.5 20.2
+text tag311 10.5 20 1 black ..
+set fish311 3 head311 tail311 tag311
+}
+{
+circle head305 12 20 0.5 pink solid
+polygon tail305 5 pink solid 12 19.8 11.2 19.5 11.5 20 11.2 20.5 12 20.2
+text tag305 12 20 1 black ..
+set fish305 3 head305 tail305 tag305
+}
+{
+circle head300 13.5 20 0.5 pink solid
+polygon tail300 5 pink solid 13.5 19.8 12.7 19.5 13 20 12.7 20.5 13.5 20.2
+text tag300 13.5 20 1 black ..
+set fish300 3 head300 tail300 tag300
+}
+{
+circle head289 15 20 0.5 pink solid
+polygon tail289 5 pink solid 15 19.8 14.2 19.5 14.5 20 14.2 20.5 15 20.2
+text tag289 15 20 1 black ..
+set fish289 3 head289 tail289 tag289
+}
+{
+circle head281 16.5 20 0.5 pink solid
+polygon tail281 5 pink solid 16.5 19.8 15.7 19.5 16 20 15.7 20.5 16.5 20.2
+text tag281 16.5 20 1 black ..
+set fish281 3 head281 tail281 tag281
+}
+{
+circle head278 18 20 0.5 pink solid
+polygon tail278 5 pink solid 18 19.8 17.2 19.5 17.5 20 17.2 20.5 18 20.2
+text tag278 18 20 1 black ..
+set fish278 3 head278 tail278 tag278
+}
+{
+circle head274 19.5 20 0.5 pink solid
+polygon tail274 5 pink solid 19.5 19.8 18.7 19.5 19 20 18.7 20.5 19.5 20.2
+text tag274 19.5 20 1 black ..
+set fish274 3 head274 tail274 tag274
+}
+{
+circle head272 21 20 0.5 pink solid
+polygon tail272 5 pink solid 21 19.8 20.2 19.5 20.5 20 20.2 20.5 21 20.2
+text tag272 21 20 1 black ..
+set fish272 3 head272 tail272 tag272
+}
+{
+circle head270 22.5 20 0.5 pink solid
+polygon tail270 5 pink solid 22.5 19.8 21.7 19.5 22 20 21.7 20.5 22.5 20.2
+text tag270 22.5 20 1 black ..
+set fish270 3 head270 tail270 tag270
+}
+{
+circle head264 24 20 0.5 pink solid
+polygon tail264 5 pink solid 24 19.8 23.2 19.5 23.5 20 23.2 20.5 24 20.2
+text tag264 24 20 1 black ..
+set fish264 3 head264 tail264 tag264
+}
+{
+circle head260 25.5 20 0.5 pink solid
+polygon tail260 5 pink solid 25.5 19.8 24.7 19.5 25 20 24.7 20.5 25.5 20.2
+text tag260 25.5 20 1 black ..
+set fish260 3 head260 tail260 tag260
+}
+{
+circle head257 27 20 0.5 pink solid
+polygon tail257 5 pink solid 27 19.8 26.2 19.5 26.5 20 26.2 20.5 27 20.2
+text tag257 27 20 1 black ..
+set fish257 3 head257 tail257 tag257
+}
+}
+{
+{
+circle head412 3 18 0.5 lightskyblue solid
+polygon tail412 5 lightskyblue solid 3 17.8 2.2 17.5 2.5 18 2.2 18.5 3 18.2
+text tag412 3 18 1 black ...
+set fish412 3 head412 tail412 tag412
+}
+{
+circle head350 4.5 18 0.5 lightskyblue solid
+polygon tail350 5 lightskyblue solid 4.5 17.8 3.7 17.5 4 18 3.7 18.5 4.5 18.2
+text tag350 4.5 18 1 black ...
+set fish350 3 head350 tail350 tag350
+}
+}
+{
+}
+alter message Selecting returns....
+move fish412 3 14
+move fish350 4.5 14
+move fish335 6 14
+move fish306 7.5 14
+move fish304 9 14
+move fish295 10.5 14
+move fish293 12 14
+move fish291 13.5 14
+move fish279 15 14
+move fish277 16.5 14
+move fish266 18 14
+move fish253 19.5 14
+move fish241 21 14
+move fish238 22.5 14
+move fish236 24 14
+move fish231 25.5 14
+move fish219 27 14
+move fish204 28.5 14
+move fish187 30 14
+move fish257 31.5 14
+move fish260 33 14
+move fish264 34.5 14
+move fish270 36 14
+move fish272 37.5 14
+move fish274 39 14
+move fish278 40.5 14
+move fish281 42 14
+move fish289 43.5 14
+move fish300 45 14
+move fish305 46.5 14
+move fish311 48 14
+move fish315 49.5 14
+move fish323 51 14
+move fish326 52.5 14
+move fish327 54 14
+move fish333 55.5 14
+alter message Selecting parents; k = 16
+move fish335 3 11
+move fish278 3 10
+move fish306 4.5 11
+move fish272 4.5 10
+move fish253 6 11
+move fish270 6 10
+move fish326 7.5 10
+move fish219 7.5 11
+move fish260 9 10
+move fish333 10.5 10
+move fish204 9 11
+move fish293 10.5 11
+move fish311 12 10
+move fish238 12 11
+move fish241 13.5 11
+move fish295 15 11
+alter message Selecting mates...
+move fish311 3 7
+move fish333 3 6
+move fish260 3 5
+move fish326 3 4
+move fish270 3 3
+move fish272 3 2
+move fish278 3 1
+move fish295 4.5 7
+move fish241 4.5 6
+move fish238 4.5 5
+move fish293 4.5 4
+move fish204 4.5 3
+move fish219 4.5 2
+move fish253 4.5 1
+move fish306 6 7
+move fish335 6 6
+% r = 5
+alter message Creating 7 x 10 = 70 offspring...
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+{
+circle head417 3 32 0.5 pink solid
+polygon tail417 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag417 3 32 1 black ..
+set fish417 3 head417 tail417 tag417
+}
+color fish278 pink
+color fish253 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+{
+circle head422 3 33 0.5 lightskyblue solid
+polygon tail422 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag422 3 33 1 black ..
+set fish422 3 head422 tail422 tag422
+}
+color fish278 pink
+color fish253 lightskyblue
+color fish311 red
+color fish295 blue
+delay 10
+{
+circle head423 4.5 33 0.5 lightskyblue solid
+polygon tail423 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag423 4.5 33 1 black ..
+set fish423 3 head423 tail423 tag423
+}
+color fish311 pink
+color fish295 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+{
+circle head424 4.5 32 0.5 pink solid
+polygon tail424 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag424 4.5 32 1 black ..
+set fish424 3 head424 tail424 tag424
+}
+color fish326 pink
+color fish293 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+{
+circle head425 6 32 0.5 pink solid
+polygon tail425 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag425 6 32 1 black ..
+set fish425 3 head425 tail425 tag425
+}
+color fish311 pink
+color fish306 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+{
+circle head426 6 33 0.5 lightskyblue solid
+polygon tail426 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag426 6 33 1 black .
+set fish426 3 head426 tail426 tag426
+}
+color fish333 pink
+color fish241 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+color fish311 pink
+color fish306 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+{
+circle head430 7.5 32 0.5 pink solid
+polygon tail430 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag430 7.5 32 1 black ..
+set fish430 3 head430 tail430 tag430
+}
+color fish311 pink
+color fish306 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+{
+circle head431 9 32 0.5 pink solid
+polygon tail431 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag431 9 32 1 black ..
+set fish431 3 head431 tail431 tag431
+}
+color fish278 pink
+color fish253 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+color fish333 pink
+color fish241 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+{
+circle head433 7.5 33 0.5 lightskyblue solid
+polygon tail433 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag433 7.5 33 1 black ..
+set fish433 3 head433 tail433 tag433
+}
+color fish333 pink
+color fish335 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+color fish311 pink
+color fish306 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+{
+circle head435 9 33 0.5 lightskyblue solid
+polygon tail435 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag435 9 33 1 black .
+set fish435 3 head435 tail435 tag435
+}
+color fish326 pink
+color fish293 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+color fish333 pink
+color fish335 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+{
+circle head442 10.5 33 0.5 lightskyblue solid
+polygon tail442 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag442 10.5 33 1 black ..
+set fish442 3 head442 tail442 tag442
+}
+color fish260 pink
+color fish238 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+color fish333 pink
+color fish241 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+color fish311 pink
+color fish306 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+{
+circle head447 12 33 0.5 lightskyblue solid
+polygon tail447 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag447 12 33 1 black ..
+set fish447 3 head447 tail447 tag447
+}
+color fish333 pink
+color fish241 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+{
+circle head449 13.5 33 0.5 lightskyblue solid
+polygon tail449 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag449 13.5 33 1 black ...
+set fish449 3 head449 tail449 tag449
+}
+color fish333 pink
+color fish241 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+{
+circle head451 15 33 0.5 lightskyblue solid
+polygon tail451 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag451 15 33 1 black ..
+set fish451 3 head451 tail451 tag451
+}
+color fish311 pink
+color fish306 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+{
+circle head452 16.5 33 0.5 lightskyblue solid
+polygon tail452 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag452 16.5 33 1 black ...
+set fish452 3 head452 tail452 tag452
+}
+color fish333 pink
+color fish335 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+{
+circle head453 18 33 0.5 lightskyblue solid
+polygon tail453 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag453 18 33 1 black ..
+set fish453 3 head453 tail453 tag453
+}
+color fish278 pink
+color fish253 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish311 red
+color fish306 blue
+delay 10
+color fish311 pink
+color fish306 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+{
+circle head459 10.5 32 0.5 pink solid
+polygon tail459 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag459 10.5 32 1 black ..
+set fish459 3 head459 tail459 tag459
+}
+color fish260 pink
+color fish238 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish278 red
+color fish253 blue
+delay 10
+color fish278 pink
+color fish253 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish311 red
+color fish295 blue
+delay 10
+color fish311 pink
+color fish295 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+{
+circle head467 12 32 0.5 pink solid
+polygon tail467 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag467 12 32 1 black ..
+set fish467 3 head467 tail467 tag467
+}
+color fish333 pink
+color fish335 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish333 red
+color fish241 blue
+delay 10
+{
+circle head469 19.5 33 0.5 lightskyblue solid
+polygon tail469 5 lightskyblue solid 19.5 32.8 18.7 32.5 19 33 18.7 33.5 19.5 33.2
+text tag469 19.5 33 1 black ..
+set fish469 3 head469 tail469 tag469
+}
+color fish333 pink
+color fish241 lightskyblue
+color fish272 red
+color fish219 blue
+delay 10
+{
+circle head470 13.5 32 0.5 pink solid
+polygon tail470 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag470 13.5 32 1 black ..
+set fish470 3 head470 tail470 tag470
+}
+color fish272 pink
+color fish219 lightskyblue
+color fish311 red
+color fish295 blue
+delay 10
+{
+circle head471 15 32 0.5 pink solid
+polygon tail471 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag471 15 32 1 black ..
+set fish471 3 head471 tail471 tag471
+}
+color fish311 pink
+color fish295 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+{
+circle head472 21 33 0.5 lightskyblue solid
+polygon tail472 5 lightskyblue solid 21 32.8 20.2 32.5 20.5 33 20.2 33.5 21 33.2
+text tag472 21 33 1 black ..
+set fish472 3 head472 tail472 tag472
+}
+color fish326 pink
+color fish293 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+{
+circle head474 16.5 32 0.5 pink solid
+polygon tail474 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag474 16.5 32 1 black ..
+set fish474 3 head474 tail474 tag474
+}
+color fish326 pink
+color fish293 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+color fish333 pink
+color fish335 lightskyblue
+color fish270 red
+color fish204 blue
+delay 10
+color fish270 pink
+color fish204 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+{
+circle head478 22.5 33 0.5 lightskyblue solid
+polygon tail478 5 lightskyblue solid 22.5 32.8 21.7 32.5 22 33 21.7 33.5 22.5 33.2
+text tag478 22.5 33 1 black .
+set fish478 3 head478 tail478 tag478
+}
+color fish326 pink
+color fish293 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+{
+circle head479 24 33 0.5 lightskyblue solid
+polygon tail479 5 lightskyblue solid 24 32.8 23.2 32.5 23.5 33 23.2 33.5 24 33.2
+text tag479 24 33 1 black ..
+set fish479 3 head479 tail479 tag479
+}
+color fish333 pink
+color fish335 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+color fish333 pink
+color fish335 lightskyblue
+color fish326 red
+color fish293 blue
+delay 10
+color fish326 pink
+color fish293 lightskyblue
+color fish333 red
+color fish335 blue
+delay 10
+color fish333 pink
+color fish335 lightskyblue
+color fish260 red
+color fish238 blue
+delay 10
+color fish260 pink
+color fish238 lightskyblue
+color fish272 red
+color fish219 blue
+delay 10
+{
+circle head485 18 32 0.5 pink solid
+polygon tail485 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag485 18 32 1 black ..
+set fish485 3 head485 tail485 tag485
+}
+color fish272 pink
+color fish219 lightskyblue
+alter message Returns die
+{
+delete head295
+delete tail295
+delete tag295
+delete fish295
+}
+{
+delete head241
+delete tail241
+delete tag241
+delete fish241
+}
+{
+delete head238
+delete tail238
+delete tag238
+delete fish238
+}
+{
+delete head293
+delete tail293
+delete tag293
+delete fish293
+}
+{
+delete head204
+delete tail204
+delete tag204
+delete fish204
+}
+{
+delete head219
+delete tail219
+delete tag219
+delete fish219
+}
+{
+delete head253
+delete tail253
+delete tag253
+delete fish253
+}
+{
+delete head306
+delete tail306
+delete tag306
+delete fish306
+}
+{
+delete head335
+delete tail335
+delete tag335
+delete fish335
+}
+{
+delete head311
+delete tail311
+delete tag311
+delete fish311
+}
+{
+delete head333
+delete tail333
+delete tag333
+delete fish333
+}
+{
+delete head260
+delete tail260
+delete tag260
+delete fish260
+}
+{
+delete head326
+delete tail326
+delete tag326
+delete fish326
+}
+{
+delete head270
+delete tail270
+delete tag270
+delete fish270
+}
+{
+delete head272
+delete tail272
+delete tag272
+delete fish272
+}
+{
+delete head278
+delete tail278
+delete tag278
+delete fish278
+}
+{
+delete head412
+delete tail412
+delete tag412
+delete fish412
+}
+{
+delete head350
+delete tail350
+delete tag350
+delete fish350
+}
+{
+delete head304
+delete tail304
+delete tag304
+delete fish304
+}
+{
+delete head291
+delete tail291
+delete tag291
+delete fish291
+}
+{
+delete head279
+delete tail279
+delete tag279
+delete fish279
+}
+{
+delete head277
+delete tail277
+delete tag277
+delete fish277
+}
+{
+delete head266
+delete tail266
+delete tag266
+delete fish266
+}
+{
+delete head236
+delete tail236
+delete tag236
+delete fish236
+}
+{
+delete head231
+delete tail231
+delete tag231
+delete fish231
+}
+{
+delete head187
+delete tail187
+delete tag187
+delete fish187
+}
+{
+delete head257
+delete tail257
+delete tag257
+delete fish257
+}
+{
+delete head264
+delete tail264
+delete tag264
+delete fish264
+}
+{
+delete head274
+delete tail274
+delete tag274
+delete fish274
+}
+{
+delete head281
+delete tail281
+delete tag281
+delete fish281
+}
+{
+delete head289
+delete tail289
+delete tag289
+delete fish289
+}
+{
+delete head300
+delete tail300
+delete tag300
+delete fish300
+}
+{
+delete head305
+delete tail305
+delete tag305
+delete fish305
+}
+{
+delete head315
+delete tail315
+delete tag315
+delete fish315
+}
+{
+delete head323
+delete tail323
+delete tag323
+delete fish323
+}
+{
+delete head327
+delete tail327
+delete tag327
+delete fish327
+}
+alter message Increasing ages by 1...
+{
+jump fish239 3 24
+jump fish232 4.5 24
+jump fish223 6 24
+jump fish220 7.5 24
+jump fish206 9 24
+jump fish205 10.5 24
+jump fish202 12 24
+jump fish199 13.5 24
+jump fish198 15 24
+jump fish191 16.5 24
+jump fish188 18 24
+}
+{
+jump fish318 3 21
+jump fish301 4.5 21
+jump fish288 6 21
+}
+set mgroup 1 dummy
+set fgroup 3 fish318 fish301 fish288
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 14 fish254 fish250 fish228 fish227 fish226 fish225 fish217 fish209 fish207 fish203 fish201 fish186 fish183 fish182
+set fgroup 11 fish239 fish232 fish223 fish220 fish206 fish205 fish202 fish199 fish198 fish191 fish188
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish169 fish164 fish157 fish156 fish155 fish141 fish131 fish120 fish117 fish113 fish109
+set fgroup 12 fish171 fish170 fish166 fish162 fish160 fish154 fish146 fish142 fish127 fish125 fish102 fish101
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 15 fish94 fish89 fish82 fish77 fish73 fish70 fish62 fish61 fish59 fish35 fish34 fish31 fish23 fish20 fish17
+set fgroup 11 fish93 fish84 fish76 fish67 fish63 fish51 fish47 fish46 fish43 fish30 fish19
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish485 fish474 fish471 fish470 fish467 fish459 fish431 fish430 fish425 fish424 fish417
+set fgroup 15 fish479 fish478 fish472 fish469 fish453 fish452 fish451 fish449 fish447 fish442 fish435 fish433 fish426 fish423 fish422
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish318 3 14
+move fish301 4.5 14
+move fish288 6 14
+move fish239 7.5 14
+move fish232 9 14
+move fish223 10.5 14
+move fish220 12 14
+move fish206 13.5 14
+move fish205 15 14
+move fish199 16.5 14
+move fish198 18 14
+move fish191 19.5 14
+move fish154 21 14
+move fish127 22.5 14
+move fish182 24 14
+move fish183 25.5 14
+move fish186 27 14
+move fish201 28.5 14
+move fish203 30 14
+move fish207 31.5 14
+move fish209 33 14
+move fish217 34.5 14
+move fish225 36 14
+move fish226 37.5 14
+move fish227 39 14
+move fish228 40.5 14
+move fish250 42 14
+move fish254 43.5 14
+alter message Selecting parents; k = 16
+move fish220 3 11
+move fish223 4.5 11
+move fish228 3 10
+move fish254 4.5 10
+move fish206 6 11
+move fish182 6 10
+move fish239 7.5 11
+move fish232 9 11
+move fish226 7.5 10
+move fish183 9 10
+move fish207 10.5 10
+move fish191 10.5 11
+move fish301 12 11
+move fish186 12 10
+move fish205 13.5 11
+move fish217 13.5 10
+alter message Selecting mates...
+move fish217 3 7
+move fish205 4.5 7
+move fish186 3 6
+move fish301 4.5 6
+move fish207 3 5
+move fish191 4.5 5
+move fish183 3 4
+move fish232 4.5 4
+move fish226 3 3
+move fish239 4.5 3
+move fish182 3 2
+move fish206 4.5 2
+move fish254 3 1
+move fish223 4.5 1
+move fish228 3 0
+move fish220 4.5 0
+% r = 5
+alter message Creating 8 x 10 = 80 offspring...
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+{
+circle head487 3 33 0.5 lightskyblue solid
+polygon tail487 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag487 3 33 1 black .
+set fish487 3 head487 tail487 tag487
+}
+color fish217 pink
+color fish205 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+color fish183 pink
+color fish232 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+{
+circle head492 3 32 0.5 pink solid
+polygon tail492 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag492 3 32 1 black ..
+set fish492 3 head492 tail492 tag492
+}
+color fish207 pink
+color fish191 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+{
+circle head494 4.5 32 0.5 pink solid
+polygon tail494 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag494 4.5 32 1 black ..
+set fish494 3 head494 tail494 tag494
+}
+color fish228 pink
+color fish220 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+color fish183 pink
+color fish232 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+{
+circle head497 6 32 0.5 pink solid
+polygon tail497 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag497 6 32 1 black ..
+set fish497 3 head497 tail497 tag497
+}
+color fish182 pink
+color fish206 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+{
+circle head498 4.5 33 0.5 lightskyblue solid
+polygon tail498 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag498 4.5 33 1 black .
+set fish498 3 head498 tail498 tag498
+}
+color fish183 pink
+color fish232 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+{
+circle head500 7.5 32 0.5 pink solid
+polygon tail500 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag500 7.5 32 1 black ..
+set fish500 3 head500 tail500 tag500
+}
+color fish207 pink
+color fish191 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+{
+circle head501 6 33 0.5 lightskyblue solid
+polygon tail501 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag501 6 33 1 black ..
+set fish501 3 head501 tail501 tag501
+}
+color fish228 pink
+color fish220 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+{
+circle head503 9 32 0.5 pink solid
+polygon tail503 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag503 9 32 1 black ..
+set fish503 3 head503 tail503 tag503
+}
+color fish183 pink
+color fish232 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+{
+circle head507 7.5 33 0.5 lightskyblue solid
+polygon tail507 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag507 7.5 33 1 black ..
+set fish507 3 head507 tail507 tag507
+}
+color fish254 pink
+color fish223 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+color fish226 pink
+color fish239 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+{
+circle head510 10.5 32 0.5 pink solid
+polygon tail510 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag510 10.5 32 1 black ..
+set fish510 3 head510 tail510 tag510
+}
+color fish217 pink
+color fish205 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+{
+circle head511 12 32 0.5 pink solid
+polygon tail511 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag511 12 32 1 black ..
+set fish511 3 head511 tail511 tag511
+}
+color fish254 pink
+color fish223 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+color fish226 pink
+color fish239 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+color fish217 pink
+color fish205 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+{
+circle head514 9 33 0.5 lightskyblue solid
+polygon tail514 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag514 9 33 1 black ..
+set fish514 3 head514 tail514 tag514
+}
+color fish207 pink
+color fish191 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+color fish226 pink
+color fish239 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+{
+circle head518 10.5 33 0.5 lightskyblue solid
+polygon tail518 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag518 10.5 33 1 black ...
+set fish518 3 head518 tail518 tag518
+}
+color fish183 pink
+color fish232 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+{
+circle head519 13.5 32 0.5 pink solid
+polygon tail519 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag519 13.5 32 1 black ..
+set fish519 3 head519 tail519 tag519
+}
+color fish182 pink
+color fish206 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+color fish183 pink
+color fish232 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+{
+circle head528 12 33 0.5 lightskyblue solid
+polygon tail528 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag528 12 33 1 black ..
+set fish528 3 head528 tail528 tag528
+}
+color fish186 pink
+color fish301 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+color fish183 pink
+color fish232 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+{
+circle head531 13.5 33 0.5 lightskyblue solid
+polygon tail531 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag531 13.5 33 1 black ..
+set fish531 3 head531 tail531 tag531
+}
+color fish254 pink
+color fish223 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+{
+circle head532 15 33 0.5 lightskyblue solid
+polygon tail532 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag532 15 33 1 black ..
+set fish532 3 head532 tail532 tag532
+}
+color fish226 pink
+color fish239 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+{
+circle head533 16.5 33 0.5 lightskyblue solid
+polygon tail533 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag533 16.5 33 1 black ..
+set fish533 3 head533 tail533 tag533
+}
+color fish182 pink
+color fish206 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+color fish217 pink
+color fish205 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+{
+circle head537 18 33 0.5 lightskyblue solid
+polygon tail537 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag537 18 33 1 black ..
+set fish537 3 head537 tail537 tag537
+}
+color fish207 pink
+color fish191 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+{
+circle head539 19.5 33 0.5 lightskyblue solid
+polygon tail539 5 lightskyblue solid 19.5 32.8 18.7 32.5 19 33 18.7 33.5 19.5 33.2
+text tag539 19.5 33 1 black ..
+set fish539 3 head539 tail539 tag539
+}
+color fish254 pink
+color fish223 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+color fish226 pink
+color fish239 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+{
+circle head542 15 32 0.5 pink solid
+polygon tail542 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag542 15 32 1 black ..
+set fish542 3 head542 tail542 tag542
+}
+color fish183 pink
+color fish232 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+{
+circle head544 16.5 32 0.5 pink solid
+polygon tail544 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag544 16.5 32 1 black ..
+set fish544 3 head544 tail544 tag544
+}
+color fish186 pink
+color fish301 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+{
+circle head545 21 33 0.5 lightskyblue solid
+polygon tail545 5 lightskyblue solid 21 32.8 20.2 32.5 20.5 33 20.2 33.5 21 33.2
+text tag545 21 33 1 black ..
+set fish545 3 head545 tail545 tag545
+}
+color fish226 pink
+color fish239 lightskyblue
+color fish183 red
+color fish232 blue
+delay 10
+color fish183 pink
+color fish232 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+{
+circle head547 22.5 33 0.5 lightskyblue solid
+polygon tail547 5 lightskyblue solid 22.5 32.8 21.7 32.5 22 33 21.7 33.5 22.5 33.2
+text tag547 22.5 33 1 black .
+set fish547 3 head547 tail547 tag547
+}
+color fish228 pink
+color fish220 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+{
+circle head548 24 33 0.5 lightskyblue solid
+polygon tail548 5 lightskyblue solid 24 32.8 23.2 32.5 23.5 33 23.2 33.5 24 33.2
+text tag548 24 33 1 black .
+set fish548 3 head548 tail548 tag548
+}
+color fish228 pink
+color fish220 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+{
+circle head550 18 32 0.5 pink solid
+polygon tail550 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag550 18 32 1 black ..
+set fish550 3 head550 tail550 tag550
+}
+color fish228 pink
+color fish220 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+color fish226 pink
+color fish239 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+{
+circle head555 25.5 33 0.5 lightskyblue solid
+polygon tail555 5 lightskyblue solid 25.5 32.8 24.7 32.5 25 33 24.7 33.5 25.5 33.2
+text tag555 25.5 33 1 black .
+set fish555 3 head555 tail555 tag555
+}
+color fish217 pink
+color fish205 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+color fish207 pink
+color fish191 lightskyblue
+color fish182 red
+color fish206 blue
+delay 10
+color fish182 pink
+color fish206 lightskyblue
+color fish226 red
+color fish239 blue
+delay 10
+{
+circle head559 19.5 32 0.5 pink solid
+polygon tail559 5 pink solid 19.5 31.8 18.7 31.5 19 32 18.7 32.5 19.5 32.2
+text tag559 19.5 32 1 black ..
+set fish559 3 head559 tail559 tag559
+}
+color fish226 pink
+color fish239 lightskyblue
+color fish207 red
+color fish191 blue
+delay 10
+{
+circle head560 27 33 0.5 lightskyblue solid
+polygon tail560 5 lightskyblue solid 27 32.8 26.2 32.5 26.5 33 26.2 33.5 27 33.2
+text tag560 27 33 1 black .
+set fish560 3 head560 tail560 tag560
+}
+color fish207 pink
+color fish191 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+color fish217 pink
+color fish205 lightskyblue
+color fish228 red
+color fish220 blue
+delay 10
+color fish228 pink
+color fish220 lightskyblue
+color fish186 red
+color fish301 blue
+delay 10
+color fish186 pink
+color fish301 lightskyblue
+color fish217 red
+color fish205 blue
+delay 10
+color fish217 pink
+color fish205 lightskyblue
+color fish254 red
+color fish223 blue
+delay 10
+color fish254 pink
+color fish223 lightskyblue
+alter message Returns die
+{
+delete head205
+delete tail205
+delete tag205
+delete fish205
+}
+{
+delete head301
+delete tail301
+delete tag301
+delete fish301
+}
+{
+delete head191
+delete tail191
+delete tag191
+delete fish191
+}
+{
+delete head232
+delete tail232
+delete tag232
+delete fish232
+}
+{
+delete head239
+delete tail239
+delete tag239
+delete fish239
+}
+{
+delete head206
+delete tail206
+delete tag206
+delete fish206
+}
+{
+delete head223
+delete tail223
+delete tag223
+delete fish223
+}
+{
+delete head220
+delete tail220
+delete tag220
+delete fish220
+}
+{
+delete head217
+delete tail217
+delete tag217
+delete fish217
+}
+{
+delete head186
+delete tail186
+delete tag186
+delete fish186
+}
+{
+delete head207
+delete tail207
+delete tag207
+delete fish207
+}
+{
+delete head183
+delete tail183
+delete tag183
+delete fish183
+}
+{
+delete head226
+delete tail226
+delete tag226
+delete fish226
+}
+{
+delete head182
+delete tail182
+delete tag182
+delete fish182
+}
+{
+delete head254
+delete tail254
+delete tag254
+delete fish254
+}
+{
+delete head228
+delete tail228
+delete tag228
+delete fish228
+}
+{
+delete head318
+delete tail318
+delete tag318
+delete fish318
+}
+{
+delete head288
+delete tail288
+delete tag288
+delete fish288
+}
+{
+delete head199
+delete tail199
+delete tag199
+delete fish199
+}
+{
+delete head198
+delete tail198
+delete tag198
+delete fish198
+}
+{
+delete head154
+delete tail154
+delete tag154
+delete fish154
+}
+{
+delete head127
+delete tail127
+delete tag127
+delete fish127
+}
+{
+delete head201
+delete tail201
+delete tag201
+delete fish201
+}
+{
+delete head203
+delete tail203
+delete tag203
+delete fish203
+}
+{
+delete head209
+delete tail209
+delete tag209
+delete fish209
+}
+{
+delete head225
+delete tail225
+delete tag225
+delete fish225
+}
+{
+delete head227
+delete tail227
+delete tag227
+delete fish227
+}
+{
+delete head250
+delete tail250
+delete tag250
+delete fish250
+}
+alter message Increasing ages by 1...
+{
+jump fish171 3 24
+jump fish170 4.5 24
+jump fish166 6 24
+jump fish162 7.5 24
+jump fish160 9 24
+jump fish146 10.5 24
+jump fish142 12 24
+jump fish125 13.5 24
+jump fish102 15 24
+jump fish101 16.5 24
+}
+{
+jump fish202 3 21
+jump fish188 4.5 21
+}
+set mgroup 1 dummy
+set fgroup 2 fish202 fish188
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish169 fish164 fish157 fish156 fish155 fish141 fish131 fish120 fish117 fish113 fish109
+set fgroup 10 fish171 fish170 fish166 fish162 fish160 fish146 fish142 fish125 fish102 fish101
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 15 fish94 fish89 fish82 fish77 fish73 fish70 fish62 fish61 fish59 fish35 fish34 fish31 fish23 fish20 fish17
+set fgroup 11 fish93 fish84 fish76 fish67 fish63 fish51 fish47 fish46 fish43 fish30 fish19
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish485 fish474 fish471 fish470 fish467 fish459 fish431 fish430 fish425 fish424 fish417
+set fgroup 15 fish479 fish478 fish472 fish469 fish453 fish452 fish451 fish449 fish447 fish442 fish435 fish433 fish426 fish423 fish422
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 12 fish559 fish550 fish544 fish542 fish519 fish511 fish510 fish503 fish500 fish497 fish494 fish492
+set fgroup 17 fish560 fish555 fish548 fish547 fish545 fish539 fish537 fish533 fish532 fish531 fish528 fish518 fish514 fish507 fish501 fish498 fish487
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish202 3 14
+move fish188 4.5 14
+move fish166 6 14
+move fish162 7.5 14
+move fish160 9 14
+move fish146 10.5 14
+move fish142 12 14
+move fish125 13.5 14
+move fish102 15 14
+move fish43 16.5 14
+move fish109 18 14
+move fish113 19.5 14
+move fish117 21 14
+move fish120 22.5 14
+move fish131 24 14
+move fish141 25.5 14
+move fish155 27 14
+move fish156 28.5 14
+move fish157 30 14
+move fish164 31.5 14
+move fish169 33 14
+alter message Selecting parents; k = 16
+move fish162 3 11
+move fish141 3 10
+move fish166 4.5 11
+move fish109 4.5 10
+move fish157 6 10
+move fish146 6 11
+move fish120 7.5 10
+move fish188 7.5 11
+move fish131 9 10
+move fish164 10.5 10
+move fish117 12 10
+move fish155 13.5 10
+move fish142 9 11
+move fish113 15 10
+move fish125 10.5 11
+move fish160 12 11
+alter message Selecting mates...
+move fish113 3 7
+move fish160 4.5 7
+move fish155 3 6
+move fish125 4.5 6
+move fish117 3 5
+move fish142 4.5 5
+move fish164 3 4
+move fish188 4.5 4
+move fish131 3 3
+move fish146 4.5 3
+move fish120 3 2
+move fish166 4.5 2
+move fish157 3 1
+move fish162 4.5 1
+% r = 5
+alter message Creating 7 x 10 = 70 offspring...
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+{
+circle head569 3 33 0.5 lightskyblue solid
+polygon tail569 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag569 3 33 1 black .
+set fish569 3 head569 tail569 tag569
+}
+color fish120 pink
+color fish166 lightskyblue
+color fish155 red
+color fish125 blue
+delay 10
+{
+circle head570 3 32 0.5 pink solid
+polygon tail570 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag570 3 32 1 black ..
+set fish570 3 head570 tail570 tag570
+}
+color fish155 pink
+color fish125 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head571 4.5 32 0.5 pink solid
+polygon tail571 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag571 4.5 32 1 black ..
+set fish571 3 head571 tail571 tag571
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+{
+circle head575 4.5 33 0.5 lightskyblue solid
+polygon tail575 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag575 4.5 33 1 black .
+set fish575 3 head575 tail575 tag575
+}
+color fish164 pink
+color fish188 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head583 6 33 0.5 lightskyblue solid
+polygon tail583 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag583 6 33 1 black ..
+set fish583 3 head583 tail583 tag583
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head588 6 32 0.5 pink solid
+polygon tail588 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag588 6 32 1 black ..
+set fish588 3 head588 tail588 tag588
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+{
+circle head592 7.5 32 0.5 pink solid
+polygon tail592 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag592 7.5 32 1 black ..
+set fish592 3 head592 tail592 tag592
+}
+color fish157 pink
+color fish162 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+{
+circle head598 7.5 33 0.5 lightskyblue solid
+polygon tail598 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag598 7.5 33 1 black ..
+set fish598 3 head598 tail598 tag598
+}
+color fish157 pink
+color fish162 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head603 9 33 0.5 lightskyblue solid
+polygon tail603 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag603 9 33 1 black ..
+set fish603 3 head603 tail603 tag603
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish155 red
+color fish125 blue
+delay 10
+color fish155 pink
+color fish125 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish155 red
+color fish125 blue
+delay 10
+color fish155 pink
+color fish125 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+{
+circle head617 10.5 33 0.5 lightskyblue solid
+polygon tail617 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag617 10.5 33 1 black ..
+set fish617 3 head617 tail617 tag617
+}
+color fish120 pink
+color fish166 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+{
+circle head619 12 33 0.5 lightskyblue solid
+polygon tail619 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag619 12 33 1 black ...
+set fish619 3 head619 tail619 tag619
+}
+color fish113 pink
+color fish160 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head620 13.5 33 0.5 lightskyblue solid
+polygon tail620 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag620 13.5 33 1 black .
+set fish620 3 head620 tail620 tag620
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+{
+circle head621 15 33 0.5 lightskyblue solid
+polygon tail621 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag621 15 33 1 black .
+set fish621 3 head621 tail621 tag621
+}
+color fish157 pink
+color fish162 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+color fish113 pink
+color fish160 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+color fish157 red
+color fish162 blue
+delay 10
+color fish157 pink
+color fish162 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish113 red
+color fish160 blue
+delay 10
+{
+circle head628 9 32 0.5 pink solid
+polygon tail628 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag628 9 32 1 black ..
+set fish628 3 head628 tail628 tag628
+}
+color fish113 pink
+color fish160 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+color fish117 pink
+color fish142 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+{
+circle head630 10.5 32 0.5 pink solid
+polygon tail630 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag630 10.5 32 1 black ..
+set fish630 3 head630 tail630 tag630
+}
+color fish131 pink
+color fish146 lightskyblue
+color fish120 red
+color fish166 blue
+delay 10
+color fish120 pink
+color fish166 lightskyblue
+color fish164 red
+color fish188 blue
+delay 10
+color fish164 pink
+color fish188 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+{
+circle head633 16.5 33 0.5 lightskyblue solid
+polygon tail633 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag633 16.5 33 1 black ..
+set fish633 3 head633 tail633 tag633
+}
+color fish117 pink
+color fish142 lightskyblue
+color fish117 red
+color fish142 blue
+delay 10
+{
+circle head634 18 33 0.5 lightskyblue solid
+polygon tail634 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag634 18 33 1 black ..
+set fish634 3 head634 tail634 tag634
+}
+color fish117 pink
+color fish142 lightskyblue
+color fish131 red
+color fish146 blue
+delay 10
+color fish131 pink
+color fish146 lightskyblue
+alter message Returns die
+{
+delete head160
+delete tail160
+delete tag160
+delete fish160
+}
+{
+delete head125
+delete tail125
+delete tag125
+delete fish125
+}
+{
+delete head142
+delete tail142
+delete tag142
+delete fish142
+}
+{
+delete head188
+delete tail188
+delete tag188
+delete fish188
+}
+{
+delete head146
+delete tail146
+delete tag146
+delete fish146
+}
+{
+delete head166
+delete tail166
+delete tag166
+delete fish166
+}
+{
+delete head162
+delete tail162
+delete tag162
+delete fish162
+}
+{
+delete head113
+delete tail113
+delete tag113
+delete fish113
+}
+{
+delete head155
+delete tail155
+delete tag155
+delete fish155
+}
+{
+delete head117
+delete tail117
+delete tag117
+delete fish117
+}
+{
+delete head164
+delete tail164
+delete tag164
+delete fish164
+}
+{
+delete head131
+delete tail131
+delete tag131
+delete fish131
+}
+{
+delete head120
+delete tail120
+delete tag120
+delete fish120
+}
+{
+delete head157
+delete tail157
+delete tag157
+delete fish157
+}
+{
+delete head109
+delete tail109
+delete tag109
+delete fish109
+}
+{
+delete head141
+delete tail141
+delete tag141
+delete fish141
+}
+{
+delete head202
+delete tail202
+delete tag202
+delete fish202
+}
+{
+delete head102
+delete tail102
+delete tag102
+delete fish102
+}
+{
+delete head43
+delete tail43
+delete tag43
+delete fish43
+}
+{
+delete head156
+delete tail156
+delete tag156
+delete fish156
+}
+{
+delete head169
+delete tail169
+delete tag169
+delete fish169
+}
+alter message Increasing ages by 1...
+{
+jump fish93 3 24
+jump fish84 4.5 24
+jump fish76 6 24
+jump fish67 7.5 24
+jump fish63 9 24
+jump fish51 10.5 24
+jump fish47 12 24
+jump fish46 13.5 24
+jump fish30 15 24
+jump fish19 16.5 24
+}
+{
+jump fish171 3 21
+jump fish170 4.5 21
+jump fish101 6 21
+}
+set mgroup 1 dummy
+set fgroup 3 fish171 fish170 fish101
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 15 fish94 fish89 fish82 fish77 fish73 fish70 fish62 fish61 fish59 fish35 fish34 fish31 fish23 fish20 fish17
+set fgroup 10 fish93 fish84 fish76 fish67 fish63 fish51 fish47 fish46 fish30 fish19
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish485 fish474 fish471 fish470 fish467 fish459 fish431 fish430 fish425 fish424 fish417
+set fgroup 15 fish479 fish478 fish472 fish469 fish453 fish452 fish451 fish449 fish447 fish442 fish435 fish433 fish426 fish423 fish422
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 12 fish559 fish550 fish544 fish542 fish519 fish511 fish510 fish503 fish500 fish497 fish494 fish492
+set fgroup 17 fish560 fish555 fish548 fish547 fish545 fish539 fish537 fish533 fish532 fish531 fish528 fish518 fish514 fish507 fish501 fish498 fish487
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish630 fish628 fish592 fish588 fish571 fish570
+set fgroup 11 fish634 fish633 fish621 fish620 fish619 fish617 fish603 fish598 fish583 fish575 fish569
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish171 3 14
+move fish170 4.5 14
+move fish101 6 14
+move fish93 7.5 14
+move fish76 9 14
+move fish67 10.5 14
+move fish63 12 14
+move fish47 13.5 14
+move fish46 15 14
+move fish30 16.5 14
+move fish19 18 14
+move fish478 19.5 14
+move fish435 21 14
+move fish426 22.5 14
+move fish17 24 14
+move fish20 25.5 14
+move fish23 27 14
+move fish31 28.5 14
+move fish34 30 14
+move fish35 31.5 14
+move fish59 33 14
+move fish61 34.5 14
+move fish62 36 14
+move fish70 37.5 14
+move fish73 39 14
+move fish77 40.5 14
+move fish82 42 14
+move fish89 43.5 14
+move fish94 45 14
+alter message Selecting parents; k = 16
+move fish76 3 11
+move fish435 4.5 11
+move fish30 6 11
+move fish47 7.5 11
+move fish478 9 11
+move fish61 3 10
+move fish23 4.5 10
+move fish171 10.5 11
+move fish89 6 10
+move fish63 12 11
+move fish62 7.5 10
+move fish70 9 10
+move fish73 10.5 10
+move fish77 12 10
+move fish17 13.5 10
+move fish46 13.5 11
+alter message Selecting mates...
+move fish17 3 7
+move fish46 4.5 7
+move fish77 3 6
+move fish63 4.5 6
+move fish73 3 5
+move fish171 4.5 5
+move fish70 3 4
+move fish478 4.5 4
+move fish62 3 3
+move fish47 4.5 3
+move fish89 3 2
+move fish30 4.5 2
+move fish23 3 1
+move fish435 4.5 1
+move fish61 3 0
+move fish76 4.5 0
+% r = 5
+alter message Creating 8 x 10 = 80 offspring...
+color fish23 red
+color fish435 blue
+delay 10
+{
+circle head636 3 33 0.5 lightskyblue solid
+polygon tail636 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag636 3 33 1 black ...
+set fish636 3 head636 tail636 tag636
+}
+color fish23 pink
+color fish435 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+{
+circle head637 3 32 0.5 pink solid
+polygon tail637 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag637 3 32 1 black ..
+set fish637 3 head637 tail637 tag637
+}
+color fish77 pink
+color fish63 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+{
+circle head640 4.5 32 0.5 pink solid
+polygon tail640 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag640 4.5 32 1 black ..
+set fish640 3 head640 tail640 tag640
+}
+color fish70 pink
+color fish478 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+{
+circle head642 4.5 33 0.5 lightskyblue solid
+polygon tail642 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag642 4.5 33 1 black ..
+set fish642 3 head642 tail642 tag642
+}
+color fish62 pink
+color fish47 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+color fish70 pink
+color fish478 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+{
+circle head645 6 32 0.5 pink solid
+polygon tail645 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag645 6 32 1 black ..
+set fish645 3 head645 tail645 tag645
+}
+color fish70 pink
+color fish478 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+{
+circle head650 7.5 32 0.5 pink solid
+polygon tail650 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag650 7.5 32 1 black ..
+set fish650 3 head650 tail650 tag650
+}
+color fish73 pink
+color fish171 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish23 red
+color fish435 blue
+delay 10
+color fish23 pink
+color fish435 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+{
+circle head656 9 32 0.5 pink solid
+polygon tail656 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag656 9 32 1 black ..
+set fish656 3 head656 tail656 tag656
+}
+color fish61 pink
+color fish76 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+{
+circle head659 10.5 32 0.5 pink solid
+polygon tail659 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag659 10.5 32 1 black ..
+set fish659 3 head659 tail659 tag659
+}
+color fish70 pink
+color fish478 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish23 red
+color fish435 blue
+delay 10
+{
+circle head661 12 32 0.5 pink solid
+polygon tail661 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag661 12 32 1 black ..
+set fish661 3 head661 tail661 tag661
+}
+color fish23 pink
+color fish435 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+{
+circle head665 6 33 0.5 lightskyblue solid
+polygon tail665 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag665 6 33 1 black ..
+set fish665 3 head665 tail665 tag665
+}
+color fish73 pink
+color fish171 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish23 red
+color fish435 blue
+delay 10
+color fish23 pink
+color fish435 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+color fish70 pink
+color fish478 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+{
+circle head670 7.5 33 0.5 lightskyblue solid
+polygon tail670 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag670 7.5 33 1 black ...
+set fish670 3 head670 tail670 tag670
+}
+color fish62 pink
+color fish47 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish23 red
+color fish435 blue
+delay 10
+{
+circle head675 13.5 32 0.5 pink solid
+polygon tail675 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag675 13.5 32 1 black ..
+set fish675 3 head675 tail675 tag675
+}
+color fish23 pink
+color fish435 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+{
+circle head680 9 33 0.5 lightskyblue solid
+polygon tail680 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag680 9 33 1 black ..
+set fish680 3 head680 tail680 tag680
+}
+color fish89 pink
+color fish30 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+{
+circle head681 15 32 0.5 pink solid
+polygon tail681 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag681 15 32 1 black ..
+set fish681 3 head681 tail681 tag681
+}
+color fish77 pink
+color fish63 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+{
+circle head683 16.5 32 0.5 pink solid
+polygon tail683 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag683 16.5 32 1 black ..
+set fish683 3 head683 tail683 tag683
+}
+color fish61 pink
+color fish76 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+{
+circle head687 10.5 33 0.5 lightskyblue solid
+polygon tail687 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag687 10.5 33 1 black ..
+set fish687 3 head687 tail687 tag687
+}
+color fish61 pink
+color fish76 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+{
+circle head688 18 32 0.5 pink solid
+polygon tail688 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag688 18 32 1 black ..
+set fish688 3 head688 tail688 tag688
+}
+color fish89 pink
+color fish30 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+{
+circle head689 12 33 0.5 lightskyblue solid
+polygon tail689 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag689 12 33 1 black ...
+set fish689 3 head689 tail689 tag689
+}
+color fish73 pink
+color fish171 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+{
+circle head690 13.5 33 0.5 lightskyblue solid
+polygon tail690 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag690 13.5 33 1 black ..
+set fish690 3 head690 tail690 tag690
+}
+color fish61 pink
+color fish76 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+{
+circle head693 15 33 0.5 lightskyblue solid
+polygon tail693 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag693 15 33 1 black ..
+set fish693 3 head693 tail693 tag693
+}
+color fish77 pink
+color fish63 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+color fish89 pink
+color fish30 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+{
+circle head700 19.5 32 0.5 pink solid
+polygon tail700 5 pink solid 19.5 31.8 18.7 31.5 19 32 18.7 32.5 19.5 32.2
+text tag700 19.5 32 1 black ..
+set fish700 3 head700 tail700 tag700
+}
+color fish77 pink
+color fish63 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+color fish77 pink
+color fish63 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+color fish70 pink
+color fish478 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+color fish17 pink
+color fish46 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+{
+circle head706 21 32 0.5 pink solid
+polygon tail706 5 pink solid 21 31.8 20.2 31.5 20.5 32 20.2 32.5 21 32.2
+text tag706 21 32 1 black ..
+set fish706 3 head706 tail706 tag706
+}
+color fish73 pink
+color fish171 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+color fish73 pink
+color fish171 lightskyblue
+color fish73 red
+color fish171 blue
+delay 10
+{
+circle head708 22.5 32 0.5 pink solid
+polygon tail708 5 pink solid 22.5 31.8 21.7 31.5 22 32 21.7 32.5 22.5 32.2
+text tag708 22.5 32 1 black ..
+set fish708 3 head708 tail708 tag708
+}
+color fish73 pink
+color fish171 lightskyblue
+color fish62 red
+color fish47 blue
+delay 10
+color fish62 pink
+color fish47 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+{
+circle head710 24 32 0.5 pink solid
+polygon tail710 5 pink solid 24 31.8 23.2 31.5 23.5 32 23.2 32.5 24 32.2
+text tag710 24 32 1 black ..
+set fish710 3 head710 tail710 tag710
+}
+color fish89 pink
+color fish30 lightskyblue
+color fish89 red
+color fish30 blue
+delay 10
+{
+circle head711 25.5 32 0.5 pink solid
+polygon tail711 5 pink solid 25.5 31.8 24.7 31.5 25 32 24.7 32.5 25.5 32.2
+text tag711 25.5 32 1 black ..
+set fish711 3 head711 tail711 tag711
+}
+color fish89 pink
+color fish30 lightskyblue
+color fish77 red
+color fish63 blue
+delay 10
+{
+circle head712 16.5 33 0.5 lightskyblue solid
+polygon tail712 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag712 16.5 33 1 black ..
+set fish712 3 head712 tail712 tag712
+}
+color fish77 pink
+color fish63 lightskyblue
+color fish17 red
+color fish46 blue
+delay 10
+{
+circle head713 27 32 0.5 pink solid
+polygon tail713 5 pink solid 27 31.8 26.2 31.5 26.5 32 26.2 32.5 27 32.2
+text tag713 27 32 1 black ..
+set fish713 3 head713 tail713 tag713
+}
+color fish17 pink
+color fish46 lightskyblue
+color fish70 red
+color fish478 blue
+delay 10
+{
+circle head714 28.5 32 0.5 pink solid
+polygon tail714 5 pink solid 28.5 31.8 27.7 31.5 28 32 27.7 32.5 28.5 32.2
+text tag714 28.5 32 1 black ..
+set fish714 3 head714 tail714 tag714
+}
+color fish70 pink
+color fish478 lightskyblue
+color fish61 red
+color fish76 blue
+delay 10
+color fish61 pink
+color fish76 lightskyblue
+alter message Returns die
+{
+delete head46
+delete tail46
+delete tag46
+delete fish46
+}
+{
+delete head63
+delete tail63
+delete tag63
+delete fish63
+}
+{
+delete head171
+delete tail171
+delete tag171
+delete fish171
+}
+{
+delete head478
+delete tail478
+delete tag478
+delete fish478
+}
+{
+delete head47
+delete tail47
+delete tag47
+delete fish47
+}
+{
+delete head30
+delete tail30
+delete tag30
+delete fish30
+}
+{
+delete head435
+delete tail435
+delete tag435
+delete fish435
+}
+{
+delete head76
+delete tail76
+delete tag76
+delete fish76
+}
+{
+delete head17
+delete tail17
+delete tag17
+delete fish17
+}
+{
+delete head77
+delete tail77
+delete tag77
+delete fish77
+}
+{
+delete head73
+delete tail73
+delete tag73
+delete fish73
+}
+{
+delete head70
+delete tail70
+delete tag70
+delete fish70
+}
+{
+delete head62
+delete tail62
+delete tag62
+delete fish62
+}
+{
+delete head89
+delete tail89
+delete tag89
+delete fish89
+}
+{
+delete head23
+delete tail23
+delete tag23
+delete fish23
+}
+{
+delete head61
+delete tail61
+delete tag61
+delete fish61
+}
+{
+delete head170
+delete tail170
+delete tag170
+delete fish170
+}
+{
+delete head101
+delete tail101
+delete tag101
+delete fish101
+}
+{
+delete head93
+delete tail93
+delete tag93
+delete fish93
+}
+{
+delete head67
+delete tail67
+delete tag67
+delete fish67
+}
+{
+delete head19
+delete tail19
+delete tag19
+delete fish19
+}
+{
+delete head426
+delete tail426
+delete tag426
+delete fish426
+}
+{
+delete head20
+delete tail20
+delete tag20
+delete fish20
+}
+{
+delete head31
+delete tail31
+delete tag31
+delete fish31
+}
+{
+delete head34
+delete tail34
+delete tag34
+delete fish34
+}
+{
+delete head35
+delete tail35
+delete tag35
+delete fish35
+}
+{
+delete head59
+delete tail59
+delete tag59
+delete fish59
+}
+{
+delete head82
+delete tail82
+delete tag82
+delete fish82
+}
+{
+delete head94
+delete tail94
+delete tag94
+delete fish94
+}
+alter message Increasing ages by 1...
+{
+jump fish479 3 24
+jump fish472 4.5 24
+jump fish469 6 24
+jump fish453 7.5 24
+jump fish452 9 24
+jump fish451 10.5 24
+jump fish449 12 24
+jump fish447 13.5 24
+jump fish442 15 24
+jump fish433 16.5 24
+jump fish423 18 24
+jump fish422 19.5 24
+}
+{
+jump fish84 3 21
+jump fish51 4.5 21
+}
+set mgroup 1 dummy
+set fgroup 2 fish84 fish51
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish485 fish474 fish471 fish470 fish467 fish459 fish431 fish430 fish425 fish424 fish417
+set fgroup 12 fish479 fish472 fish469 fish453 fish452 fish451 fish449 fish447 fish442 fish433 fish423 fish422
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 12 fish559 fish550 fish544 fish542 fish519 fish511 fish510 fish503 fish500 fish497 fish494 fish492
+set fgroup 17 fish560 fish555 fish548 fish547 fish545 fish539 fish537 fish533 fish532 fish531 fish528 fish518 fish514 fish507 fish501 fish498 fish487
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish630 fish628 fish592 fish588 fish571 fish570
+set fgroup 11 fish634 fish633 fish621 fish620 fish619 fish617 fish603 fish598 fish583 fish575 fish569
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 18 fish714 fish713 fish711 fish710 fish708 fish706 fish700 fish688 fish683 fish681 fish675 fish661 fish659 fish656 fish650 fish645 fish640 fish637
+set fgroup 10 fish712 fish693 fish690 fish689 fish687 fish680 fish670 fish665 fish642 fish636
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish84 3 14
+move fish51 4.5 14
+move fish479 6 14
+move fish472 7.5 14
+move fish469 9 14
+move fish453 10.5 14
+move fish451 12 14
+move fish447 13.5 14
+move fish442 15 14
+move fish433 16.5 14
+move fish423 18 14
+move fish422 19.5 14
+move fish560 21 14
+move fish555 22.5 14
+move fish548 24 14
+move fish547 25.5 14
+move fish498 27 14
+move fish487 28.5 14
+move fish417 30 14
+move fish424 31.5 14
+move fish425 33 14
+move fish430 34.5 14
+move fish431 36 14
+move fish459 37.5 14
+move fish467 39 14
+move fish470 40.5 14
+move fish471 42 14
+move fish474 43.5 14
+move fish485 45 14
+alter message Selecting parents; k = 16
+move fish447 3 11
+move fish422 4.5 11
+move fish431 3 10
+move fish470 4.5 10
+move fish472 6 11
+move fish459 6 10
+move fish433 7.5 11
+move fish442 9 11
+move fish430 7.5 10
+move fish498 10.5 11
+move fish424 9 10
+move fish548 12 11
+move fish560 13.5 11
+move fish84 15 11
+move fish479 16.5 11
+move fish471 10.5 10
+alter message Selecting mates...
+move fish471 3 7
+move fish424 3 6
+move fish430 3 5
+move fish459 3 4
+move fish470 3 3
+move fish431 3 2
+move fish479 4.5 7
+move fish84 4.5 6
+move fish560 4.5 5
+move fish548 4.5 4
+move fish498 4.5 3
+move fish442 4.5 2
+move fish433 6 7
+move fish472 6 6
+move fish422 6 5
+move fish447 6 4
+% r = 5
+alter message Creating 6 x 10 = 60 offspring...
+color fish424 red
+color fish472 blue
+delay 10
+{
+circle head716 3 33 0.5 lightskyblue solid
+polygon tail716 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag716 3 33 1 black ..
+set fish716 3 head716 tail716 tag716
+}
+color fish424 pink
+color fish472 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+{
+circle head718 4.5 33 0.5 lightskyblue solid
+polygon tail718 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag718 4.5 33 1 black ..
+set fish718 3 head718 tail718 tag718
+}
+color fish431 pink
+color fish442 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish459 red
+color fish548 blue
+delay 10
+color fish459 pink
+color fish548 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish424 red
+color fish472 blue
+delay 10
+{
+circle head724 3 32 0.5 pink solid
+polygon tail724 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag724 3 32 1 black ..
+set fish724 3 head724 tail724 tag724
+}
+color fish424 pink
+color fish472 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+{
+circle head726 6 33 0.5 lightskyblue solid
+polygon tail726 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag726 6 33 1 black ..
+set fish726 3 head726 tail726 tag726
+}
+color fish430 pink
+color fish422 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+{
+circle head730 4.5 32 0.5 pink solid
+polygon tail730 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag730 4.5 32 1 black ..
+set fish730 3 head730 tail730 tag730
+}
+color fish470 pink
+color fish498 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+{
+circle head731 6 32 0.5 pink solid
+polygon tail731 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag731 6 32 1 black ..
+set fish731 3 head731 tail731 tag731
+}
+color fish431 pink
+color fish442 lightskyblue
+color fish424 red
+color fish84 blue
+delay 10
+color fish424 pink
+color fish84 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish471 red
+color fish479 blue
+delay 10
+color fish471 pink
+color fish479 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+{
+circle head735 7.5 32 0.5 pink solid
+polygon tail735 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag735 7.5 32 1 black ..
+set fish735 3 head735 tail735 tag735
+}
+color fish430 pink
+color fish422 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+{
+circle head736 7.5 33 0.5 lightskyblue solid
+polygon tail736 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag736 7.5 33 1 black .
+set fish736 3 head736 tail736 tag736
+}
+color fish430 pink
+color fish422 lightskyblue
+color fish471 red
+color fish433 blue
+delay 10
+color fish471 pink
+color fish433 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish430 red
+color fish560 blue
+delay 10
+color fish430 pink
+color fish560 lightskyblue
+color fish430 red
+color fish560 blue
+delay 10
+color fish430 pink
+color fish560 lightskyblue
+color fish471 red
+color fish433 blue
+delay 10
+color fish471 pink
+color fish433 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish424 red
+color fish84 blue
+delay 10
+{
+circle head743 9 33 0.5 lightskyblue solid
+polygon tail743 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag743 9 33 1 black ...
+set fish743 3 head743 tail743 tag743
+}
+color fish424 pink
+color fish84 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+{
+circle head744 9 32 0.5 pink solid
+polygon tail744 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag744 9 32 1 black ..
+set fish744 3 head744 tail744 tag744
+}
+color fish470 pink
+color fish498 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+{
+circle head745 10.5 33 0.5 lightskyblue solid
+polygon tail745 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag745 10.5 33 1 black ..
+set fish745 3 head745 tail745 tag745
+}
+color fish470 pink
+color fish498 lightskyblue
+color fish471 red
+color fish479 blue
+delay 10
+{
+circle head746 10.5 32 0.5 pink solid
+polygon tail746 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag746 10.5 32 1 black ..
+set fish746 3 head746 tail746 tag746
+}
+color fish471 pink
+color fish479 lightskyblue
+color fish471 red
+color fish479 blue
+delay 10
+color fish471 pink
+color fish479 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+{
+circle head749 12 33 0.5 lightskyblue solid
+polygon tail749 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag749 12 33 1 black ..
+set fish749 3 head749 tail749 tag749
+}
+color fish431 pink
+color fish442 lightskyblue
+color fish424 red
+color fish472 blue
+delay 10
+{
+circle head750 12 32 0.5 pink solid
+polygon tail750 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag750 12 32 1 black ..
+set fish750 3 head750 tail750 tag750
+}
+color fish424 pink
+color fish472 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+{
+circle head753 13.5 33 0.5 lightskyblue solid
+polygon tail753 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag753 13.5 33 1 black .
+set fish753 3 head753 tail753 tag753
+}
+color fish430 pink
+color fish422 lightskyblue
+color fish424 red
+color fish84 blue
+delay 10
+color fish424 pink
+color fish84 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+{
+circle head755 15 33 0.5 lightskyblue solid
+polygon tail755 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag755 15 33 1 black ..
+set fish755 3 head755 tail755 tag755
+}
+color fish431 pink
+color fish442 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+{
+circle head756 16.5 33 0.5 lightskyblue solid
+polygon tail756 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag756 16.5 33 1 black .
+set fish756 3 head756 tail756 tag756
+}
+color fish470 pink
+color fish498 lightskyblue
+color fish424 red
+color fish84 blue
+delay 10
+{
+circle head757 13.5 32 0.5 pink solid
+polygon tail757 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag757 13.5 32 1 black ..
+set fish757 3 head757 tail757 tag757
+}
+color fish424 pink
+color fish84 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+color fish431 pink
+color fish442 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish430 red
+color fish560 blue
+delay 10
+color fish430 pink
+color fish560 lightskyblue
+color fish424 red
+color fish472 blue
+delay 10
+{
+circle head761 15 32 0.5 pink solid
+polygon tail761 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag761 15 32 1 black ..
+set fish761 3 head761 tail761 tag761
+}
+color fish424 pink
+color fish472 lightskyblue
+color fish424 red
+color fish84 blue
+delay 10
+{
+circle head762 18 33 0.5 lightskyblue solid
+polygon tail762 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag762 18 33 1 black ..
+set fish762 3 head762 tail762 tag762
+}
+color fish424 pink
+color fish84 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish459 red
+color fish548 blue
+delay 10
+{
+circle head764 19.5 33 0.5 lightskyblue solid
+polygon tail764 5 lightskyblue solid 19.5 32.8 18.7 32.5 19 33 18.7 33.5 19.5 33.2
+text tag764 19.5 33 1 black ..
+set fish764 3 head764 tail764 tag764
+}
+color fish459 pink
+color fish548 lightskyblue
+color fish431 red
+color fish442 blue
+delay 10
+{
+circle head765 21 33 0.5 lightskyblue solid
+polygon tail765 5 lightskyblue solid 21 32.8 20.2 32.5 20.5 33 20.2 33.5 21 33.2
+text tag765 21 33 1 black ..
+set fish765 3 head765 tail765 tag765
+}
+color fish431 pink
+color fish442 lightskyblue
+color fish459 red
+color fish447 blue
+delay 10
+color fish459 pink
+color fish447 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+{
+circle head767 16.5 32 0.5 pink solid
+polygon tail767 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag767 16.5 32 1 black ..
+set fish767 3 head767 tail767 tag767
+}
+color fish470 pink
+color fish498 lightskyblue
+color fish424 red
+color fish472 blue
+delay 10
+color fish424 pink
+color fish472 lightskyblue
+color fish471 red
+color fish433 blue
+delay 10
+color fish471 pink
+color fish433 lightskyblue
+color fish459 red
+color fish447 blue
+delay 10
+{
+circle head770 18 32 0.5 pink solid
+polygon tail770 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag770 18 32 1 black ..
+set fish770 3 head770 tail770 tag770
+}
+color fish459 pink
+color fish447 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+color fish459 red
+color fish447 blue
+delay 10
+color fish459 pink
+color fish447 lightskyblue
+color fish430 red
+color fish422 blue
+delay 10
+color fish430 pink
+color fish422 lightskyblue
+color fish470 red
+color fish498 blue
+delay 10
+color fish470 pink
+color fish498 lightskyblue
+alter message Returns die
+{
+delete head479
+delete tail479
+delete tag479
+delete fish479
+}
+{
+delete head84
+delete tail84
+delete tag84
+delete fish84
+}
+{
+delete head560
+delete tail560
+delete tag560
+delete fish560
+}
+{
+delete head548
+delete tail548
+delete tag548
+delete fish548
+}
+{
+delete head498
+delete tail498
+delete tag498
+delete fish498
+}
+{
+delete head442
+delete tail442
+delete tag442
+delete fish442
+}
+{
+delete head433
+delete tail433
+delete tag433
+delete fish433
+}
+{
+delete head472
+delete tail472
+delete tag472
+delete fish472
+}
+{
+delete head422
+delete tail422
+delete tag422
+delete fish422
+}
+{
+delete head447
+delete tail447
+delete tag447
+delete fish447
+}
+{
+delete head471
+delete tail471
+delete tag471
+delete fish471
+}
+{
+delete head424
+delete tail424
+delete tag424
+delete fish424
+}
+{
+delete head430
+delete tail430
+delete tag430
+delete fish430
+}
+{
+delete head459
+delete tail459
+delete tag459
+delete fish459
+}
+{
+delete head470
+delete tail470
+delete tag470
+delete fish470
+}
+{
+delete head431
+delete tail431
+delete tag431
+delete fish431
+}
+{
+delete head51
+delete tail51
+delete tag51
+delete fish51
+}
+{
+delete head469
+delete tail469
+delete tag469
+delete fish469
+}
+{
+delete head453
+delete tail453
+delete tag453
+delete fish453
+}
+{
+delete head451
+delete tail451
+delete tag451
+delete fish451
+}
+{
+delete head423
+delete tail423
+delete tag423
+delete fish423
+}
+{
+delete head555
+delete tail555
+delete tag555
+delete fish555
+}
+{
+delete head547
+delete tail547
+delete tag547
+delete fish547
+}
+{
+delete head487
+delete tail487
+delete tag487
+delete fish487
+}
+{
+delete head417
+delete tail417
+delete tag417
+delete fish417
+}
+{
+delete head425
+delete tail425
+delete tag425
+delete fish425
+}
+{
+delete head467
+delete tail467
+delete tag467
+delete fish467
+}
+{
+delete head474
+delete tail474
+delete tag474
+delete fish474
+}
+{
+delete head485
+delete tail485
+delete tag485
+delete fish485
+}
+alter message Increasing ages by 1...
+{
+jump fish545 3 24
+jump fish539 4.5 24
+jump fish537 6 24
+jump fish533 7.5 24
+jump fish532 9 24
+jump fish531 10.5 24
+jump fish528 12 24
+jump fish518 13.5 24
+jump fish514 15 24
+jump fish507 16.5 24
+jump fish501 18 24
+}
+{
+jump fish452 3 21
+jump fish449 4.5 21
+}
+set mgroup 1 dummy
+set fgroup 2 fish452 fish449
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 12 fish559 fish550 fish544 fish542 fish519 fish511 fish510 fish503 fish500 fish497 fish494 fish492
+set fgroup 11 fish545 fish539 fish537 fish533 fish532 fish531 fish528 fish518 fish514 fish507 fish501
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish630 fish628 fish592 fish588 fish571 fish570
+set fgroup 11 fish634 fish633 fish621 fish620 fish619 fish617 fish603 fish598 fish583 fish575 fish569
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 18 fish714 fish713 fish711 fish710 fish708 fish706 fish700 fish688 fish683 fish681 fish675 fish661 fish659 fish656 fish650 fish645 fish640 fish637
+set fgroup 10 fish712 fish693 fish690 fish689 fish687 fish680 fish670 fish665 fish642 fish636
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish770 fish767 fish761 fish757 fish750 fish746 fish744 fish735 fish731 fish730 fish724
+set fgroup 13 fish765 fish764 fish762 fish756 fish755 fish753 fish749 fish745 fish743 fish736 fish726 fish718 fish716
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish452 3 14
+move fish449 4.5 14
+move fish545 6 14
+move fish539 7.5 14
+move fish537 9 14
+move fish533 10.5 14
+move fish532 12 14
+move fish531 13.5 14
+move fish528 15 14
+move fish514 16.5 14
+move fish507 18 14
+move fish501 19.5 14
+move fish621 21 14
+move fish620 22.5 14
+move fish575 24 14
+move fish569 25.5 14
+move fish492 27 14
+move fish494 28.5 14
+move fish497 30 14
+move fish500 31.5 14
+move fish503 33 14
+move fish510 34.5 14
+move fish511 36 14
+move fish519 37.5 14
+move fish542 39 14
+move fish544 40.5 14
+move fish550 42 14
+move fish559 43.5 14
+alter message Selecting parents; k = 16
+move fish544 3 10
+move fish533 3 11
+move fish514 4.5 11
+move fish575 6 11
+move fish545 7.5 11
+move fish528 9 11
+move fish519 4.5 10
+move fish500 6 10
+move fish539 10.5 11
+move fish621 12 11
+move fish449 13.5 11
+move fish503 7.5 10
+move fish559 9 10
+move fish507 15 11
+move fish494 10.5 10
+move fish531 16.5 11
+alter message Selecting mates...
+move fish494 3 7
+move fish559 3 6
+move fish503 3 5
+move fish500 3 4
+move fish519 3 3
+move fish544 3 2
+move fish531 4.5 7
+move fish507 4.5 6
+move fish449 4.5 5
+move fish621 4.5 4
+move fish539 4.5 3
+move fish528 4.5 2
+move fish545 6 7
+move fish575 6 6
+move fish514 6 5
+move fish533 6 4
+% r = 5
+alter message Creating 6 x 10 = 60 offspring...
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish559 red
+color fish575 blue
+delay 10
+color fish559 pink
+color fish575 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+color fish494 pink
+color fish531 lightskyblue
+color fish503 red
+color fish449 blue
+delay 10
+{
+circle head780 3 32 0.5 pink solid
+polygon tail780 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag780 3 32 1 black ..
+set fish780 3 head780 tail780 tag780
+}
+color fish503 pink
+color fish449 lightskyblue
+color fish500 red
+color fish621 blue
+delay 10
+{
+circle head781 3 33 0.5 lightskyblue solid
+polygon tail781 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag781 3 33 1 black ..
+set fish781 3 head781 tail781 tag781
+}
+color fish500 pink
+color fish621 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish503 red
+color fish514 blue
+delay 10
+color fish503 pink
+color fish514 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+color fish494 pink
+color fish531 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+{
+circle head786 4.5 33 0.5 lightskyblue solid
+polygon tail786 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag786 4.5 33 1 black ..
+set fish786 3 head786 tail786 tag786
+}
+color fish559 pink
+color fish507 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+{
+circle head787 4.5 32 0.5 pink solid
+polygon tail787 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag787 4.5 32 1 black ..
+set fish787 3 head787 tail787 tag787
+}
+color fish494 pink
+color fish531 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish559 red
+color fish575 blue
+delay 10
+color fish559 pink
+color fish575 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+color fish500 pink
+color fish533 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+{
+circle head794 6 33 0.5 lightskyblue solid
+polygon tail794 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag794 6 33 1 black .
+set fish794 3 head794 tail794 tag794
+}
+color fish519 pink
+color fish539 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+{
+circle head796 6 32 0.5 pink solid
+polygon tail796 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag796 6 32 1 black ..
+set fish796 3 head796 tail796 tag796
+}
+color fish519 pink
+color fish539 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+{
+circle head798 7.5 33 0.5 lightskyblue solid
+polygon tail798 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag798 7.5 33 1 black ...
+set fish798 3 head798 tail798 tag798
+}
+color fish544 pink
+color fish528 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish503 red
+color fish514 blue
+delay 10
+color fish503 pink
+color fish514 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+{
+circle head803 7.5 32 0.5 pink solid
+polygon tail803 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag803 7.5 32 1 black ..
+set fish803 3 head803 tail803 tag803
+}
+color fish494 pink
+color fish531 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+{
+circle head804 9 32 0.5 pink solid
+polygon tail804 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag804 9 32 1 black ..
+set fish804 3 head804 tail804 tag804
+}
+color fish500 pink
+color fish533 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+{
+circle head806 9 33 0.5 lightskyblue solid
+polygon tail806 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag806 9 33 1 black ..
+set fish806 3 head806 tail806 tag806
+}
+color fish500 pink
+color fish533 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+color fish500 pink
+color fish533 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+color fish500 pink
+color fish533 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+{
+circle head812 10.5 33 0.5 lightskyblue solid
+polygon tail812 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag812 10.5 33 1 black ...
+set fish812 3 head812 tail812 tag812
+}
+color fish519 pink
+color fish539 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+color fish494 pink
+color fish531 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+color fish494 pink
+color fish531 lightskyblue
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish500 red
+color fish621 blue
+delay 10
+{
+circle head817 10.5 32 0.5 pink solid
+polygon tail817 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag817 10.5 32 1 black ..
+set fish817 3 head817 tail817 tag817
+}
+color fish500 pink
+color fish621 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish503 red
+color fish449 blue
+delay 10
+{
+circle head820 12 33 0.5 lightskyblue solid
+polygon tail820 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag820 12 33 1 black ..
+set fish820 3 head820 tail820 tag820
+}
+color fish503 pink
+color fish449 lightskyblue
+color fish559 red
+color fish507 blue
+delay 10
+color fish559 pink
+color fish507 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+{
+circle head824 13.5 33 0.5 lightskyblue solid
+polygon tail824 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag824 13.5 33 1 black ..
+set fish824 3 head824 tail824 tag824
+}
+color fish519 pink
+color fish539 lightskyblue
+color fish494 red
+color fish531 blue
+delay 10
+color fish494 pink
+color fish531 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+{
+circle head826 15 33 0.5 lightskyblue solid
+polygon tail826 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag826 15 33 1 black .
+set fish826 3 head826 tail826 tag826
+}
+color fish544 pink
+color fish528 lightskyblue
+color fish500 red
+color fish533 blue
+delay 10
+color fish500 pink
+color fish533 lightskyblue
+color fish500 red
+color fish621 blue
+delay 10
+color fish500 pink
+color fish621 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+color fish544 pink
+color fish528 lightskyblue
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish519 red
+color fish539 blue
+delay 10
+color fish519 pink
+color fish539 lightskyblue
+color fish494 red
+color fish545 blue
+delay 10
+color fish494 pink
+color fish545 lightskyblue
+color fish544 red
+color fish528 blue
+delay 10
+{
+circle head834 16.5 33 0.5 lightskyblue solid
+polygon tail834 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag834 16.5 33 1 black ..
+set fish834 3 head834 tail834 tag834
+}
+color fish544 pink
+color fish528 lightskyblue
+color fish500 red
+color fish621 blue
+delay 10
+color fish500 pink
+color fish621 lightskyblue
+alter message Returns die
+{
+delete head531
+delete tail531
+delete tag531
+delete fish531
+}
+{
+delete head507
+delete tail507
+delete tag507
+delete fish507
+}
+{
+delete head449
+delete tail449
+delete tag449
+delete fish449
+}
+{
+delete head621
+delete tail621
+delete tag621
+delete fish621
+}
+{
+delete head539
+delete tail539
+delete tag539
+delete fish539
+}
+{
+delete head528
+delete tail528
+delete tag528
+delete fish528
+}
+{
+delete head545
+delete tail545
+delete tag545
+delete fish545
+}
+{
+delete head575
+delete tail575
+delete tag575
+delete fish575
+}
+{
+delete head514
+delete tail514
+delete tag514
+delete fish514
+}
+{
+delete head533
+delete tail533
+delete tag533
+delete fish533
+}
+{
+delete head494
+delete tail494
+delete tag494
+delete fish494
+}
+{
+delete head559
+delete tail559
+delete tag559
+delete fish559
+}
+{
+delete head503
+delete tail503
+delete tag503
+delete fish503
+}
+{
+delete head500
+delete tail500
+delete tag500
+delete fish500
+}
+{
+delete head519
+delete tail519
+delete tag519
+delete fish519
+}
+{
+delete head544
+delete tail544
+delete tag544
+delete fish544
+}
+{
+delete head452
+delete tail452
+delete tag452
+delete fish452
+}
+{
+delete head537
+delete tail537
+delete tag537
+delete fish537
+}
+{
+delete head532
+delete tail532
+delete tag532
+delete fish532
+}
+{
+delete head501
+delete tail501
+delete tag501
+delete fish501
+}
+{
+delete head620
+delete tail620
+delete tag620
+delete fish620
+}
+{
+delete head569
+delete tail569
+delete tag569
+delete fish569
+}
+{
+delete head492
+delete tail492
+delete tag492
+delete fish492
+}
+{
+delete head497
+delete tail497
+delete tag497
+delete fish497
+}
+{
+delete head510
+delete tail510
+delete tag510
+delete fish510
+}
+{
+delete head511
+delete tail511
+delete tag511
+delete fish511
+}
+{
+delete head542
+delete tail542
+delete tag542
+delete fish542
+}
+{
+delete head550
+delete tail550
+delete tag550
+delete fish550
+}
+alter message Increasing ages by 1...
+{
+jump fish634 3 24
+jump fish633 4.5 24
+jump fish619 6 24
+jump fish617 7.5 24
+jump fish603 9 24
+jump fish598 10.5 24
+jump fish583 12 24
+}
+{
+jump fish518 3 21
+}
+set mgroup 1 dummy
+set fgroup 1 fish518
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish630 fish628 fish592 fish588 fish571 fish570
+set fgroup 7 fish634 fish633 fish619 fish617 fish603 fish598 fish583
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 18 fish714 fish713 fish711 fish710 fish708 fish706 fish700 fish688 fish683 fish681 fish675 fish661 fish659 fish656 fish650 fish645 fish640 fish637
+set fgroup 10 fish712 fish693 fish690 fish689 fish687 fish680 fish670 fish665 fish642 fish636
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish770 fish767 fish761 fish757 fish750 fish746 fish744 fish735 fish731 fish730 fish724
+set fgroup 13 fish765 fish764 fish762 fish756 fish755 fish753 fish749 fish745 fish743 fish736 fish726 fish718 fish716
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish817 fish804 fish803 fish796 fish787 fish780
+set fgroup 10 fish834 fish826 fish824 fish820 fish812 fish806 fish798 fish794 fish786 fish781
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish518 3 14
+move fish634 4.5 14
+move fish633 6 14
+move fish617 7.5 14
+move fish603 9 14
+move fish598 10.5 14
+move fish583 12 14
+move fish570 13.5 14
+move fish571 15 14
+move fish588 16.5 14
+move fish592 18 14
+move fish628 19.5 14
+move fish630 21 14
+alter message Selecting parents; k = 13
+move fish592 3 10
+move fish570 4.5 10
+move fish617 3 11
+move fish583 4.5 11
+move fish571 6 10
+move fish603 6 11
+move fish630 7.5 10
+move fish628 9 10
+move fish588 10.5 10
+move fish598 7.5 11
+move fish634 9 11
+move fish633 10.5 11
+move fish518 12 11
+alter message Selecting mates...
+move fish588 3 7
+move fish628 3 6
+move fish630 3 5
+move fish571 3 4
+move fish570 3 3
+move fish592 3 2
+move fish518 4.5 7
+move fish633 4.5 6
+move fish634 4.5 5
+move fish598 4.5 4
+move fish603 4.5 3
+move fish583 4.5 2
+move fish617 6 7
+% r = 5
+alter message Creating 6 x 10 = 60 offspring...
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head836 3 32 0.5 pink solid
+polygon tail836 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag836 3 32 1 black ..
+set fish836 3 head836 tail836 tag836
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+{
+circle head837 4.5 32 0.5 pink solid
+polygon tail837 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag837 4.5 32 1 black ..
+set fish837 3 head837 tail837 tag837
+}
+color fish630 pink
+color fish634 lightskyblue
+color fish588 red
+color fish518 blue
+delay 10
+color fish588 pink
+color fish518 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+{
+circle head840 6 32 0.5 pink solid
+polygon tail840 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag840 6 32 1 black ..
+set fish840 3 head840 tail840 tag840
+}
+color fish571 pink
+color fish598 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head842 3 33 0.5 lightskyblue solid
+polygon tail842 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag842 3 33 1 black ..
+set fish842 3 head842 tail842 tag842
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+color fish571 pink
+color fish598 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+{
+circle head844 7.5 32 0.5 pink solid
+polygon tail844 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag844 7.5 32 1 black ..
+set fish844 3 head844 tail844 tag844
+}
+color fish571 pink
+color fish598 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+{
+circle head845 4.5 33 0.5 lightskyblue solid
+polygon tail845 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag845 4.5 33 1 black ..
+set fish845 3 head845 tail845 tag845
+}
+color fish628 pink
+color fish633 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+color fish570 pink
+color fish603 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+{
+circle head850 6 33 0.5 lightskyblue solid
+polygon tail850 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag850 6 33 1 black ..
+set fish850 3 head850 tail850 tag850
+}
+color fish571 pink
+color fish598 lightskyblue
+color fish588 red
+color fish617 blue
+delay 10
+color fish588 pink
+color fish617 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish588 red
+color fish617 blue
+delay 10
+{
+circle head853 9 32 0.5 pink solid
+polygon tail853 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag853 9 32 1 black ..
+set fish853 3 head853 tail853 tag853
+}
+color fish588 pink
+color fish617 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head854 7.5 33 0.5 lightskyblue solid
+polygon tail854 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag854 7.5 33 1 black ..
+set fish854 3 head854 tail854 tag854
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+{
+circle head857 10.5 32 0.5 pink solid
+polygon tail857 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag857 10.5 32 1 black ..
+set fish857 3 head857 tail857 tag857
+}
+color fish630 pink
+color fish634 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+color fish630 pink
+color fish634 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head859 12 32 0.5 pink solid
+polygon tail859 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag859 12 32 1 black ..
+set fish859 3 head859 tail859 tag859
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head860 13.5 32 0.5 pink solid
+polygon tail860 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag860 13.5 32 1 black ..
+set fish860 3 head860 tail860 tag860
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+color fish630 pink
+color fish634 lightskyblue
+color fish588 red
+color fish518 blue
+delay 10
+color fish588 pink
+color fish518 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head864 9 33 0.5 lightskyblue solid
+polygon tail864 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag864 9 33 1 black .
+set fish864 3 head864 tail864 tag864
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head865 15 32 0.5 pink solid
+polygon tail865 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag865 15 32 1 black ..
+set fish865 3 head865 tail865 tag865
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head866 10.5 33 0.5 lightskyblue solid
+polygon tail866 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag866 10.5 33 1 black ..
+set fish866 3 head866 tail866 tag866
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+{
+circle head867 16.5 32 0.5 pink solid
+polygon tail867 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag867 16.5 32 1 black ..
+set fish867 3 head867 tail867 tag867
+}
+color fish628 pink
+color fish633 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head868 12 33 0.5 lightskyblue solid
+polygon tail868 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag868 12 33 1 black ..
+set fish868 3 head868 tail868 tag868
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+color fish571 pink
+color fish598 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head871 18 32 0.5 pink solid
+polygon tail871 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag871 18 32 1 black ..
+set fish871 3 head871 tail871 tag871
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish588 red
+color fish617 blue
+delay 10
+{
+circle head872 19.5 32 0.5 pink solid
+polygon tail872 5 pink solid 19.5 31.8 18.7 31.5 19 32 18.7 32.5 19.5 32.2
+text tag872 19.5 32 1 black ..
+set fish872 3 head872 tail872 tag872
+}
+color fish588 pink
+color fish617 lightskyblue
+color fish588 red
+color fish617 blue
+delay 10
+{
+circle head873 13.5 33 0.5 lightskyblue solid
+polygon tail873 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag873 13.5 33 1 black ..
+set fish873 3 head873 tail873 tag873
+}
+color fish588 pink
+color fish617 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+color fish630 pink
+color fish634 lightskyblue
+color fish588 red
+color fish617 blue
+delay 10
+{
+circle head875 21 32 0.5 pink solid
+polygon tail875 5 pink solid 21 31.8 20.2 31.5 20.5 32 20.2 32.5 21 32.2
+text tag875 21 32 1 black ..
+set fish875 3 head875 tail875 tag875
+}
+color fish588 pink
+color fish617 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+color fish570 pink
+color fish603 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+color fish630 pink
+color fish634 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish630 red
+color fish634 blue
+delay 10
+color fish630 pink
+color fish634 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head883 22.5 32 0.5 pink solid
+polygon tail883 5 pink solid 22.5 31.8 21.7 31.5 22 32 21.7 32.5 22.5 32.2
+text tag883 22.5 32 1 black ..
+set fish883 3 head883 tail883 tag883
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+{
+circle head884 15 33 0.5 lightskyblue solid
+polygon tail884 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag884 15 33 1 black .
+set fish884 3 head884 tail884 tag884
+}
+color fish571 pink
+color fish598 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+color fish592 pink
+color fish583 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head886 16.5 33 0.5 lightskyblue solid
+polygon tail886 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag886 16.5 33 1 black ..
+set fish886 3 head886 tail886 tag886
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head887 24 32 0.5 pink solid
+polygon tail887 5 pink solid 24 31.8 23.2 31.5 23.5 32 23.2 32.5 24 32.2
+text tag887 24 32 1 black ..
+set fish887 3 head887 tail887 tag887
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+color fish571 pink
+color fish598 lightskyblue
+color fish592 red
+color fish583 blue
+delay 10
+{
+circle head891 18 33 0.5 lightskyblue solid
+polygon tail891 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag891 18 33 1 black .
+set fish891 3 head891 tail891 tag891
+}
+color fish592 pink
+color fish583 lightskyblue
+color fish588 red
+color fish518 blue
+delay 10
+{
+circle head892 25.5 32 0.5 pink solid
+polygon tail892 5 pink solid 25.5 31.8 24.7 31.5 25 32 24.7 32.5 25.5 32.2
+text tag892 25.5 32 1 black ..
+set fish892 3 head892 tail892 tag892
+}
+color fish588 pink
+color fish518 lightskyblue
+color fish571 red
+color fish598 blue
+delay 10
+{
+circle head893 27 32 0.5 pink solid
+polygon tail893 5 pink solid 27 31.8 26.2 31.5 26.5 32 26.2 32.5 27 32.2
+text tag893 27 32 1 black ..
+set fish893 3 head893 tail893 tag893
+}
+color fish571 pink
+color fish598 lightskyblue
+color fish570 red
+color fish603 blue
+delay 10
+{
+circle head894 19.5 33 0.5 lightskyblue solid
+polygon tail894 5 lightskyblue solid 19.5 32.8 18.7 32.5 19 33 18.7 33.5 19.5 33.2
+text tag894 19.5 33 1 black ..
+set fish894 3 head894 tail894 tag894
+}
+color fish570 pink
+color fish603 lightskyblue
+color fish628 red
+color fish633 blue
+delay 10
+color fish628 pink
+color fish633 lightskyblue
+alter message Returns die
+{
+delete head518
+delete tail518
+delete tag518
+delete fish518
+}
+{
+delete head633
+delete tail633
+delete tag633
+delete fish633
+}
+{
+delete head634
+delete tail634
+delete tag634
+delete fish634
+}
+{
+delete head598
+delete tail598
+delete tag598
+delete fish598
+}
+{
+delete head603
+delete tail603
+delete tag603
+delete fish603
+}
+{
+delete head583
+delete tail583
+delete tag583
+delete fish583
+}
+{
+delete head617
+delete tail617
+delete tag617
+delete fish617
+}
+{
+delete head588
+delete tail588
+delete tag588
+delete fish588
+}
+{
+delete head628
+delete tail628
+delete tag628
+delete fish628
+}
+{
+delete head630
+delete tail630
+delete tag630
+delete fish630
+}
+{
+delete head571
+delete tail571
+delete tag571
+delete fish571
+}
+{
+delete head570
+delete tail570
+delete tag570
+delete fish570
+}
+{
+delete head592
+delete tail592
+delete tag592
+delete fish592
+}
+alter message Increasing ages by 1...
+{
+jump fish712 3 24
+jump fish693 4.5 24
+jump fish690 6 24
+jump fish689 7.5 24
+jump fish687 9 24
+jump fish680 10.5 24
+jump fish670 12 24
+jump fish665 13.5 24
+jump fish642 15 24
+jump fish636 16.5 24
+}
+{
+jump fish619 3 21
+}
+set mgroup 1 dummy
+set fgroup 1 fish619
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 18 fish714 fish713 fish711 fish710 fish708 fish706 fish700 fish688 fish683 fish681 fish675 fish661 fish659 fish656 fish650 fish645 fish640 fish637
+set fgroup 10 fish712 fish693 fish690 fish689 fish687 fish680 fish670 fish665 fish642 fish636
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish770 fish767 fish761 fish757 fish750 fish746 fish744 fish735 fish731 fish730 fish724
+set fgroup 13 fish765 fish764 fish762 fish756 fish755 fish753 fish749 fish745 fish743 fish736 fish726 fish718 fish716
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish817 fish804 fish803 fish796 fish787 fish780
+set fgroup 10 fish834 fish826 fish824 fish820 fish812 fish806 fish798 fish794 fish786 fish781
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 17 fish893 fish892 fish887 fish883 fish875 fish872 fish871 fish867 fish865 fish860 fish859 fish857 fish853 fish844 fish840 fish837 fish836
+set fgroup 12 fish894 fish891 fish886 fish884 fish873 fish868 fish866 fish864 fish854 fish850 fish845 fish842
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish619 3 14
+move fish712 4.5 14
+move fish693 6 14
+move fish690 7.5 14
+move fish687 9 14
+move fish680 10.5 14
+move fish665 12 14
+move fish642 13.5 14
+move fish756 15 14
+move fish753 16.5 14
+move fish736 18 14
+move fish637 19.5 14
+move fish640 21 14
+move fish645 22.5 14
+move fish650 24 14
+move fish656 25.5 14
+move fish659 27 14
+move fish661 28.5 14
+move fish675 30 14
+move fish681 31.5 14
+move fish683 33 14
+move fish688 34.5 14
+move fish700 36 14
+move fish706 37.5 14
+move fish708 39 14
+move fish710 40.5 14
+move fish711 42 14
+move fish713 43.5 14
+move fish714 45 14
+alter message Selecting parents; k = 16
+move fish756 3 11
+move fish690 4.5 11
+move fish659 3 10
+move fish736 6 11
+move fish642 7.5 11
+move fish640 4.5 10
+move fish681 6 10
+move fish712 9 11
+move fish710 7.5 10
+move fish665 10.5 11
+move fish706 9 10
+move fish688 10.5 10
+move fish714 12 10
+move fish700 13.5 10
+move fish661 15 10
+move fish687 12 11
+alter message Selecting mates...
+move fish661 3 7
+move fish687 4.5 7
+move fish700 3 6
+move fish665 4.5 6
+move fish714 3 5
+move fish712 4.5 5
+move fish688 3 4
+move fish642 4.5 4
+move fish706 3 3
+move fish736 4.5 3
+move fish710 3 2
+move fish690 4.5 2
+move fish681 3 1
+move fish756 4.5 1
+% r = 5
+alter message Creating 7 x 10 = 70 offspring...
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+{
+circle head897 3 32 0.5 pink solid
+polygon tail897 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag897 3 32 1 black ..
+set fish897 3 head897 tail897 tag897
+}
+color fish700 pink
+color fish665 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+color fish710 pink
+color fish690 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+{
+circle head900 4.5 32 0.5 pink solid
+polygon tail900 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag900 4.5 32 1 black ..
+set fish900 3 head900 tail900 tag900
+}
+color fish714 pink
+color fish712 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+color fish700 pink
+color fish665 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+{
+circle head904 6 32 0.5 pink solid
+polygon tail904 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag904 6 32 1 black ..
+set fish904 3 head904 tail904 tag904
+}
+color fish706 pink
+color fish736 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+{
+circle head905 3 33 0.5 lightskyblue solid
+polygon tail905 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag905 3 33 1 black ..
+set fish905 3 head905 tail905 tag905
+}
+color fish700 pink
+color fish665 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+color fish710 pink
+color fish690 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+{
+circle head907 7.5 32 0.5 pink solid
+polygon tail907 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag907 7.5 32 1 black ..
+set fish907 3 head907 tail907 tag907
+}
+color fish714 pink
+color fish712 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head909 4.5 33 0.5 lightskyblue solid
+polygon tail909 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag909 4.5 33 1 black .
+set fish909 3 head909 tail909 tag909
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+{
+circle head910 9 32 0.5 pink solid
+polygon tail910 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag910 9 32 1 black ..
+set fish910 3 head910 tail910 tag910
+}
+color fish714 pink
+color fish712 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+{
+circle head911 10.5 32 0.5 pink solid
+polygon tail911 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag911 10.5 32 1 black ..
+set fish911 3 head911 tail911 tag911
+}
+color fish688 pink
+color fish642 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+{
+circle head913 6 33 0.5 lightskyblue solid
+polygon tail913 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag913 6 33 1 black ..
+set fish913 3 head913 tail913 tag913
+}
+color fish700 pink
+color fish665 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+{
+circle head914 7.5 33 0.5 lightskyblue solid
+polygon tail914 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag914 7.5 33 1 black ...
+set fish914 3 head914 tail914 tag914
+}
+color fish714 pink
+color fish712 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+{
+circle head915 9 33 0.5 lightskyblue solid
+polygon tail915 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag915 9 33 1 black ..
+set fish915 3 head915 tail915 tag915
+}
+color fish661 pink
+color fish687 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+color fish700 pink
+color fish665 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+{
+circle head919 10.5 33 0.5 lightskyblue solid
+polygon tail919 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag919 10.5 33 1 black .
+set fish919 3 head919 tail919 tag919
+}
+color fish710 pink
+color fish690 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+color fish710 pink
+color fish690 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+{
+circle head925 12 33 0.5 lightskyblue solid
+polygon tail925 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag925 12 33 1 black ..
+set fish925 3 head925 tail925 tag925
+}
+color fish661 pink
+color fish687 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+{
+circle head930 12 32 0.5 pink solid
+polygon tail930 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag930 12 32 1 black ..
+set fish930 3 head930 tail930 tag930
+}
+color fish714 pink
+color fish712 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+color fish700 pink
+color fish665 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+{
+circle head932 13.5 33 0.5 lightskyblue solid
+polygon tail932 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag932 13.5 33 1 black ..
+set fish932 3 head932 tail932 tag932
+}
+color fish706 pink
+color fish736 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head935 15 33 0.5 lightskyblue solid
+polygon tail935 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag935 15 33 1 black .
+set fish935 3 head935 tail935 tag935
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+{
+circle head936 16.5 33 0.5 lightskyblue solid
+polygon tail936 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag936 16.5 33 1 black .
+set fish936 3 head936 tail936 tag936
+}
+color fish710 pink
+color fish690 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+{
+circle head937 18 33 0.5 lightskyblue solid
+polygon tail937 5 lightskyblue solid 18 32.8 17.2 32.5 17.5 33 17.2 33.5 18 33.2
+text tag937 18 33 1 black ..
+set fish937 3 head937 tail937 tag937
+}
+color fish706 pink
+color fish736 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+color fish710 pink
+color fish690 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+color fish700 pink
+color fish665 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head948 13.5 32 0.5 pink solid
+polygon tail948 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag948 13.5 32 1 black ..
+set fish948 3 head948 tail948 tag948
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+color fish681 pink
+color fish756 lightskyblue
+color fish710 red
+color fish690 blue
+delay 10
+color fish710 pink
+color fish690 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head951 19.5 33 0.5 lightskyblue solid
+polygon tail951 5 lightskyblue solid 19.5 32.8 18.7 32.5 19 33 18.7 33.5 19.5 33.2
+text tag951 19.5 33 1 black ..
+set fish951 3 head951 tail951 tag951
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+{
+circle head952 21 33 0.5 lightskyblue solid
+polygon tail952 5 lightskyblue solid 21 32.8 20.2 32.5 20.5 33 20.2 33.5 21 33.2
+text tag952 21 33 1 black ...
+set fish952 3 head952 tail952 tag952
+}
+color fish700 pink
+color fish665 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head956 15 32 0.5 pink solid
+polygon tail956 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag956 15 32 1 black ..
+set fish956 3 head956 tail956 tag956
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish714 red
+color fish712 blue
+delay 10
+color fish714 pink
+color fish712 lightskyblue
+color fish688 red
+color fish642 blue
+delay 10
+color fish688 pink
+color fish642 lightskyblue
+color fish681 red
+color fish756 blue
+delay 10
+{
+circle head961 22.5 33 0.5 lightskyblue solid
+polygon tail961 5 lightskyblue solid 22.5 32.8 21.7 32.5 22 33 21.7 33.5 22.5 33.2
+text tag961 22.5 33 1 black ..
+set fish961 3 head961 tail961 tag961
+}
+color fish681 pink
+color fish756 lightskyblue
+color fish661 red
+color fish687 blue
+delay 10
+color fish661 pink
+color fish687 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+color fish700 pink
+color fish665 lightskyblue
+color fish700 red
+color fish665 blue
+delay 10
+{
+circle head964 24 33 0.5 lightskyblue solid
+polygon tail964 5 lightskyblue solid 24 32.8 23.2 32.5 23.5 33 23.2 33.5 24 33.2
+text tag964 24 33 1 black ...
+set fish964 3 head964 tail964 tag964
+}
+color fish700 pink
+color fish665 lightskyblue
+color fish706 red
+color fish736 blue
+delay 10
+color fish706 pink
+color fish736 lightskyblue
+alter message Returns die
+{
+delete head687
+delete tail687
+delete tag687
+delete fish687
+}
+{
+delete head665
+delete tail665
+delete tag665
+delete fish665
+}
+{
+delete head712
+delete tail712
+delete tag712
+delete fish712
+}
+{
+delete head642
+delete tail642
+delete tag642
+delete fish642
+}
+{
+delete head736
+delete tail736
+delete tag736
+delete fish736
+}
+{
+delete head690
+delete tail690
+delete tag690
+delete fish690
+}
+{
+delete head756
+delete tail756
+delete tag756
+delete fish756
+}
+{
+delete head661
+delete tail661
+delete tag661
+delete fish661
+}
+{
+delete head700
+delete tail700
+delete tag700
+delete fish700
+}
+{
+delete head714
+delete tail714
+delete tag714
+delete fish714
+}
+{
+delete head688
+delete tail688
+delete tag688
+delete fish688
+}
+{
+delete head706
+delete tail706
+delete tag706
+delete fish706
+}
+{
+delete head710
+delete tail710
+delete tag710
+delete fish710
+}
+{
+delete head681
+delete tail681
+delete tag681
+delete fish681
+}
+{
+delete head640
+delete tail640
+delete tag640
+delete fish640
+}
+{
+delete head659
+delete tail659
+delete tag659
+delete fish659
+}
+{
+delete head619
+delete tail619
+delete tag619
+delete fish619
+}
+{
+delete head693
+delete tail693
+delete tag693
+delete fish693
+}
+{
+delete head680
+delete tail680
+delete tag680
+delete fish680
+}
+{
+delete head753
+delete tail753
+delete tag753
+delete fish753
+}
+{
+delete head637
+delete tail637
+delete tag637
+delete fish637
+}
+{
+delete head645
+delete tail645
+delete tag645
+delete fish645
+}
+{
+delete head650
+delete tail650
+delete tag650
+delete fish650
+}
+{
+delete head656
+delete tail656
+delete tag656
+delete fish656
+}
+{
+delete head675
+delete tail675
+delete tag675
+delete fish675
+}
+{
+delete head683
+delete tail683
+delete tag683
+delete fish683
+}
+{
+delete head708
+delete tail708
+delete tag708
+delete fish708
+}
+{
+delete head711
+delete tail711
+delete tag711
+delete fish711
+}
+{
+delete head713
+delete tail713
+delete tag713
+delete fish713
+}
+alter message Increasing ages by 1...
+{
+jump fish765 3 24
+jump fish764 4.5 24
+jump fish762 6 24
+jump fish755 7.5 24
+jump fish749 9 24
+jump fish745 10.5 24
+jump fish743 12 24
+jump fish726 13.5 24
+jump fish718 15 24
+jump fish716 16.5 24
+}
+{
+jump fish689 3 21
+jump fish670 4.5 21
+jump fish636 6 21
+}
+set mgroup 1 dummy
+set fgroup 3 fish689 fish670 fish636
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 11 fish770 fish767 fish761 fish757 fish750 fish746 fish744 fish735 fish731 fish730 fish724
+set fgroup 10 fish765 fish764 fish762 fish755 fish749 fish745 fish743 fish726 fish718 fish716
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish817 fish804 fish803 fish796 fish787 fish780
+set fgroup 10 fish834 fish826 fish824 fish820 fish812 fish806 fish798 fish794 fish786 fish781
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 17 fish893 fish892 fish887 fish883 fish875 fish872 fish871 fish867 fish865 fish860 fish859 fish857 fish853 fish844 fish840 fish837 fish836
+set fgroup 12 fish894 fish891 fish886 fish884 fish873 fish868 fish866 fish864 fish854 fish850 fish845 fish842
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 9 fish956 fish948 fish930 fish911 fish910 fish907 fish904 fish900 fish897
+set fgroup 15 fish964 fish961 fish952 fish951 fish937 fish936 fish935 fish932 fish925 fish919 fish915 fish914 fish913 fish909 fish905
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish689 3 14
+move fish670 4.5 14
+move fish636 6 14
+move fish765 7.5 14
+move fish764 9 14
+move fish762 10.5 14
+move fish755 12 14
+move fish749 13.5 14
+move fish745 15 14
+move fish726 16.5 14
+move fish718 18 14
+move fish716 19.5 14
+move fish826 21 14
+move fish794 22.5 14
+move fish724 24 14
+move fish730 25.5 14
+move fish731 27 14
+move fish735 28.5 14
+move fish744 30 14
+move fish746 31.5 14
+move fish750 33 14
+move fish757 34.5 14
+move fish761 36 14
+move fish767 37.5 14
+move fish770 39 14
+alter message Selecting parents; k = 16
+move fish767 3 10
+move fish718 3 11
+move fish636 4.5 11
+move fish794 6 11
+move fish724 4.5 10
+move fish726 7.5 11
+move fish670 9 11
+move fish716 10.5 11
+move fish746 6 10
+move fish749 12 11
+move fish744 7.5 10
+move fish689 13.5 11
+move fish761 9 10
+move fish762 15 11
+move fish757 10.5 10
+move fish755 16.5 11
+alter message Selecting mates...
+move fish757 3 7
+move fish761 3 6
+move fish744 3 5
+move fish746 3 4
+move fish724 3 3
+move fish767 3 2
+move fish755 4.5 7
+move fish762 4.5 6
+move fish689 4.5 5
+move fish749 4.5 4
+move fish716 4.5 3
+move fish670 4.5 2
+move fish726 6 7
+move fish794 6 6
+move fish636 6 5
+move fish718 6 4
+% r = 5
+alter message Creating 6 x 10 = 60 offspring...
+color fish744 red
+color fish636 blue
+delay 10
+{
+circle head966 3 32 0.5 pink solid
+polygon tail966 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag966 3 32 1 black ..
+set fish966 3 head966 tail966 tag966
+}
+color fish744 pink
+color fish636 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+{
+circle head968 4.5 32 0.5 pink solid
+polygon tail968 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag968 4.5 32 1 black ..
+set fish968 3 head968 tail968 tag968
+}
+color fish744 pink
+color fish689 lightskyblue
+color fish761 red
+color fish794 blue
+delay 10
+color fish761 pink
+color fish794 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+color fish724 pink
+color fish716 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+color fish757 pink
+color fish755 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+{
+circle head975 6 32 0.5 pink solid
+polygon tail975 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag975 6 32 1 black ..
+set fish975 3 head975 tail975 tag975
+}
+color fish757 pink
+color fish755 lightskyblue
+color fish761 red
+color fish762 blue
+delay 10
+{
+circle head976 7.5 32 0.5 pink solid
+polygon tail976 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag976 7.5 32 1 black ..
+set fish976 3 head976 tail976 tag976
+}
+color fish761 pink
+color fish762 lightskyblue
+color fish761 red
+color fish762 blue
+delay 10
+{
+circle head977 3 33 0.5 lightskyblue solid
+polygon tail977 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag977 3 33 1 black ..
+set fish977 3 head977 tail977 tag977
+}
+color fish761 pink
+color fish762 lightskyblue
+color fish746 red
+color fish749 blue
+delay 10
+color fish746 pink
+color fish749 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+color fish757 red
+color fish726 blue
+delay 10
+color fish757 pink
+color fish726 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+{
+circle head982 9 32 0.5 pink solid
+polygon tail982 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag982 9 32 1 black ..
+set fish982 3 head982 tail982 tag982
+}
+color fish744 pink
+color fish636 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+{
+circle head983 4.5 33 0.5 lightskyblue solid
+polygon tail983 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag983 4.5 33 1 black ..
+set fish983 3 head983 tail983 tag983
+}
+color fish744 pink
+color fish636 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+color fish724 pink
+color fish716 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+{
+circle head985 6 33 0.5 lightskyblue solid
+polygon tail985 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag985 6 33 1 black ..
+set fish985 3 head985 tail985 tag985
+}
+color fish746 pink
+color fish718 lightskyblue
+color fish746 red
+color fish749 blue
+delay 10
+color fish746 pink
+color fish749 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+{
+circle head988 10.5 32 0.5 pink solid
+polygon tail988 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag988 10.5 32 1 black ..
+set fish988 3 head988 tail988 tag988
+}
+color fish744 pink
+color fish689 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+{
+circle head989 12 32 0.5 pink solid
+polygon tail989 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag989 12 32 1 black ..
+set fish989 3 head989 tail989 tag989
+}
+color fish744 pink
+color fish636 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+color fish744 pink
+color fish636 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+color fish744 pink
+color fish689 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+color fish724 pink
+color fish716 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+color fish744 pink
+color fish689 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+color fish744 pink
+color fish636 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+{
+circle head996 7.5 33 0.5 lightskyblue solid
+polygon tail996 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag996 7.5 33 1 black ...
+set fish996 3 head996 tail996 tag996
+}
+color fish757 pink
+color fish755 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+color fish757 pink
+color fish755 lightskyblue
+color fish746 red
+color fish749 blue
+delay 10
+color fish746 pink
+color fish749 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+color fish744 pink
+color fish689 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+{
+circle head1001 9 33 0.5 lightskyblue solid
+polygon tail1001 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag1001 9 33 1 black ..
+set fish1001 3 head1001 tail1001 tag1001
+}
+color fish724 pink
+color fish716 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+color fish757 pink
+color fish755 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+color fish724 pink
+color fish716 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+{
+circle head1004 13.5 32 0.5 pink solid
+polygon tail1004 5 pink solid 13.5 31.8 12.7 31.5 13 32 12.7 32.5 13.5 32.2
+text tag1004 13.5 32 1 black ..
+set fish1004 3 head1004 tail1004 tag1004
+}
+color fish724 pink
+color fish716 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+{
+circle head1006 10.5 33 0.5 lightskyblue solid
+polygon tail1006 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag1006 10.5 33 1 black ..
+set fish1006 3 head1006 tail1006 tag1006
+}
+color fish767 pink
+color fish670 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+{
+circle head1007 12 33 0.5 lightskyblue solid
+polygon tail1007 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag1007 12 33 1 black ...
+set fish1007 3 head1007 tail1007 tag1007
+}
+color fish746 pink
+color fish718 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+{
+circle head1008 13.5 33 0.5 lightskyblue solid
+polygon tail1008 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag1008 13.5 33 1 black .
+set fish1008 3 head1008 tail1008 tag1008
+}
+color fish746 pink
+color fish718 lightskyblue
+color fish757 red
+color fish755 blue
+delay 10
+color fish757 pink
+color fish755 lightskyblue
+color fish761 red
+color fish794 blue
+delay 10
+color fish761 pink
+color fish794 lightskyblue
+color fish761 red
+color fish794 blue
+delay 10
+color fish761 pink
+color fish794 lightskyblue
+color fish744 red
+color fish636 blue
+delay 10
+{
+circle head1012 15 33 0.5 lightskyblue solid
+polygon tail1012 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag1012 15 33 1 black ..
+set fish1012 3 head1012 tail1012 tag1012
+}
+color fish744 pink
+color fish636 lightskyblue
+color fish761 red
+color fish794 blue
+delay 10
+{
+circle head1013 15 32 0.5 pink solid
+polygon tail1013 5 pink solid 15 31.8 14.2 31.5 14.5 32 14.2 32.5 15 32.2
+text tag1013 15 32 1 black ..
+set fish1013 3 head1013 tail1013 tag1013
+}
+color fish761 pink
+color fish794 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish724 red
+color fish716 blue
+delay 10
+color fish724 pink
+color fish716 lightskyblue
+color fish757 red
+color fish726 blue
+delay 10
+{
+circle head1016 16.5 32 0.5 pink solid
+polygon tail1016 5 pink solid 16.5 31.8 15.7 31.5 16 32 15.7 32.5 16.5 32.2
+text tag1016 16.5 32 1 black ..
+set fish1016 3 head1016 tail1016 tag1016
+}
+color fish757 pink
+color fish726 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish746 red
+color fish749 blue
+delay 10
+color fish746 pink
+color fish749 lightskyblue
+color fish744 red
+color fish689 blue
+delay 10
+{
+circle head1021 18 32 0.5 pink solid
+polygon tail1021 5 pink solid 18 31.8 17.2 31.5 17.5 32 17.2 32.5 18 32.2
+text tag1021 18 32 1 black ..
+set fish1021 3 head1021 tail1021 tag1021
+}
+color fish744 pink
+color fish689 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+{
+circle head1022 19.5 32 0.5 pink solid
+polygon tail1022 5 pink solid 19.5 31.8 18.7 31.5 19 32 18.7 32.5 19.5 32.2
+text tag1022 19.5 32 1 black ..
+set fish1022 3 head1022 tail1022 tag1022
+}
+color fish767 pink
+color fish670 lightskyblue
+color fish761 red
+color fish794 blue
+delay 10
+{
+circle head1023 21 32 0.5 pink solid
+polygon tail1023 5 pink solid 21 31.8 20.2 31.5 20.5 32 20.2 32.5 21 32.2
+text tag1023 21 32 1 black ..
+set fish1023 3 head1023 tail1023 tag1023
+}
+color fish761 pink
+color fish794 lightskyblue
+color fish746 red
+color fish718 blue
+delay 10
+color fish746 pink
+color fish718 lightskyblue
+color fish767 red
+color fish670 blue
+delay 10
+color fish767 pink
+color fish670 lightskyblue
+alter message Returns die
+{
+delete head755
+delete tail755
+delete tag755
+delete fish755
+}
+{
+delete head762
+delete tail762
+delete tag762
+delete fish762
+}
+{
+delete head689
+delete tail689
+delete tag689
+delete fish689
+}
+{
+delete head749
+delete tail749
+delete tag749
+delete fish749
+}
+{
+delete head716
+delete tail716
+delete tag716
+delete fish716
+}
+{
+delete head670
+delete tail670
+delete tag670
+delete fish670
+}
+{
+delete head726
+delete tail726
+delete tag726
+delete fish726
+}
+{
+delete head794
+delete tail794
+delete tag794
+delete fish794
+}
+{
+delete head636
+delete tail636
+delete tag636
+delete fish636
+}
+{
+delete head718
+delete tail718
+delete tag718
+delete fish718
+}
+{
+delete head757
+delete tail757
+delete tag757
+delete fish757
+}
+{
+delete head761
+delete tail761
+delete tag761
+delete fish761
+}
+{
+delete head744
+delete tail744
+delete tag744
+delete fish744
+}
+{
+delete head746
+delete tail746
+delete tag746
+delete fish746
+}
+{
+delete head724
+delete tail724
+delete tag724
+delete fish724
+}
+{
+delete head767
+delete tail767
+delete tag767
+delete fish767
+}
+{
+delete head765
+delete tail765
+delete tag765
+delete fish765
+}
+{
+delete head764
+delete tail764
+delete tag764
+delete fish764
+}
+{
+delete head745
+delete tail745
+delete tag745
+delete fish745
+}
+{
+delete head826
+delete tail826
+delete tag826
+delete fish826
+}
+{
+delete head730
+delete tail730
+delete tag730
+delete fish730
+}
+{
+delete head731
+delete tail731
+delete tag731
+delete fish731
+}
+{
+delete head735
+delete tail735
+delete tag735
+delete fish735
+}
+{
+delete head750
+delete tail750
+delete tag750
+delete fish750
+}
+{
+delete head770
+delete tail770
+delete tag770
+delete fish770
+}
+alter message Increasing ages by 1...
+{
+jump fish834 3 24
+jump fish824 4.5 24
+jump fish820 6 24
+jump fish812 7.5 24
+jump fish806 9 24
+jump fish798 10.5 24
+jump fish786 12 24
+jump fish781 13.5 24
+}
+{
+jump fish743 3 21
+}
+set mgroup 1 dummy
+set fgroup 1 fish743
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 6 fish817 fish804 fish803 fish796 fish787 fish780
+set fgroup 8 fish834 fish824 fish820 fish812 fish806 fish798 fish786 fish781
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 17 fish893 fish892 fish887 fish883 fish875 fish872 fish871 fish867 fish865 fish860 fish859 fish857 fish853 fish844 fish840 fish837 fish836
+set fgroup 12 fish894 fish891 fish886 fish884 fish873 fish868 fish866 fish864 fish854 fish850 fish845 fish842
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 9 fish956 fish948 fish930 fish911 fish910 fish907 fish904 fish900 fish897
+set fgroup 15 fish964 fish961 fish952 fish951 fish937 fish936 fish935 fish932 fish925 fish919 fish915 fish914 fish913 fish909 fish905
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 13 fish1023 fish1022 fish1021 fish1016 fish1013 fish1004 fish989 fish988 fish982 fish976 fish975 fish968 fish966
+set fgroup 9 fish1012 fish1008 fish1007 fish1006 fish1001 fish996 fish985 fish983 fish977
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+alter message Selecting returns....
+move fish743 3 14
+move fish834 4.5 14
+move fish824 6 14
+move fish820 7.5 14
+move fish806 9 14
+move fish786 10.5 14
+move fish781 12 14
+move fish891 13.5 14
+move fish884 15 14
+move fish864 16.5 14
+move fish780 18 14
+move fish787 19.5 14
+move fish796 21 14
+move fish803 22.5 14
+move fish804 24 14
+move fish817 25.5 14
+alter message Selecting parents; k = 16
+move fish787 3 10
+move fish891 3 11
+move fish796 4.5 10
+move fish743 4.5 11
+move fish834 6 11
+move fish864 7.5 11
+move fish786 9 11
+move fish803 6 10
+move fish781 10.5 11
+move fish806 12 11
+move fish884 13.5 11
+move fish804 7.5 10
+move fish820 15 11
+move fish824 16.5 11
+move fish817 9 10
+move fish780 10.5 10
+alter message Selecting mates...
+move fish780 3 7
+move fish817 3 6
+move fish804 3 5
+move fish803 3 4
+move fish796 3 3
+move fish787 3 2
+move fish824 4.5 7
+move fish820 4.5 6
+move fish884 4.5 5
+move fish806 4.5 4
+move fish781 4.5 3
+move fish786 4.5 2
+move fish864 6 7
+move fish834 6 6
+move fish743 6 5
+move fish891 6 4
+% r = 5
+alter message Creating 6 x 10 = 60 offspring...
+color fish817 red
+color fish820 blue
+delay 10
+{
+circle head1026 3 33 0.5 lightskyblue solid
+polygon tail1026 5 lightskyblue solid 3 32.8 2.2 32.5 2.5 33 2.2 33.5 3 33.2
+text tag1026 3 33 1 black ..
+set fish1026 3 head1026 tail1026 tag1026
+}
+color fish817 pink
+color fish820 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish817 red
+color fish820 blue
+delay 10
+color fish817 pink
+color fish820 lightskyblue
+color fish803 red
+color fish891 blue
+delay 10
+color fish803 pink
+color fish891 lightskyblue
+color fish817 red
+color fish820 blue
+delay 10
+color fish817 pink
+color fish820 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish817 red
+color fish834 blue
+delay 10
+{
+circle head1034 3 32 0.5 pink solid
+polygon tail1034 5 pink solid 3 31.8 2.2 31.5 2.5 32 2.2 32.5 3 32.2
+text tag1034 3 32 1 black ..
+set fish1034 3 head1034 tail1034 tag1034
+}
+color fish817 pink
+color fish834 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+{
+circle head1035 4.5 32 0.5 pink solid
+polygon tail1035 5 pink solid 4.5 31.8 3.7 31.5 4 32 3.7 32.5 4.5 32.2
+text tag1035 4.5 32 1 black ..
+set fish1035 3 head1035 tail1035 tag1035
+}
+color fish796 pink
+color fish781 lightskyblue
+color fish780 red
+color fish824 blue
+delay 10
+color fish780 pink
+color fish824 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+color fish804 pink
+color fish884 lightskyblue
+color fish817 red
+color fish820 blue
+delay 10
+{
+circle head1039 4.5 33 0.5 lightskyblue solid
+polygon tail1039 5 lightskyblue solid 4.5 32.8 3.7 32.5 4 33 3.7 33.5 4.5 33.2
+text tag1039 4.5 33 1 black ..
+set fish1039 3 head1039 tail1039 tag1039
+}
+color fish817 pink
+color fish820 lightskyblue
+color fish817 red
+color fish834 blue
+delay 10
+color fish817 pink
+color fish834 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+{
+circle head1042 6 32 0.5 pink solid
+polygon tail1042 5 pink solid 6 31.8 5.2 31.5 5.5 32 5.2 32.5 6 32.2
+text tag1042 6 32 1 black ..
+set fish1042 3 head1042 tail1042 tag1042
+}
+color fish804 pink
+color fish884 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+{
+circle head1043 7.5 32 0.5 pink solid
+polygon tail1043 5 pink solid 7.5 31.8 6.7 31.5 7 32 6.7 32.5 7.5 32.2
+text tag1043 7.5 32 1 black ..
+set fish1043 3 head1043 tail1043 tag1043
+}
+color fish780 pink
+color fish864 lightskyblue
+color fish803 red
+color fish891 blue
+delay 10
+color fish803 pink
+color fish891 lightskyblue
+color fish780 red
+color fish824 blue
+delay 10
+color fish780 pink
+color fish824 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+color fish804 pink
+color fish884 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish804 red
+color fish743 blue
+delay 10
+{
+circle head1048 9 32 0.5 pink solid
+polygon tail1048 5 pink solid 9 31.8 8.2 31.5 8.5 32 8.2 32.5 9 32.2
+text tag1048 9 32 1 black ..
+set fish1048 3 head1048 tail1048 tag1048
+}
+color fish804 pink
+color fish743 lightskyblue
+color fish817 red
+color fish820 blue
+delay 10
+color fish817 pink
+color fish820 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+{
+circle head1050 6 33 0.5 lightskyblue solid
+polygon tail1050 5 lightskyblue solid 6 32.8 5.2 32.5 5.5 33 5.2 33.5 6 33.2
+text tag1050 6 33 1 black .
+set fish1050 3 head1050 tail1050 tag1050
+}
+color fish780 pink
+color fish864 lightskyblue
+color fish780 red
+color fish824 blue
+delay 10
+color fish780 pink
+color fish824 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+color fish804 pink
+color fish884 lightskyblue
+color fish803 red
+color fish806 blue
+delay 10
+color fish803 pink
+color fish806 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish803 red
+color fish806 blue
+delay 10
+{
+circle head1057 7.5 33 0.5 lightskyblue solid
+polygon tail1057 5 lightskyblue solid 7.5 32.8 6.7 32.5 7 33 6.7 33.5 7.5 33.2
+text tag1057 7.5 33 1 black ...
+set fish1057 3 head1057 tail1057 tag1057
+}
+color fish803 pink
+color fish806 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+{
+circle head1059 10.5 32 0.5 pink solid
+polygon tail1059 5 pink solid 10.5 31.8 9.7 31.5 10 32 9.7 32.5 10.5 32.2
+text tag1059 10.5 32 1 black ..
+set fish1059 3 head1059 tail1059 tag1059
+}
+color fish796 pink
+color fish781 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish803 red
+color fish891 blue
+delay 10
+color fish803 pink
+color fish891 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+{
+circle head1063 9 33 0.5 lightskyblue solid
+polygon tail1063 5 lightskyblue solid 9 32.8 8.2 32.5 8.5 33 8.2 33.5 9 33.2
+text tag1063 9 33 1 black ..
+set fish1063 3 head1063 tail1063 tag1063
+}
+color fish780 pink
+color fish864 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish780 red
+color fish824 blue
+delay 10
+color fish780 pink
+color fish824 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+{
+circle head1067 10.5 33 0.5 lightskyblue solid
+polygon tail1067 5 lightskyblue solid 10.5 32.8 9.7 32.5 10 33 9.7 33.5 10.5 33.2
+text tag1067 10.5 33 1 black ..
+set fish1067 3 head1067 tail1067 tag1067
+}
+color fish796 pink
+color fish781 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish787 red
+color fish786 blue
+delay 10
+color fish787 pink
+color fish786 lightskyblue
+color fish817 red
+color fish820 blue
+delay 10
+color fish817 pink
+color fish820 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish817 red
+color fish834 blue
+delay 10
+{
+circle head1076 12 33 0.5 lightskyblue solid
+polygon tail1076 5 lightskyblue solid 12 32.8 11.2 32.5 11.5 33 11.2 33.5 12 33.2
+text tag1076 12 33 1 black ...
+set fish1076 3 head1076 tail1076 tag1076
+}
+color fish817 pink
+color fish834 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish780 red
+color fish864 blue
+delay 10
+color fish780 pink
+color fish864 lightskyblue
+color fish803 red
+color fish891 blue
+delay 10
+{
+circle head1079 12 32 0.5 pink solid
+polygon tail1079 5 pink solid 12 31.8 11.2 31.5 11.5 32 11.2 32.5 12 32.2
+text tag1079 12 32 1 black ..
+set fish1079 3 head1079 tail1079 tag1079
+}
+color fish803 pink
+color fish891 lightskyblue
+color fish803 red
+color fish806 blue
+delay 10
+color fish803 pink
+color fish806 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+{
+circle head1081 13.5 33 0.5 lightskyblue solid
+polygon tail1081 5 lightskyblue solid 13.5 32.8 12.7 32.5 13 33 12.7 33.5 13.5 33.2
+text tag1081 13.5 33 1 black ..
+set fish1081 3 head1081 tail1081 tag1081
+}
+color fish804 pink
+color fish884 lightskyblue
+color fish796 red
+color fish781 blue
+delay 10
+color fish796 pink
+color fish781 lightskyblue
+color fish804 red
+color fish743 blue
+delay 10
+{
+circle head1083 15 33 0.5 lightskyblue solid
+polygon tail1083 5 lightskyblue solid 15 32.8 14.2 32.5 14.5 33 14.2 33.5 15 33.2
+text tag1083 15 33 1 black ...
+set fish1083 3 head1083 tail1083 tag1083
+}
+color fish804 pink
+color fish743 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+{
+circle head1084 16.5 33 0.5 lightskyblue solid
+polygon tail1084 5 lightskyblue solid 16.5 32.8 15.7 32.5 16 33 15.7 33.5 16.5 33.2
+text tag1084 16.5 33 1 black ..
+set fish1084 3 head1084 tail1084 tag1084
+}
+color fish804 pink
+color fish884 lightskyblue
+color fish804 red
+color fish884 blue
+delay 10
+color fish804 pink
+color fish884 lightskyblue
+alter message Returns die
+{
+delete head824
+delete tail824
+delete tag824
+delete fish824
+}
+{
+delete head820
+delete tail820
+delete tag820
+delete fish820
+}
+{
+delete head884
+delete tail884
+delete tag884
+delete fish884
+}
+{
+delete head806
+delete tail806
+delete tag806
+delete fish806
+}
+{
+delete head781
+delete tail781
+delete tag781
+delete fish781
+}
+{
+delete head786
+delete tail786
+delete tag786
+delete fish786
+}
+{
+delete head864
+delete tail864
+delete tag864
+delete fish864
+}
+{
+delete head834
+delete tail834
+delete tag834
+delete fish834
+}
+{
+delete head743
+delete tail743
+delete tag743
+delete fish743
+}
+{
+delete head891
+delete tail891
+delete tag891
+delete fish891
+}
+{
+delete head780
+delete tail780
+delete tag780
+delete fish780
+}
+{
+delete head817
+delete tail817
+delete tag817
+delete fish817
+}
+{
+delete head804
+delete tail804
+delete tag804
+delete fish804
+}
+{
+delete head803
+delete tail803
+delete tag803
+delete fish803
+}
+{
+delete head796
+delete tail796
+delete tag796
+delete fish796
+}
+{
+delete head787
+delete tail787
+delete tag787
+delete fish787
+}
+alter message Increasing ages by 1...
+{
+jump fish894 3 24
+jump fish886 4.5 24
+jump fish873 6 24
+jump fish868 7.5 24
+jump fish866 9 24
+jump fish854 10.5 24
+jump fish850 12 24
+jump fish845 13.5 24
+jump fish842 15 24
+}
+{
+jump fish812 3 21
+jump fish798 4.5 21
+}
+set mgroup 1 dummy
+set fgroup 2 fish812 fish798
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 17 fish893 fish892 fish887 fish883 fish875 fish872 fish871 fish867 fish865 fish860 fish859 fish857 fish853 fish844 fish840 fish837 fish836
+set fgroup 9 fish894 fish886 fish873 fish868 fish866 fish854 fish850 fish845 fish842
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 9 fish956 fish948 fish930 fish911 fish910 fish907 fish904 fish900 fish897
+set fgroup 15 fish964 fish961 fish952 fish951 fish937 fish936 fish935 fish932 fish925 fish919 fish915 fish914 fish913 fish909 fish905
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 13 fish1023 fish1022 fish1021 fish1016 fish1013 fish1004 fish989 fish988 fish982 fish976 fish975 fish968 fish966
+set fgroup 9 fish1012 fish1008 fish1007 fish1006 fish1001 fish996 fish985 fish983 fish977
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group
+set mgroup 7 fish1079 fish1059 fish1048 fish1043 fish1042 fish1035 fish1034
+set fgroup 10 fish1084 fish1083 fish1081 fish1076 fish1067 fish1063 fish1057 fish1050 fish1039 fish1026
+set group 2 mgroup fgroup
+moverelative group 0 -3
+delete mgroup
+delete fgroup
+delete group

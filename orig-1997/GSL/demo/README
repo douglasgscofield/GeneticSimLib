@@ -1,0 +1,16 @@
+Contents of the demo directory:
+
+Makefile	rules for building demo programs
+
+gdemo.C		Genome demo, with FORMS interface; shows insertion
+		of mutations into genes
+gdriver.C	test driver for Genome and Individual classes
+idemo.C		Demo for Individual and ISet classes
+rnddemo.C	Random Number Generator demo, with FORMS interface
+
+ggui.*		FORMS Designer files for gdemo interface
+rgui.*		FORMS Designer files for rnddemo interface
+
+*.dat		probability density functions that can be read by
+		CDFRNG class
+

@@ -1,0 +1,130 @@
+GENETIC SIMULATION LIBRARY (GSL)
+================================
+
+GSL is a set of C++ classes for incorporating genetics in 
+population models.  Source code can be freely copied and 
+distributed subject to the constraints spelled out in the
+copyright notice at the end of this file and in the file
+named COPYRIGHT in this directory.
+
+Refer to http://www.csi.uoregon.edu/projects/genetics/GSL 
+for more information.
+
+List of Files
+-------------
+
+  README	  this file
+  COPYRIGHT	  copyright notice applicable to all source,
+		    binary, and documentation files in GSL.
+  GSL.html	  main documentation, including design and
+		    implementation notes
+  GSL.ref.html	  programmer reference pages
+  GSL.tar.Z	  source code distribution
+  GSL.solaris.*	  Solaris binaries
+  GSL.irix.*	  Irix binaries
+
+What to Download
+----------------
+
+(1) If you are going to use the library on a machine for 
+which there is a binary archive in this directory (e.g. an 
+Ultrasparc-1 or later under Solaris 2.5) and you don't want 
+to bother compiling the library yourself, download the
+appropriate precompiled binary.  This file will also
+contain header files.  
+
+(2) If there is not a precompiled binary for your machine, 
+or if you plan to use the sources, you need the source 
+distribution in GSL.tar.Z.  
+
+(3) If you want a local copy of the documentation, grab 
+GSL.doc.tar.Z, or you can just use the Web-based documentation 
+at http://www.csi.uoregon.edu/projects/genetics/GSL.
+
+
+Installation
+------------
+
+(1) Download the files you need (as described above).
+
+(2) Move the files to a directory where you want to install 
+    the software.
+
+(3) Uncompress the .Z files (e.g. type "uncompress GSL.tar.Z").
+    Repeat this step for every .Z file you downloaded.
+
+(4) Extract individual files from the tar files.  For example,
+    if you downloaded and uncompressed GSL.tar, you now need to
+    type  "tar xvf GSL.tar".  Repeat this step for every .tar
+    file you downloaded.
+
+    NOTE: the first time you do step 4 tar will create a 
+    directory named GSL as a subdirectory of your current 
+    working directory.  Subsequent extractions will add to 
+    (and maybe overwrite parts of) this new subdirectory.
+
+You should now have a directory named GSL.  Under this 
+directory you will find all or some of the following 
+subdirectories, depending on which tar files you downloaded:
+
+    src		Contains all the .C files for the classes
+		in the class library
+    include	The .h files for the class library
+    lib		Contains libgen.a, the compiled library
+    doc		HTML documentation
+    demo	Sources for demo programs
+
+By default the Makefiles for the demos and applications expect
+libgen.a to be in the lib subdirectory.  If you download two
+or more binary files and untar them, the library in that archive
+will overwrite any file that currently exists.  If you want to
+have several versions of the binaries for many different machines,
+it is up to you to decide how to manage them.  One method is
+to make subdirectories under lib, eg. lib/sun and lib/sgi,
+and then move libgen.a to the correct subdirectory each time
+you extract a binary.  When all your binaries are unpacked, you
+can make a symbolic link named libgen.a in the lib directory
+and point it toward the default library.
+
+If you downloaded the src directory and want to compile the
+library on your own system, cd to src and type 'make".  Now
+you can make the demo and application programs by typing "make"
+in the demo and apps directories, respectively.  Note that
+when you build your own libgen.a, it will be moved to the lib
+directory and overwrite anything there.    
+
+The demo directory also contains a file named Makefile.Template
+which you can use as a template for building Makefiles for your
+own projects (or you can copy macros and rules from this
+file to your existing Makefile).  This Makefile will show you
+how to direct your C++ compiler and linker to find the GSL
+programs so they can be included with your applications.
+
+Send bug reports and problems to:
+
+	conery@cs.uoregon.edu
+
+Please include the word "GSL" in the e-mail subject line.
+
+
+-----------------------------------------------------------
+
+Copyright (c) 1997 by the University of Oregon.  
+ALL RIGHTS RESERVED. 
+
+Permission to use, copy, and distribute this software in 
+its entirety for non-commercial purposes and without fee, 
+is hereby granted, provided that the above copyright notice 
+and this permission notice appear in all copies and their 
+documentation. 
+
+Software developers, consultants, or anyone else who wishes 
+to use all or part of the software or its documentation for 
+commercial purposes should contact the Technology Transfer 
+Office at the University of Oregon to arrange a commercial
+license agreement.
+
+This software is provided "as is" without expressed or 
+implied warranty of any kind.
+
+-----------------------------------------------------------

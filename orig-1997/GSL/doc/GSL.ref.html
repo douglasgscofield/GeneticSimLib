@@ -1,0 +1,1191 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.02 [en] (X11; I; SunOS 5.5.1 sun4u) [Netscape]">
+   <TITLE>Genetic Simulation Classes</TITLE>
+<! Genetic Simulation Documentation and Reference>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<CENTER>&nbsp;</CENTER>
+
+<HR>
+<CENTER>
+<H2>
+Genetic Simulation Library</H2></CENTER>
+
+<CENTER>
+<H4>Reference Manual</H4>
+<H4>John Conery<br>University of Oregon</H4>
+<A href="#copyright">Copyright</A> &#169 1997, University of Oregon
+<P>
+</CENTER>
+
+
+<HR>
+<H3>Contents</H3>
+
+<H4><A href="#GenerationSection">Generation Classes</A></H4>
+<UL>
+<LI><A href="#Generation">class Generation</A>
+<LI><A href="#GenerationParamBlock">class GenerationParamBlock</A>
+</UL>
+
+<H4><A href="#GenomeSection">Genome Classes</A></H4>
+<UL>
+<LI><A href="#Genome">class Genome</A>
+<LI><A href="#GenomeParamBlock">class GenomeParamBlock</A>
+<LI><A href="#InfiniteGenome">class InfiniteGenome</A>
+<LI><A href="#InfGenomeParamBlock">class InfGenomeParamBlock</A>
+<LI><A href="#SparseGenome">class SparseGenome</A>
+<LI><A href="#SparseGenomeParamBlock">class SparseGenomeParamBlock</A>
+<LI><A href="#Strand">class Strand</A>
+<LI><A href="#StrandIter">class StrandIter</A>
+<LI><A href="#VirtualGenome">class VirtualGenome</A>
+<LI><A href="#VirtualGenomeParamBlock">class VirtualGenomeParamBlock</A>
+<p>
+<LI><A href="#hs">hs()</A>
+<LI><A href="#locus_fitness">locus_fitness()</A>
+</UL>
+
+<H4><A href="#IndividualSection">Individual Classes</A></H4>
+<UL>
+<LI><A href="#Individual">class Individual</A>
+<LI><A href="#IndividualParamBlock">class IndividualParamBlock</A>
+<LI><A href="#ISet">class ISet</A>
+</UL>
+
+<H4><A href="#PopulationSection">Population Classes</A></H4>
+<UL>
+<LI><A href="#Population">class Population</A>
+<LI><A href="#PopulationParamBlock">class PopulationParamBlock</A>
+<LI><A href="#ResultBlock">class ResultBlock</A>
+</UL>
+
+<H4><A href="#RandomSection">Random Number Generator Classes</A></H4>
+<UL>
+<LI><A href="#RNG">class RNG</A>
+<LI><A href="#RNGSeed">class RNGSeed</A>
+<LI><A href="#BinomialRNG">class BinomialRNG</A>
+<LI><A href="#CDFRNG">class CDFRNG</A>
+<LI><A href="#ExponentialRNG">class ExponentialRNG</A>
+<LI><A href="#GammaRNG">class GammaRNG</A>
+<LI><A href="#NormalRNG">class NormalRNG</A>
+<LI><A href="#LogNormalRNG">class LogNormalRNG</A>
+<LI><A href="#LogNormalLogRNG">class LogNormalLogRNG</A>
+<LI><A href="#PoissonRNG">class PoissonRNG</A>
+<LI><A href="#UniformRNG">class UniformRNG</A>
+<P>
+<LI><A href="#rbinomial">rbinomial()</A>
+<LI><A href="#rexponential">rexponential()</A>
+<LI><A href="#rgamma">rgamma()</A>
+<LI><A href="#rlognormal">rlognormal()</A>
+<LI><A href="#rlognormallog">rlognormallog()</A>
+<LI><A href="#rnormal">rnormal()</A>
+<LI><A href="#rpoisson">rpoisson()</A>
+<LI><A href="#runiform">runiform()</A>
+<LI><A href="#rword">int rword()</A>
+
+</UL>
+
+<H4><A href="#StatisticsSection">Statistics Classes</A></H4>
+<UL>
+<LI><A href="#Statistics">class Statistics</A>
+<LI><A href="#StatsBlock">class StatsBlock</A>
+</UL>
+
+<P>
+<A name="GenerationSection"</A>
+<HR>
+<H3>Generation Classes</H3>
+A generation is a collection of individuals.  In the current
+version, operations on generations are simply wrappers for
+calls to the same operations as implemented in the 
+ISet class.
+<DL>
+<DT><tt>#include "generation.h"</tt>
+<DD>The header file contains the definitions of the
+Generation and GenerationParamBlock classes.
+</DL>
+
+<A name="Generation">
+<H4>Generation</H4>
+
+<PRE>
+class Generation {
+public:
+</PRE>
+
+<DL>
+<DT><tt>&nbsp&nbspGeneration();</tt>
+<DD>The constructor creates a new generation containing no individuals.<p>
+
+<DT><tt>&nbsp&nbsp~Generation();</tt>
+<DD>Make sure the destructor is called to deallocate variables used to
+maintain the internal set management data structures.<p>
+
+<DT><tt>&nbsp&nbspvoid insert(Individual *x);</tt>
+<DD>Add individual <TT>x</TT> to this generation.</DD><P>
+
+<DT><tt>&nbsp&nbspIndividual *remove(int i);</tt>
+<DD>Remove individual number <TT>i</TT> from this
+generation (see <TT><A HREF="#isetremove">ISet::remove()</A></TT>
+for the definition of a set index).</DD><P>
+
+<DT><tt>&nbsp&nbspIndividual *select();</tt>
+<DD>Remove a random individual from the generation.</DD><P>
+
+<DT><tt>&nbsp&nbspIndividual *operator [](int i);</tt>
+<DD>Return a reference to individual <TT>i</TT> in this generation.</DD><P>
+
+<DT><tt>&nbsp&nbspint size();</tt>
+<DD>Return the number of individuals in the generation.</DD><P>
+
+<DT><tt>&nbsp&nbspstatic void reset_class();</tt>
+<DD>Reinitialize the class.  Currently does nothing.<P>
+
+<DT><tt>&nbsp&nbspstatic void set_parameters(GenerationParamBlock *pb);</tt>
+<DD>Currently does nothing.<p>
+</DL>
+
+<PRE>
+private:
+  ...
+}
+</PRE>
+
+<A name="GenerationParamBlock">
+<H4>GenerationParamBlock</H4>
+Since there are no operating parameters for the Generation class,
+the current version of the parameter block is empty.
+
+<PRE>
+class GenerationParamBlock {
+};
+
+</PRE>
+
+<P>
+
+<A name="GenomeSection"</A>
+<HR>
+<H3>Genome Classes</H3>
+A genome object holds all the information related to the genetic
+fitness of an individual.  The class named <tt>Genome</tt> is
+an abstract class that defines the basic operations that must
+be implemented for any genome object.  An actual genotype object
+will be an instance of one of the three derived classes.
+See the library documentation for descriptions of the three
+derived classes.
+<P>
+<DL>
+<DT><tt>#include "genome.h"</tt>
+<DD>This header file contains the definition of the base class,
+the inline fitness functions, and the overloaded <tt>&lt&lt</tt>
+operator.<p>
+<DT><tt>#include "infgenome.h"</tt>
+<DT><tt>#include "sparsegenome.h"</tt>
+<DT><tt>#include "virtualgenome.h"</tt>
+<DD>Use one of these three header files in your application, 
+depending on which representation(s) you will use.  The
+files automatically include the base class header file.<p>
+<DT><tt>#include "strand.h"</tt>
+<DD>Definition of the Strand class, which is a building
+block for the Sparse Genome representation.  You will not
+need it unless you are defining your own genome representation
+using strands.
+</DL>
+
+<A name="Genome">
+<H4>Genome</H4>
+The string "<tt>=0</tt>" at the end of each member function defined
+in this class signify that the class is an abstract class.  In other
+words, there will never be an object of type Genome.  Any
+objects that represent genes will be defined by a class
+that is derived from Genome, and 
+every such derived class must implement all of these member functions.
+The steps carried out by the derived class functions will
+all do the same thing.  The only difference is in how they
+are implemented: each derived class uses different data
+structures to represent a genotype, and the functions defined
+for each class must update the corresponding type of data
+structure.
+<P>
+Since all derived classes implement the same member functions,
+the operations of the member functions are described here.
+
+<PRE>
+class Genome {
+protected:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp static Genome *exemplar;</tt>
+<DT><tt>&nbsp&nbsp virtual Genome *new_genome() = 0;</tt>
+<DD>User code cannot access these private functions, but they
+are shown here to explain how the "virtual constructors" in
+the derived classes work -- see the description of 
+<tt>make_genome</tt> and <tt>set_parameters</tt> below.
+</DL>
+<PRE>
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp friend Genome *make_genome();</tt>
+<DD>The "virtual constructor" function.  Returns an object of
+type Genome* by calling <tt>exemplar->new_genome()</tt>.  The
+object pointed to by <tt>exemplar</tt> is an object of the
+derived type last used in a call to <tt>set_parameters</tt>.<p>
+
+<DT><tt>&nbsp&nbsp virtual ~Genome() {};</tt>
+<DD>Each derived class must implement a destuctor that will clean
+up all the data structures associated with a Genome object.<p>
+
+<A name="combine">
+<DT><tt>&nbsp&nbsp virtual fitness_t combine(Genome *p1, Genome *p2) =0;</tt>
+<DD>
+Set the genes in this object to a combination of the genes in <TT>p1</TT>
+and <TT>p2</TT>. Note that <TT>combine()</TT> does not construct a new
+genome object; the genotype must exist before <TT>combine()</TT> can be
+called to fill it with a combination of genes from <TT>p1</TT> and <TT>p2</TT>.
+This function calculates and returns the fitness of the resulting genotype.</DD><P>
+
+<A name="set_locus">
+<DT><tt>&nbsp&nbsp virtual fitness_t set_locus(int i, mutation_t s[]) =0;</tt>
+<DD>The second argument of this procedure is a vector of two mutation
+values.  The procedure sets the mutation values at locus <tt>i</tt>
+of the genotype to these two mutation values.  The return value is
+the new fitness of the genotype.
+</DD><P>
+
+<A name="add_mutations">
+<DT><tt>&nbsp&nbsp virtual fitness_t add_mutations(int n) =0;</tt>
+<DD>
+Add <TT>n</TT> new mutations to random loci
+in this genotype, and return the new relative
+fitness after the mutations have been added. The location of the mutations
+within the set of genes and the effect of the mutations are defined by
+each implementation of the genome class.</DD><P>
+
+<DT><tt>&nbsp&nbsp virtual fitness_t fitness() =0;</tt>
+<DD>
+Returns the fitness of this genotype as last caculated in a call to <TT>combine()</TT>
+or <TT>add__mutations()</TT>. Note that the fitness of a genotype is initialized
+to 1.0, and this value will be returned if <TT>combine()</TT> or <TT>add_mutations()</TT>
+has not been called yet.</DD><P>
+
+<DT><tt>&nbsp&nbsp virtual void print(ostream &s) =0;</tt>
+<DD>
+Print a string with a visible representation
+of this genome object on the stream <TT>s</TT>.</DD><P>
+
+<DT><tt>&nbsp&nbsp virtual Genome* operator =(Genome *x) =0;</tt>
+<DD>
+A "deep copy" operator that makes this genotype a copy of <TT>g</TT>. Note
+that since Genome is an abstract class, every variable used to access objects
+of this class must be a pointer to a Genome and not a Genome itself. If
+<TT>g0</TT> and <TT>g1</TT> are both defined to be Genome*, the assignment
+<TT>g0 = g1</TT> simply copies the pointer, not the Genome object. To make
+<TT>g0</TT> a copy of <TT>g1</TT>, invoke the copy operator by the assignment
+<TT>g0 = *g1</TT>.</DD><P>
+NOTE: the deep copy has not been implemented yet for all derived types.<P>
+</DL>
+<PRE>
+};
+</PRE>
+
+<DL>
+<DT><tt>inline ostream &operator <<(ostream &s, Genome *g);</tt>
+<DD>The base class defines this overloading of the <tt>&lt&lt</tt>
+operator, so it is possible to print a textual representation of
+any Genome object on an output stream.  The operator calls
+the <tt>print</tt> member function defined for the derived class.
+</DL>
+
+<A name="GenomeParamBlock">
+<H4>GenomeParamBlock</H4>
+The parameter block defined in the base class has fields that are
+common to all genome classes.  The derived classes may also
+define additional parameters by defining their own parameter
+blocks that are derived from a GenomeParamBlock.
+
+<PRE>
+class GenomeParamBlock {
+public:
+  mutation_t s;		/* s = mean mutation effect */
+  double u;		/* mu = gametic mutation rate */
+};
+</PRE>
+
+<A name="InfiniteGenome">
+<H4>InfiniteGenome</H4>
+An "infinite genome" allows genes to grow arbitrarily long.  
+When a locus no longer differentiates any individual, it can be reused, i.e.
+it can be reset to 0.0 in all individuals and used as a location
+for a new mutation.  An internal garbage collection routine,
+invisible to user code, performs the garbage collection periodically.
+<P>
+Refer to the documentation of the base class for a description of
+each of member function.
+
+<PRE>
+class InfiniteGenome : public Genome {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp InfiniteGenome();</tt>
+<DT><tt>&nbsp&nbsp ~InfiniteGenome();</tt>
+<DT><tt>&nbsp&nbsp fitness_t combine(Genome *p1, Genome *p2);</tt>
+<DT><tt>&nbsp&nbsp fitness_t set_locus(int i, mutation_t s[]);</tt>
+<DT><tt>&nbsp&nbsp fitness_t add_mutations(int n);</tt>
+<DT><tt>&nbsp&nbsp fitness_t fitness();</tt>
+<DT><tt>&nbsp&nbsp void print(ostream &s);</tt>
+<DT><tt>&nbsp&nbsp Genome* operator =(Genome *x);</tt>
+<DT><tt>&nbsp&nbsp static void reset_class();</tt>
+<DT><tt>&nbsp&nbsp static void set_parameters(InfGenomeParamBlock *p);</tt>
+<DT><tt>&nbsp&nbsp static void init_mutations(ISet &s);</tt>
+<DT><tt>&nbsp&nbsp static void class_status(ostream &s);</tt>
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+<A name="InfGenomeParamBlock">
+<H4>InfGenomeParamBlock</H4>
+<PRE>
+class InfGenomeParamBlock : public GenomeParamBlock {
+public:
+  double d;		/* dominance factor */
+};
+</PRE>
+
+<A name="SparseGenome">
+<H4>SparseGenome</H4>
+A "sparse genome" is basically a sparse vector.  The genome
+length is speficied in advance, and cannot change during the
+simulation.  The genome length can be quite large, but the representation
+is efficient because only loci that contain mutations are
+actually stored in memory.
+Thus the amount of space occupied by a genotype is
+proportional to the number of mutations.  The data structure used
+to hold the sparse vector is known as a <A href="strand">strand</A>.
+A genotype will consist of one or more strands, and the combine
+function will combine the strands independently, implementing
+a chromosome structure for the genes.
+
+<PRE>
+class SparseGenome : public Genome {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp SparseGenome();</tt>
+<DT><tt>&nbsp&nbsp ~SparseGenome();</tt>
+<DT><tt>&nbsp&nbsp fitness_t combine(Genome *p1, Genome *p2);</tt>
+<DT><tt>&nbsp&nbsp fitness_t set_locus(int i, mutation_t s[]);</tt>
+<DT><tt>&nbsp&nbsp fitness_t add_mutations(int n);</tt>
+<DT><tt>&nbsp&nbsp fitness_t fitness();</tt>
+<DT><tt>&nbsp&nbsp void print(ostream &s);</tt>
+<DT><tt>&nbsp&nbsp Genome* operator =(Genome *x);</tt>
+<DT><tt>&nbsp&nbsp static void reset_class();</tt>
+<DT><tt>&nbsp&nbsp static void set_parameters(SparseGenomeParamBlock *p);</tt>
+<DT><tt>&nbsp&nbsp static void class_status(ostream &s);</tt>
+<DT><tt>&nbsp&nbsp static void init_mutations(ISet &is);</tt>
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+<A name="SparseGenomeParamBlock">
+<H4> SparseGenomeParamBlock</H4>
+The additional parameters needed for a sparse genome define the
+variation in mutation effects (the mean mutation effect is
+specified in the base class parameter <tt>s</tt>) and
+parameters that define the overall genome length, the
+number of chromosomes, and the probability of a cross-over
+during recombination.
+
+<PRE>
+class SparseGenomeParamBlock : public GenomeParamBlock {
+public:
+  mutation_t sds;	/* std deviation of s (s = mutation effect) */
+  int gl;		/* G = number of loci in genome */
+  int nchromosomes;	/* N = number of haploid chromosomes */
+  double maplength;	/* M = genetic map length (unit = Morgans) */
+};
+</PRE>
+
+<A name="Strand">
+<H4>Strand</H4>
+A strand is used to hold the mutations in a single chromosome.
+Conceptually a strand is simply a linked list that chains
+together loci.  The current implementation uses segmented
+vectors to provide better locality of reference and faster
+access.
+<P>
+The building block for a strand is defined by a local class
+named Locus.  A locus object will have two mutation values.
+
+<PRE>
+class Strand {
+friend class StrandIter;
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp Strand();</tt>
+<DD>Allocates a new, empty, strand.<p>
+<DT><tt>&nbsp&nbsp ~Strand();</tt>
+<DD>Deallocate the strand.<p>
+<DT><tt>&nbsp&nbsp static void set_chromosome_length(int n);</tt>
+<DD>Set the number of loci that can be held in this strand
+(does not have to be the same for all strands in a genotype).<p>
+<DT><tt>&nbsp&nbsp fitness_t set_gene(int x, int y, mutation_t s);</tt>
+<DD>Insert a mutation with value <tt>s</tt> at locus number
+<tt>x</tt>, strand <tt>y</tt> (<tt>y</tt> is either 0 or 1).<p>
+<DT><tt>&nbsp&nbsp mutation_t get_gene(int x, int y);</tt>
+<DD>Return the value of the mutation at locus <tt>x</tt>,
+strand <tt>y</tt>.<p>
+<DT><tt>&nbsp&nbsp fitness_t get_fitness(int x);</tt>
+<DD>Return the relative fitness of locus x.  The relative
+fitness is determined by the two mutation values, and is
+computed using the fitness function defined in the Genome class.<p>
+<DT><tt>&nbsp&nbsp fitness_t strand_fitness();</tt>
+<DD>Return the relative fitness of the entire strand, defined
+to be the product of the locus fitness of each locus in the strand.<p>
+<DT><tt>&nbsp&nbsp Strand* unravel(int n, int y);</tt>
+<DD>Create a new strand by selecting random genes from this
+object.  Start at a random strand (0 or 1) and copy until
+a cross-over point or the end of the strand.  <tt>n</tt> is
+the number of cross-overs to perform; the cross-overs will
+occur at uniformly random locations distributed throughout
+the strand.  <tt>y</tt> is the "target" strand (see the
+description of <tt>merge()</tt>, below).<p>
+<DT><tt>&nbsp&nbsp fitness_t merge(Strand *s1, Strand *s2);</tt>
+<DD>Combine two input strands and form a new double strand.
+The two input strands should be created by calls to <tt>unravel()</tt>
+performed on two parent genotypes, one with a "target" of 1 and
+the other with a "target" of 0.<p>
+<DT><tt>&nbsp&nbsp void print(ostream &sout, int n);</tt>
+<DD>Print a representation of the strand on the output stream <tt>sout</tt>.
+Stop printing after <tt>n</tt> loci.
+</DL>
+<PRE>
+private:
+  ...
+};
+</PRE>
+
+<A name="StrandIter">
+<H4>StrandIter</H4>
+A StrandIter object is an "iterator" object for strands.  
+Use it to traverse a strand
+in order, stepping from the first non-zero locus to the last.
+The iterator knows how the strand is put together, so it can
+move efficiently from one locus to the next and skip over
+non-zero loci.
+<P>
+Here is an example of a piece of code that uses a strand iterator
+to compute the product of the fitness values of all mutated
+loci in a strand <tt>sp</tt>:
+<PRE>
+   for (StrandIter si(sp); si < max; ++si)
+     w *= sp.get_fitness(si);
+</PRE>
+The name of the iterator is <tt>si</tt>.  Note that the
+argument of the iterator constructor is a reference to the strand object
+that the iterator will traverse.
+When the iterator is created, its
+value is the index of the first non-zero locus in the strand.  The operation
+<tt>++si</tt> will set <tt>si</tt> to the index of the next non-zero
+locus in the strand.  <tt>max</tt> is the length of the strand,
+i.e. a value higher than any locus index.
+
+<PRE>
+class StrandIter {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp StrandIter(Strand &sp);</tt>
+<DD>Create a new iterator to traverse the strand object <tt>sp</tt>.<p>
+<DT><tt>&nbsp&nbsp int operator++();</tt>
+<DD>Advance the iterator to the next non-zero locus.<p>
+<DT><tt>&nbsp&nbsp operator const int() const;</tt>
+<DD>Return the index of the current locus.<p>
+</DL>
+<PRE>
+private:
+  ...
+};
+</PRE>
+
+<A name="VirtualGenome">
+<H4>VirtualGenome</H4>
+A "virtual" genome is simply a single fitness value that represents
+the total overall fitness of the genotype.  Individual loci are
+not represented explicitly.
+<P>
+The "combine" operation, which in the usual genome classes 
+creates a child genotype by combining genes from two parents,
+in this case simply draws a random fitness.  The distribution
+of fitness values is specified by a random number generator
+passed as a parameter to the <tt>set_parameters()</tt> function.
+
+<PRE>
+class VirtualGenome : public Genome {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp VirtualGenome();</tt>
+<DT><tt>&nbsp&nbsp ~VirtualGenome();</tt>
+<DT><tt>&nbsp&nbsp fitness_t combine(Genome *p1, Genome *p2);</tt>
+<DT><tt>&nbsp&nbsp fitness_t set_locus(int i, mutation_t s[]);</tt>
+<DT><tt>&nbsp&nbsp fitness_t add_mutations(int n);</tt>
+<DT><tt>&nbsp&nbsp fitness_t fitness();</tt>
+<DT><tt>&nbsp&nbsp void print(ostream &s);</tt>
+<DT><tt>&nbsp&nbsp Genome* operator =(Genome *x);</tt>
+<DT><tt>&nbsp&nbsp static void reset_class();</tt>
+<DT><tt>&nbsp&nbsp static void set_parameters(VirtualGenomeParamBlock *p);</tt>
+<DT><tt>&nbsp&nbsp static void init_mutations(ISet &s);</tt>
+<DT><tt>&nbsp&nbsp static void class_status(ostream &s);</tt>
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+<A name="VirtualGenomeParamBlock">
+<H4>VirtualGenomeParamBlock</H4>
+The only operating parameter for the virtual genome class is
+the random number generator object to use for drawing the fitness
+of new genotypes.
+
+<PRE>
+class VirtualGenomeParamBlock : public GenomeParamBlock {
+public:
+  RNG *R;
+};
+</PRE>
+
+<A name="hs">
+<A name="locus_fitness">
+<H4>Fitness Functions</H4>
+<DL>
+<DT><tt>inline fitness_t hs(mutation_t s);</tt>
+<DD> This function computes the reduction in fitness caused by
+a heterozygous mutation with effect <tt>s</tt>.</DD><P>
+
+<DT><tt>inline fitness_t locus_fitness(mutation_t s0, mutation_t s1);</tt>
+<DD> This function computes the relative fitness of a locus that
+has mutations with effects <tt>s0</tt> and <tt>s1</tt>.  </DD><P>
+</DL>
+
+<P>
+<A name="IndividualSection"</A>
+<HR>
+<H3>Individual Classes</H3>
+An individual consists of a genotype, a sex, and an ID.  Although
+this simple representation is unlikely to suffice for all but the
+simplest simulations, this class can be used as a base class for
+deriving more complex individuals.
+
+<DL>
+<DT><tt>#include "individual.h"</tt>
+<DD>The include file defines the Individual, IndividualParamBlock,
+and ISet classes, an overloaded
+stream operator for printing a representation of the individual,
+and an enumerated type for sexes.<p>
+<DT><tt>enum sex_t {NONE, FEMALE, MALE};</tt>
+<DD>The enumerated type.  Use <TT>NONE</TT> to indicate
+uninitialized values.<p>
+<DT><tt>inline ostream &operator <<(ostream &sout, Individual &x);</tt>
+<DD>The stream output operator.
+</DL>
+
+<A name="Individual">
+<H4>Individual</H4>
+<PRE>
+class Individual {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp Individual();</tt>
+<DD>The constructor initializes the genes by calling <tt>make_genome()</tt>,
+sets the sex to <tt>NONE</tt>, and assigns a unique ID.  The ID is simply
+determined by incrementing a hidden class variable used as a counter.<p>
+<DT><tt>&nbsp&nbsp ~Individual();</tt>
+<DD>Destructor.<p>
+<DT><tt>&nbsp&nbsp void print(ostream &s);</tt>
+<DD>Print a representation of the individual on stream <tt>s</tt>; invoked
+by the <tt>&lt&lt</tt> operator.<p>
+<DT><tt>&nbsp&nbsp void set_sex(sex_t sex);</tt>
+<DT><tt>&nbsp&nbsp sex_t get_sex();</tt>
+<DD>Member functions to assign the sex of the individual and return the
+current sex.<p>
+<DT><tt>&nbsp&nbsp int get_id();</tt>
+<DD>Return the individual's ID.<p>
+<DT><tt>&nbsp&nbsp Genome *const genes;</tt>
+<DD>A pointer to the genes (see the library documentation 
+of <A href="GSL.html#individual">Individual</A> for a
+discussion of why this member is public and what it means for
+it to be defined as a const).<p>
+<DT><tt>&nbsp&nbsp void copy_genes(GBase *gb, int n);</tt>
+<DD>Initialize the genes of this individual by making a copy
+of genotype <tt>n</tt> in the genotype database <tt>gb</tt>.<P>
+<DT><tt>&nbsp&nbsp static void reset_class();</tt>
+<DT><tt>&nbsp&nbsp static void set_parameters(IndividualParamBlock *pb);</tt>
+<DD>Since the class has no operating parameters these two
+procedures have no effect.
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+<A name="IndividualParamBlock">
+<H4>IndividualParamBlock</H4>
+Since there are no operating parameters for the Individual class,
+the current version of the parameter block is empty.
+
+<PRE>
+class IndividualParamBlock {
+};
+</PRE>
+
+<A name="ISet">
+<H4>ISet</H4>
+An ISet is a container object for the Set class.  It implements
+a simple ordered set, allowing set elements to be referenced by
+index.  If the set currently holds <tt>n</tt> items, the items
+are indexed from 0 to <tt>n-1</tt>.
+
+<PRE>
+class ISet {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp ISet();</tt>
+<DD>Create a new, empty, set of individuals.<p>
+<DT><tt>&nbsp&nbsp ~ISet();</tt>
+<DD>Deallocate the set.  IMPORTANT NOTE:  deallocating a set does
+NOT deallocate the individuals in the set.<p>
+<DT><tt>&nbsp&nbsp void insert(Individual *x);</tt>
+<DD>
+Add individual <TT>x</TT> to the set. Individuals are stored in the order
+in which they are inserted.</DD><P>
+<A name="isetremove">
+<DT><tt>&nbsp&nbsp Individual *remove(int i);</tt>
+<DD>
+Remove individual number <TT>i</TT> from the set. Note that this operation
+will change the index of all remaining individuals.<p>
+<DT><tt>&nbsp&nbsp Individual *select();</tt>
+<DD>Remove a random individual from the set.</DD><P>
+<DT><tt>&nbsp&nbsp Individual *operator [](int i);</tt>
+<DD>The array index operator can be used to refer to any individual according
+to its current position in the set.</DD><P>
+<DT><tt>&nbsp&nbsp int size();</tt>
+<DD>Return the number of individuals currently in the set.</DD><P>
+</DL>
+<PRE>
+private:
+  ...
+};
+</PRE>
+
+
+<P>
+<A name="PopulationSection"</A>
+<HR>
+<H3>Population Classes</H3>
+Populations are collections of generations.  The simple population
+defined in the library has just two generations -- a "current"
+generation of reproducing adults and a "new" generation of offspring
+produced by the current generation.  As is the case with Individual
+and Generation, the Population class is too simple to be used in
+any but the simplest simulations, but it can be used as a base class
+for more complicated populations.
+
+<DL>
+<DT><tt>#include "population.h"</tt>
+<DD>The header file contains the definitions of the
+Population and PopulationParamBlock
+classes.  It also defines a class named ResultBlock,
+which is a simple record structure used to hold the
+results of a simulation.
+</DL>
+
+<A name="Population">
+<H4>Population</H4>
+<PRE>
+class Population {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp Population(PopulationParamBlock *pb = NULL);</tt>
+<DD>Create a new Population object, initializing it with values
+from the parameter block.  Note that the use of a parameter block
+is slightly different in this class: it is used to create a single
+population object, whereas the parameter blocks for the other
+classes are used to initialize the class, not any particular object.<p>
+
+<DT><tt>&nbsp&nbsp ~Population();</tt>
+<DD>Destructor; make sure it is called to deallocate the generations
+and any other structures used in a simulation.<p>
+
+<DT><tt>&nbsp&nbsp ResultBlock *run(int n);</tt>
+<DD> Run the simulation for up to <TT>n</TT> generations. Returns either when
+the population is extinct or after the nth generation has been created.
+Results of the run are returned in a ResultBlock structure.</DD><P>
+
+<DT><tt>&nbsp&nbsp int step();</tt>
+<DD>Do one step of the simulation, typically one generation cycle. The return
+value is the number of survivors in the new generation.</DD><P>
+
+<DT><tt>&nbsp&nbsp friend ostream &operator <<(ostream &s, Population &p);</tt>
+<DD>Print the current status of the population on the output stream <TT>s</TT>.</DD><P>
+
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+The <TT>run()</TT> and <TT>step()</TT> procedures can be used interchangeably.
+After they return, the population is left in a state where the simulation
+can be resumed by a subsequent call. For example, an application might
+define a derived type that has member functions for visualizing the state
+of the population. A program might call <TT>step()</TT> two times so the
+user can view two generations, then call <TT>run(100)</TT> to advance the
+simulation to year 100; in this case a call to run(100) simulates
+98 more years, and is equivalent to calling <tt>step()</tt> 98 more
+times, assuming the population is not extinct before year 100.
+
+<P>The application should not call <TT>run()</TT> or <TT>step()</TT> after
+the population is extinct, since the behavior of these functions
+is undefined in these situations.  Extinction is signified by a 
+population size of zero, either the return value from a call to
+<tt>step()</tt> or the population size indicated in the ResultBlock
+returned by <tt>run()</tt>.<P>
+
+<A name="ResultBlock">
+<H4>ResultBlock</H4>
+<PRE>
+class ResultBlock {
+public:
+  int ngen;		/* number of generations simulated */
+  int nsur;		/* current size of the population */
+};
+</PRE>
+
+<A name="PopulationParamBlock">
+<H4>PopulationParamBlock</H4>
+<PRE>
+class PopulationParamBlock {
+public:
+  double kmax;		/* K = mean carrying capacity */
+  double sdk;		/*     std deviation of kmax */
+  double rmax;		/* R = mean reproductive rate */
+  double sdr;		/*     std deviation of rmax */
+  double u;		/* mu = gametic mutation rate */
+};
+</PRE>
+
+<P>
+<A name="RandomSection"</A>
+<HR>
+<H3>Random Number Generator Classes</H3>
+The GSL library includes several random number generators.  There
+are two ways to draw a sample from a random distribution: call
+a stand-alone function for that distribution, or create a
+random number generator object and use an operator to advance
+the object to the next number in its sequence.
+
+<DL>
+<DT><tt>#include "rng.h"</tt>
+<DD>The header file contains the definition of a base class,
+RNG, that describes the basic behavior of random number generator
+objects; seven derived classes, each defining a different random
+distribution; seven stand-alone random number functions; and
+a class for defining seeds for random number generators.
+</DL>
+
+<A name="RNGSeed">
+<H4>RNGSeed</H4>
+The random number generators are built on top of the <tt>rand48</tt>
+collection of random number functions that are part of most Unix
+system libraries.  Seeds for these functions are 48 bits long.
+The RNGSeed class gives users a way to create a seed from an
+integer and to examine the state of a seed.
+
+<P>The last parameter to each of the stand-alone functions and
+each of the random number generator constructors is an optional
+pointer to a seed.  If the parameter is missing, or if it is
+NULL, a global seed, automatically initialized from the system
+clock, is used.  The same seed is shared by all stand-alone
+functions and all random number generator objects.
+Users can create their own seeds and pass
+pointers to them if they want to use their seeds instead of
+the predefined seed.  
+
+<PRE>
+class RNGSeed {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp RNGSeed();</tt>
+<DD>Create a new seed, and initialize it from the system clock.<p>
+<DT><tt>&nbsp&nbsp RNGSeed(unsigned int x0);</tt>
+<DD>Create a new seed, using the 32 bits from <tt>x0</tt> and
+zeros for the remaining 16 bits.<p>
+<DT><tt>&nbsp&nbsp ~RNGSeed();</tt>
+<DD>Deallocate the seed.<p>
+<DT><tt>&nbsp&nbsp unsigned short *x;</tt>
+<DD>Return a pointer to the seed.  Note: this function will
+be replaced in future versions, so it should not be called
+from user code.
+</DL>
+<PRE>
+};
+</PRE>
+
+<A name="RNG">
+<H4>RNG Base Class</H4>
+The operations defined for the base class are implemented
+in every random number generator object created by a derived
+class.
+
+<PRE>
+class RNG {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp virtual double operator ++() =0;</tt>
+<DD>Return the next random deviate in this distribution.<p>
+
+<DT><tt>&nbsp&nbsp operator const double();</tt>
+<DD>Return the most recently generated random deviate from
+this distribution.<p>
+
+<DT><tt>&nbsp&nbsp RNGSeed *get_seed();</tt>
+<DD>Return a pointer to the seed object currently being used 
+by this distribution.<p>
+
+<DT><tt>&nbsp&nbsp RNGSeed *save_seed();</tt>
+<DD>Return a copy of the seed used by this object (i.e. future
+calls to the RNG object will not affect the copy).<p>
+
+<DT><tt>&nbsp&nbsp void set_seed(RNGSeed *px);</tt>
+<DD>Replace current seed with the
+seed pointed to by <tt>px</tt>.  Note: the current seed
+might be shared by several objects, so it is not deleted
+by this procedure; users
+must know when the old seed is not used any more and deallocate
+it when it is not used by any object.<p>
+
+<DT><tt>&nbsp&nbsp void restore_seed(RNGSeed *ps);</tt>
+<DD>Copy the seed pointed to be <tt>ps</tt> to the seed
+used by this object (i.e. the opposite of <tt>save_seed</tt>).<p>
+
+<DT><tt>&nbsp&nbsp void inc_seed(int n);</tt>
+<DD>Add <tt>n</tt> to the seed.<p>
+</DL>
+
+<PRE>
+};
+</PRE>
+
+<A name="BinomialRNG">
+<A name="rbinomial">
+<H4>Binomial Distribution</H4>
+A value from a binomial distribution will be
+an integer valued floating point number between 0 and <TT>n</TT>
+corresponding to the number of successes in <TT>n</TT> trials, where each
+trial has probability <TT>p</TT>.
+
+<PRE>
+double rbinomial(double p, int n, RNGSeed *s = NULL);
+
+class BinomialRNG : public RNG {
+public:
+  BinomialRNG(double p, int n, RNGSeed *s = NULL);
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="CDFRNG">
+<H4>Distributions Based on Cumulative Density Functions</H4>
+A value from a CDF distribution will have a probability that is
+defined by a probability density function supplied by the user.
+The PDF is contained in a file that is read by the class
+constructor and used to create an internal cumulative density
+function, which is in turn used whenever the user requests
+a new value.  See "<A href="GSL.html#CDFRNG">Arbitrary Distributions</A>"
+in the GSL User Manual for information on the file format
+and the types of distributions supported.
+
+<PRE>
+typedef enum {CDF_OK, CDF_OPEN_ERR, CDF_FORMAT_ERR} CDFStatus;
+
+class CDFRNG : public RNG {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp CDFRNG(char *CDFFileName)</tt>
+<DD>The argument to the constructor is the name of the
+data file that contains the input probability density function.<P>
+<DT><tt>&nbsp&nbsp ~CDFRNG()</tt>
+<DD>Be sure to call the destructor so it deallocates the
+internal CDF and other state variables.<P>
+<DT><tt>&nbsp&nbsp int bad()</tt>
+<DD>Returns true if there were any errors encountered in
+constructing the CDF, e.g. if the input file could not be
+found or if there was a format error.<P>
+<DT><tt>&nbsp&nbsp double min()</tt>
+<DD>Returns the smallest X value, i.e. the smallest deviate
+that will be generated.<P>
+<DT><tt>&nbsp&nbsp double max()</tt>
+<DD>Returns the largest X value, the largest deviate that
+will be generated.<P>
+<DT><tt>&nbsp&nbsp double operator ++();</tt>
+<DD>Return a new random deviate from the distribution.<p>
+</DL>
+<PRE>
+private:
+  ...
+};
+</PRE>
+
+<A name="rexponential">
+<A name="ExponentialRNG">
+<H4>Exponential Distribution</H4>
+A value from an exponential distribution will be
+a positive real value with exponentially decreasing probability
+of higher values.
+
+<PRE>
+double rexponential(RNGSeed *s = NULL);
+
+class ExponentialRNG : public RNG {
+public:
+  ExponentialRNG(RNGSeed *s = NULL);
+  double operator ++();
+};
+</PRE>
+
+<A name="GammaRNG">
+<A name="rgamma">
+<H4>Gamma Distribution</H4>
+Implementation of a Gamma distribution with mean <TT>a</TT> and standard deviation
+<TT>b</TT>. Note: when <TT>a == b</TT> the distribution is an exponential
+distribution; when <TT>a &lt; b</TT> the distribution is more L-shaped,
+and when <TT>a > b</TT> the distribution is similar to a log-normal distribution.
+
+<PRE>
+double rgamma(double a, double b, RNGSeed *s = NULL);
+
+class GammaRNG : public RNG {
+public:
+  GammaRNG(double a, double b, RNGSeed *s = NULL);
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="LogNormalRNG">
+<A name="rlognormal">
+<A name="LogNormalLogRNG">
+<A name="rlognormallog">
+<H4>LogNormal Distribution</H4>
+There are two ways to specify a log-normal distribution.  The first
+("lognormal") is used when the mean and standard deviation are
+specified in the normal scale, and the second ("lognormallog")
+is used when the mean and standard deviation are specified on
+the log scale.
+
+<PRE>
+double rlognormal(double mean, double stddev, RNGSeed *s = NULL);
+double rlognormallog(double mean, double stddev, RNGSeed *s = NULL);
+
+class LogNormalRNG : public RNG {
+public:
+  LogNormalRNG(double mean, double stddev, RNGSeed *s = NULL);
+  ~LogNormalRNG();
+  double operator ++();
+private:
+  ...
+};
+
+class LogNormalLogRNG : public RNG {
+public:
+  LogNormalLogRNG(double mean, double stddev, RNGSeed *s = NULL);
+  ~LogNormalLogRNG();
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="rnormal">
+<A name="NormalRNG">
+<H4>Normal Distribution</H4>
+A value from this distribution will be normally
+distributed with mean <TT>mean</TT>
+and standard deviation <TT>stddev</TT>.
+
+<PRE>
+double rnormal(double mean, double stddev, RNGSeed *s = NULL);
+
+class NormalRNG : public RNG {
+public:
+  NormalRNG(double mean, double stddev, RNGSeed *s = NULL);
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="PoissonRNG">
+<A name="rpoisson">
+<H4>Poisson Distribution</H4>
+A value from a Possion distribution is an integer-valued floating point number
+with expected value <TT>lambda</TT> and exponentially decreasing probability 
+of higher values.
+
+<PRE>
+double rpoisson(double lambda, RNGSeed *s = NULL);
+
+class PoissonRNG : public RNG {
+public:
+  PoissonRNG(double lambda, RNGSeed *s = NULL);
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="UniformRNG">
+<A name="runiform">
+<H4>Uniform Distribution</H4>
+This distribution consists of real numbers evenly distributed
+between <tt>lower</tt> and <tt>upper</tt>.
+
+<PRE>
+double runiform(double lower, double upper, RNGSeed *s = NULL);
+
+class UniformRNG : public RNG {
+public:
+  UniformRNG(double lower, double upper, RNGSeed *s = NULL);
+  double operator ++();
+private:
+  ...
+};
+</PRE>
+
+<A name="rword">
+<H4>Random Words</H4>
+<DL>
+<DT><tt>unsigned int rword(RNGSeed *s = NULL);</tt>
+<DD>Return a random integer between 0 and 2<SUP>32</SUP>-1.<p>
+<DT><tt>unsigned int rword(int n, RNGSeed *s = NULL);</tt>
+<DD>Return a random integer between 0 and <tt>n</tt>-1.<p>
+</DL>
+
+<P>
+<A name="StatisticsSection"</A>
+<HR>
+<H3>Statistics Classes</H3>
+The Statistics class is used to compute descriptive statistics
+for a set of data points.
+
+<DL>
+<DT><tt>#include "statistics.h"</tt>
+<DD>The header file contains the definition of a class that
+computes statistics and a result block used to return the
+values of the statistics to the user.
+</DL>
+
+<A name="Statistics">
+<H4>Statistics</H4>
+A Statistics object works like the stat functions in a hand-held
+calculator.  To compute statistics for a set of data points,
+create a Statistics object, and then record the values one at a time
+in the object.  After the last value has been recorded, call
+<tt>get_results()</tt>; the mean, standard deviation, etc. will
+be returned in a StatsBlock object.
+
+<PRE>
+class Statistics {
+public:
+</PRE>
+<DL>
+<DT><tt>&nbsp&nbsp Statistics();</tt>
+<DD>Create a new, initially empty, Statistics object.<p>
+<DT><tt>&nbsp&nbsp ~Statistics();</tt>
+<DD>Destructor.<p>
+<DT><tt>&nbsp&nbsp void reset();</tt>
+<DD>
+Clear the set of values. The constructor automatically initializes the
+set, so it is not necessary to reset a new object.</DD><P>
+<DT><tt>&nbsp&nbsp void save(double x);</tt>
+<DD>Add the value <TT>x</TT> to the set.</DD><P>
+<DT><tt>&nbsp&nbsp StatsBlock *get_results();</tt>
+<DD>Compute the summary statistics on the values currently in the set 
+and return them in a StatsBlock object.</DD><P>
+</DL>
+<PRE>
+protected:
+  ...
+};
+</PRE>
+
+<A name="StatsBlock">
+<H4>StatsBlock</H4>
+A StatsBlock is simply a record structure with fields for
+each statistic computed by a Statistics object.
+
+<PRE>
+class StatsBlock {
+public:
+  int n;		/* number of observations */
+  double mean;		/* mean */
+  double sd;		/* standard deviation */
+  double cv;		/* coefficient of variation */
+  int min;		/* minimum value */
+  int max;		/* maximum value */
+};
+</PRE>
+
+<P>
+<HR>
+<A name=copyright>
+Copyright &#169 1997 by the University of Oregon.<br>  
+ALL RIGHTS RESERVED.
+<P>
+Permission to use, copy, and distribute this software in 
+its entirety for non-commercial purposes and without fee, 
+is hereby granted, provided that the above copyright notice 
+and this permission notice appear in all copies and their 
+documentation. 
+<P>
+Software developers, consultants, or anyone else who wishes 
+to use all or part of the software or its documentation for 
+commercial purposes should contact the Technology Transfer 
+Office at the University of Oregon to arrange a commercial
+license agreement.
+<P>
+This software is provided "as is" without expressed or 
+implied warranty of any kind.
+
+<HR>
+
+<P> <EM> Last update: 20 Nov 97  13:32:39 </EM> </P>
+</BODY>
+</HTML>
+

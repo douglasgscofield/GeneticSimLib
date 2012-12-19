@@ -1,0 +1,20 @@
+# mas 1.0
+
+# To change a default setting uncomment the corresponding line
+# and edit the value of the parameter.  Note: any line that does
+# not begin with a comment character must start with the name of
+# a parameter.
+
+NPopulations	100
+MaxGenerations  1000
+#PopSizeM 	2
+#PopSizeSD 	0
+#ReproRateM 	2
+#ReproRateSD 	0
+#MutEffectM 	0.05
+#MutEffectSD 	0.02
+#MutationRate 	0.5
+#Interval	10
+#GenomeLength   10000
+#NChromosomes   1
+#NCrossovers    3
