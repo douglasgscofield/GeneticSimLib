@@ -1,0 +1,10 @@
+.DS_Store
+._*
+*.swp
+*.o
+*.a
+gitignore
+tmp*
+scmas
+mas
+idemo
