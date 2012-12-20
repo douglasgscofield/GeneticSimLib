@@ -16,10 +16,10 @@
 */
 
 #include <stdlib.h>
-#include <string.h>
-#include <iostream.h>
-#include <strstream.h>
-#include <iomanip.h>
+#include <string>
+#include <iostream>
+#include <strstream>
+#include <iomanip>
 #include <time.h>
 #include <unistd.h>
 

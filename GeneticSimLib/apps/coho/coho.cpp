@@ -87,7 +87,7 @@ CohoPopulation::CohoPopulation(CohoParamBlock *pb, int *as, char *id) : Populati
     f[i] = new Generation;
     j[i] = new Generation;
     for (k = 0; k < as[i-1]; k++) {
-      if (x = new Coho(pfemale,pmale,pjack)) {
+      if ((x = new Coho(pfemale,pmale,pjack))) {
 	if (x->get_sex() == MALE)
 	  if (x->return_year() == 3)
 	    m[i]->insert(x);
@@ -149,19 +149,19 @@ std::ostream &operator <<(std::ostream &s, CohoPopulation &p) {
   for (i = 0; i < NYEARS; i++) {
     s << i << "-year olds:" << std::endl;
     s << "  M: ";
-    if (g = p.m[i]) {
+    if ((g = p.m[i])) {
       for (k = 0; k < g->size(); k++)
 	s << std::setw(4) << (*g)[k]->get_id();
     }
     s << std::endl;
     s << "  F: ";
-    if (g = p.f[i]) {
+    if ((g = p.f[i])) {
       for (k = 0; k < g->size(); k++)
 	s << std::setw(4) << (*g)[k]->get_id();
     }
     s << std::endl;
     s << "  J: ";
-    if (g = p.j[i]) {
+    if ((g = p.j[i])) {
       for (k = 0; k < g->size(); k++)
 	s << std::setw(4) << (*g)[k]->get_id();
     }

@@ -144,6 +144,7 @@ int numberp(char *s) {
 void read_rcfile(double *pb) {
   char line[100];
   std::ifstream rcfile(".masrc");
+  const std::string rcfile_first_line = "# mas 1.0";
   double x;
   char *pn, *val;
   int i, valid;
@@ -153,8 +154,8 @@ void read_rcfile(double *pb) {
     return;			// file doesn't exist? just use defaults
 
   rcfile.getline(line,sizeof(line));
-  if ((line != "# mas 1.0")) {
-    std::cerr << "Corrupt .masrc file?  First line must be '#mas 1.0'" << std::endl;
+  if (strncmp(line,rcfile_first_line.c_str(),rcfile_first_line.length())) {
+    std::cerr << "Corrupt .masrc file?  First line must be '" << rcfile_first_line << "'" << std::endl;
     return;
   }
 

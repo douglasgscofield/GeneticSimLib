@@ -36,51 +36,51 @@ int main(int argc, char *argv[]) {
     dad = new Individual;
     dad->set_sex(MALE);
     dad->genes->add_mutations(2);
-    cout << dad->get_id() << ":  " << *dad;
+    std::cout << dad->get_id() << ":  " << *dad;
     dads.insert(dad);
 
     mom = new Individual;
     mom->set_sex(FEMALE);
     mom->genes->add_mutations(2);
     moms.insert(mom);
-    cout << mom->get_id() << ":  " << *mom;
+    std::cout << mom->get_id() << ":  " << *mom;
 
     child = new Individual;
     child->set_sex((++r < 0.5) ? MALE : FEMALE);
     child->genes->combine(dad->genes,mom->genes);
     x.insert(child);
-    cout << child->get_id() << ":  " << *child;
+    std::cout << child->get_id() << ":  " << *child;
 
-    cout << endl;
+    std::cout << std::endl;
   }
 
   // Test the remove function and error detection in the Generation class.
 
   // Print the first three, remove the second, and print again:
 
-  cout << "First three individuals in x: \n  ";
+  std::cout << "First three individuals in x: \n  ";
   for (i=0; i<3; i++)
-    cout << x[i]->get_id() << "  ";
-  cout << endl;
+    std::cout << x[i]->get_id() << "  ";
+  std::cout << std::endl;
   child = x.remove(1);
-  cout << "individual removed: " << child->get_id() << endl;
-  cout << "First three individuals remaining in x: \n  ";
+  std::cout << "individual removed: " << child->get_id() << std::endl;
+  std::cout << "First three individuals remaining in x: \n  ";
   for (i=0; i<3; i++)
-    cout << x[i]->get_id() << "  ";
-  cout << endl << endl;
+    std::cout << x[i]->get_id() << "  ";
+  std::cout << std::endl << std::endl;
 
   // Same test, but now remove the first one (special case):
 
-  cout << "First three individuals in x: \n  ";
+  std::cout << "First three individuals in x: \n  ";
   for (i=0; i<3; i++)
-    cout << x[i]->get_id() << "  ";
-  cout << endl;
+    std::cout << x[i]->get_id() << "  ";
+  std::cout << std::endl;
   child = x.remove(0);
-  cout << "individual removed: " << child->get_id() << endl;
-  cout << "First three individuals remaining in x: \n  ";
+  std::cout << "individual removed: " << child->get_id() << std::endl;
+  std::cout << "First three individuals remaining in x: \n  ";
   for (i=0; i<3; i++)
-    cout << x[i]->get_id() << "  ";
-  cout << endl << endl;
+    std::cout << x[i]->get_id() << "  ";
+  std::cout << std::endl << std::endl;
 
   // There are now gsize-2 individuals in x.  Whittle it down to 2:
 
@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
 
   // Print the remaining two individuals:
 
-  cout << "last two individuals in x: " << x[0]->get_id() << " and " << x[1]->get_id() << endl;
+  std::cout << "last two individuals in x: " << x[0]->get_id() << " and " << x[1]->get_id() << std::endl;
 
   // These should cause an error message:
 
@@ -99,14 +99,14 @@ int main(int argc, char *argv[]) {
   // Test removing the last item:
 
   child = x.remove(1);
-  cout << child->get_id() << endl;
+  std::cout << child->get_id() << std::endl;
 
   child = x.remove(0);
-  cout << child->get_id() << endl;
+  std::cout << child->get_id() << std::endl;
 
   // Gen X should now be empty:
 
-  cout << "Gen X size = " << x.size() << endl;
+  std::cout << "Gen X size = " << x.size() << std::endl;
 }
 
 // Initializations -- set parameters used in genome class

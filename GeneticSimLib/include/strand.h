@@ -13,7 +13,7 @@
 #ifndef _strand_h_
 #define _strand_h_
 
-#include <string.h>
+#include <string>
 #include <stdlib.h>
 #include <math.h>
 #include <iostream>

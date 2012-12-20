@@ -19,7 +19,7 @@
 //						a coho population
 
 #include <stddef.h>
-#include "gsl.hpp"
+#include "gsl.h"
 
 // The extra data member that defines a salmon object is a "return_year"
 // that determines when the individual will return to spawn.  Both the sex 

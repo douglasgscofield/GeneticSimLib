@@ -23,7 +23,6 @@
 #include <assert.h>
 #include <fstream>
 #include <string>
-#include <stdio.h>
 
 // Define a global seed to be used by stand-alone functions
 // and objects that do not use a seed passed by the user.  Seeds
@@ -72,6 +71,9 @@ RNGSeed::~RNGSeed() {
 // In all RNG classes, referring to a variable of type RNG returns the
 // last value drawn from the distribution.
 //
+
+RNG::~RNG() {
+}
 
 RNGSeed *RNG::get_seed() {
   return seed;

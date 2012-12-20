@@ -15,11 +15,11 @@
   The program uses the XFORMS user interface library.
 */
 
-#include <stdlib.h>
 #include <string>
 #include <iostream>
 #include <strstream>
 #include <iomanip>
+#include <stdlib.h>
 
 #include "gsl.h"
 
@@ -50,7 +50,7 @@ void init_gui();
 void init_obs();
 void add_mutations_step();
 void zap_individuals_step();
-void genome_class_status(ostream &s);
+void genome_class_status(std::ostream &s);
 void init_genome_class();
 
 // Initialize the local objects (array of genomes) and user interface
@@ -87,7 +87,7 @@ void add_mutations_step() {
   int i;
   int nm, n1, n2;
   char num1[linewidth], num2[linewidth];
-  ostrstream sout(display_buffer,bufsize);
+  std::ostrstream sout(display_buffer,bufsize);
   PoissonRNG rnm(1.0);
 
   fl_freeze_form(the_gui->ggui);
@@ -101,7 +101,7 @@ void add_mutations_step() {
     g[i]->add_mutations(nm);
     sout << g[i];
   }
-  sout << ends;
+  sout << std::ends;
 
   fl_addto_browser(the_gui->Browser,display_buffer);
   fl_unfreeze_form(the_gui->ggui);
@@ -117,7 +117,7 @@ void zap_individuals_step() {
   int i;
   int n1, n2;
   char num[linewidth];
-  ostrstream sout(display_buffer,bufsize);
+  std::ostrstream sout(display_buffer,bufsize);
 
   fl_freeze_form(the_gui->ggui);
   fl_clear_browser(the_gui->Browser);
@@ -131,18 +131,18 @@ void zap_individuals_step() {
     }
     sout << g[i];
   }
-  sout << ends;
+  sout << std::ends;
 
   fl_addto_browser(the_gui->Browser,display_buffer);
   fl_unfreeze_form(the_gui->ggui);
 }
 
-void genome_class_status(ostream &sout) {
+void genome_class_status(std::ostream &sout) {
   if (cur_genome_type == Infinite)
     InfiniteGenome::class_status(sout);
   else
     SparseGenome::class_status(sout);
-  sout << endl;
+  sout << std::endl;
 }
 
 void init_genome_class() {
@@ -183,7 +183,7 @@ void init_obs() {
 
 void init_gui() {
   int i;
-  ostrstream sout(display_buffer,bufsize);
+  std::ostrstream sout(display_buffer,bufsize);
 
   the_gui = create_form_ggui();
 
@@ -195,7 +195,7 @@ void init_gui() {
 
   for (i=0; i<ng; i++)
     sout << g[i];
-  sout << ends;
+  sout << std::ends;
 
   fl_addto_browser(the_gui->Browser,display_buffer);
   fl_show_form(the_gui->ggui,FL_PLACE_CENTER,FL_FULLBORDER,"Genome Demo");

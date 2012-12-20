@@ -98,5 +98,7 @@ inline std::ostream &operator <<(std::ostream &s, Genome *g) {
   return s;
 }
 
+Genome *make_genome();	/* declaration of "virtual constructor" */
+
 #endif  // _genome_h_
 
