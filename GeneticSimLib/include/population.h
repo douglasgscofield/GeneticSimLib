@@ -13,12 +13,12 @@
 #ifndef _population_h_
 #define _population_h_
 
+#include <iostream>
 #include <stddef.h>
 
 class Individual;
 class Generation;
 class RNG;
-class ostream;
 
 class ResultBlock {
 public:
@@ -41,7 +41,7 @@ public:
   ~Population();
   ResultBlock *run(int n);
   int step();
-  friend ostream &operator <<(ostream &s, Population &p);
+  friend std::ostream &operator <<(std::ostream &s, Population &p);
 protected:
   Generation *cur;		/* current generation  */
   Generation *old;		/* past generation (only two age classes) */
@@ -58,5 +58,5 @@ protected:
   virtual int build_next_generation();
 };
 
-#endif
+#endif  // _population_h_
 

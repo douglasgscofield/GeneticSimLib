@@ -16,7 +16,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "genome.h"
 
@@ -39,7 +39,7 @@ public:
   fitness_t strand_fitness();
   Strand* unravel(int n, int y);
   fitness_t merge(Strand *s1, Strand *s2);
-  void print(ostream &sout, int limit);
+  void print(std::ostream &sout, int limit);
 private:
   Locus *v;
   int nl;				/* number of loci in strand */
@@ -80,4 +80,4 @@ private:
   int max;
 };
 
-#endif
+#endif  // _strand_h_

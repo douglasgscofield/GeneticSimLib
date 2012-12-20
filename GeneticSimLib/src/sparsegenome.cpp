@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 // 
-// sparsegenome.C -- implementation of the "sparse vector" representation
+// sparsegenome.cpp -- implementation of the "sparse vector" representation
 // of a genome.
 //
 // Linked list version: a locus contains an integer index and a float
@@ -20,10 +20,10 @@
 // destructor to reuse or copy loci as needed.
 //
 
-#include <string.h>
+#include <string>
 #include <stdlib.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "strand.h"
 #include "sparsegenome.h"
@@ -92,14 +92,14 @@ fitness_t SparseGenome::combine(Genome *p1, Genome *p2){
   for (i = 0; i < nchromosomes; i++) {
     nx1 = ++(*rx);
     nx2 = ++(*rx);
-    //    cout << nx1 << " " << nx2 << endl;
-    //    sp1->sa[i].print(cout,10000);
-    //    sp2->sa[i].print(cout,10000);
+    //    std::cout << nx1 << " " << nx2 << std::endl;
+    //    sp1->sa[i].print(std::cout,10000);
+    //    sp2->sa[i].print(std::cout,10000);
     lp1 = sp1->sa[i].unravel(nx1,0);
     lp2 = sp2->sa[i].unravel(nx2,1);
     xw *= sa[i].merge(lp1,lp2);
-    //    sa[i].print(cout,10000);
-    //    cout << sa[i].strand_fitness() << endl;
+    //    sa[i].print(std::cout,10000);
+    //    std::cout << sa[i].strand_fitness() << std::endl;
   }
 
   return w = xw;
@@ -173,7 +173,7 @@ Genome* SparseGenome::operator =(Genome *x){
   //  *s1 = *(x1->s1);
   //  *s2 = *(x1->s2);
   //  w = x1->w;
-  cerr << "sparse genome deep copy not implemented yet" << endl;
+  std::cerr << "sparse genome deep copy not implemented yet" << std::endl;
   return this;
 }
 
@@ -181,18 +181,18 @@ Genome* SparseGenome::operator =(Genome *x){
 // operator <<: put a written representation of a genome object into an 
 // iostream (useful in demos and debugging).
 
-void SparseGenome::print(ostream &sout) {
+void SparseGenome::print(std::ostream &sout) {
   static const int cutoff = 10;			// max loci to print
   int i;
 
-  sout.setf(ios::fixed, ios::floatfield);
+  sout.setf(std::ios::fixed, std::ios::floatfield);
   sout.precision(4);
 
-  sout << "sparse genome @ " << (void *)this << " w = " << w << endl << endl;
+  sout << "sparse genome @ " << (void *)this << " w = " << w << std::endl << std::endl;
   for (i=0; i<nchromosomes; i++) {
     sout << "sa[" << i << "]: ";
     sa[i].print(sout,cutoff);
-    sout << endl;
+    sout << std::endl;
   }
 }
 
@@ -207,7 +207,7 @@ void print_locus_fitnesses() {
     for (j=0; j<=i; j++) {
       x = i*0.01;
       y = j*0.01;
-      cout << "s( " << x << "," << y << ") = " << locus_fitness(x,y) << endl;
+      std::cout << "s( " << x << "," << y << ") = " << locus_fitness(x,y) << std::endl;
     }
 }
 
@@ -287,14 +287,14 @@ void SparseGenome::init_mutations(ISet &is) {
     v[i] = is.remove(0);
 
   bin = new int[p+1];
-  //  cout << "Placing initial mutations in " << p << " strands...." << endl;
+  //  std::cout << "Placing initial mutations in " << p << " strands...." << std::endl;
 
   for (i=0; i<=p; i++)
     bin[i] = 0;
 
   gu = u/(2*gl);		// genic rate = individual rate / number of genes
 
-  //  cout << "Genic mutation rate (U/2N) = " << gu << endl;
+  //  std::cout << "Genic mutation rate (U/2N) = " << gu << std::endl;
 
   // Iterate over all loci; pick a mutation effect for that locus, figure
   // out the expected frequency of a gene with that effect, and then add it
@@ -320,11 +320,11 @@ void SparseGenome::init_mutations(ISet &is) {
       nx = p;
 
     //    if (qi) {
-    //      cout << "locus " << i << ": ";
-    //      cout << ", si = " << si;
-    //      cout << ", hs = " << hs(si,0.0);
-    //      cout << ", qi = " << qi;
-    //      cout << ", nx = " << nx << endl;
+    //      std::cout << "locus " << i << ": ";
+    //      std::cout << ", si = " << si;
+    //      std::cout << ", hs = " << hs(si,0.0);
+    //      std::cout << ", qi = " << qi;
+    //      std::cout << ", nx = " << nx << std::endl;
     //    }
 
     nm += nx;				// record info on this mutation
@@ -344,18 +344,18 @@ void SparseGenome::init_mutations(ISet &is) {
     }
   }
 
-  // cout << "Distributed " << nm << " mutations across " << nl << " loci" << endl;
+  // std::cout << "Distributed " << nm << " mutations across " << nl << " loci" << std::endl;
   // for (i=0; i<=p; i++)
-  //   cout << i << ": " << bin[i] << endl;
+  //   std::cout << i << ": " << bin[i] << std::endl;
 }
 
 // class_status prints the state of the class (no static members in this class,
 // so nothing to print)
 
-void SparseGenome::class_status(ostream &sout) {
-  sout << "[Sparse Genome]" << endl;
+void SparseGenome::class_status(std::ostream &sout) {
+  sout << "[Sparse Genome]" << std::endl;
   sout << "s = " << s << " +/- " << sds << "; u = " << u << "; ";
   sout << "G = " << gl << "; N = " << nchromosomes << "; ";
-  sout << "L = " << chrlength << "; M = " << maplength << endl;    
+  sout << "L = " << chrlength << "; M = " << maplength << std::endl;    
 }
 

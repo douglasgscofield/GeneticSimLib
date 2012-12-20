@@ -9,7 +9,7 @@
 // object uses the ISet (set of individuals) container class defined
 // in individual.h.
 
-#include <iostream.h>
+#include <iostream>
 
 #include "gsl.h"
 

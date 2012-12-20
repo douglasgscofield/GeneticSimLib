@@ -6,14 +6,14 @@
 /*--------------------------------------------------------------*/
 
 // 
-// virtualgenome.C -- implementation of the "virtual genome" representation
+// virtualgenome.cpp -- implementation of the "virtual genome" representation
 //
 
-#include <string.h>
+#include <string>
 #include <stdlib.h>
 #include <stddef.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "virtualgenome.h"
 #include "rng.h"
@@ -53,7 +53,7 @@ fitness_t VirtualGenome::combine(Genome *, Genome *) {
 // a virtual genome:
 
 fitness_t VirtualGenome::set_locus(int i, mutation_t xs[]) {
-  cerr << "VirtualGenome::set_locus not implemented" << endl;
+  std::cerr << "VirtualGenome::set_locus not implemented" << std::endl;
   return 0.0;
 }
 
@@ -107,10 +107,10 @@ Genome* VirtualGenome::operator =(Genome *x) {
 // For this class just print the fitness.  To be consistent with
 // other implementations print an entire line.
 
-void VirtualGenome::print(ostream &sout) {
-  sout.setf(ios::fixed, ios::floatfield);
+void VirtualGenome::print(std::ostream &sout) {
+  sout.setf(std::ios::fixed, std::ios::floatfield);
   sout.precision(4);
-  sout << w << endl;
+  sout << w << std::endl;
 }
 
 // VirtualGenome class static functions -- 
@@ -136,9 +136,9 @@ void VirtualGenome::set_parameters(VirtualGenomeParamBlock *p) {
 class ISet;
 
 void VirtualGenome::init_mutations(ISet &is) {
-  cerr << "Initial mutations not defined for VirtualGenome class" << endl;
+  std::cerr << "Initial mutations not defined for VirtualGenome class" << std::endl;
 }
 
-void VirtualGenome::class_status(ostream &sout) {
-  sout << "Virtual Genome: R = " << (void *)R << endl;
+void VirtualGenome::class_status(std::ostream &sout) {
+  sout << "Virtual Genome: R = " << (void *)R << std::endl;
 }

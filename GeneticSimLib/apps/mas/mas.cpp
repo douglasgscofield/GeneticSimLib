@@ -9,15 +9,15 @@
 
   Plain command line interface -- gets default settings from .rc file,
   then checks command line for further settings.  Prints results on
-  stdout (cout).  
+  stdout (std::cout).  
 */
 
 #include <stdlib.h>
 #include <ctype.h>
-#include <iostream.h>
-#include <fstream.h>
-#include <iomanip.h>
 #include <math.h>
+#include <iostream>
+#include <fstream>
+#include <iomanip>
 
 #include "gsl.h"		// genetic simulation library
 
@@ -48,9 +48,9 @@ typedef enum {
 
 typedef struct {
   paramtype key;
-  char *name;
-  char *cmnd;
-  char *desc;
+  const std::string& name;
+  const std::string& cmnd;
+  const std::string& desc;
   double val;
   double min;
   double max;
@@ -143,7 +143,7 @@ int numberp(char *s) {
 
 void read_rcfile(double *pb) {
   char line[100];
-  ifstream rcfile(".masrc");
+  std::ifstream rcfile(".masrc");
   double x;
   char *pn, *val;
   int i, valid;
@@ -153,8 +153,8 @@ void read_rcfile(double *pb) {
     return;			// file doesn't exist? just use defaults
 
   rcfile.getline(line,sizeof(line));
-  if (strcmp(line,"# mas 1.0")) {
-    cerr << "Corrupt .masrc file?  First line must be '#mas 1.0'" << endl;
+  if ((line != "# mas 1.0")) {
+    std::cerr << "Corrupt .masrc file?  First line must be '#mas 1.0'" << std::endl;
     return;
   }
 
@@ -169,24 +169,24 @@ void read_rcfile(double *pb) {
       val = strtok(NULL,whitespace);
 
     for (i = 0; i < NParams; i++)
-      if (strcmp(ParamTable[i].name,pn) == 0) {
-	valid = 1;
-	if (!numberp(val))
-	  valid = 0;
-	else {
-	  x = atof(val);
-	  if ((x < ParamTable[i].min) || (x > ParamTable[i].max))
-	    valid = 0;
-	}
-	break;
+      if (strcmp(ParamTable[i].name.c_str(),pn) == 0) {
+	    valid = 1;
+	    if (!numberp(val))
+	      valid = 0;
+	    else {
+	      x = atof(val);
+	      if ((x < ParamTable[i].min) || (x > ParamTable[i].max))
+	        valid = 0;
+	    }
+	    break;
       }
     if (i < NParams)
       if (valid)
-	pb[ParamTable[i].key] = x;
+	    pb[ParamTable[i].key] = x;
       else
-	cerr << "Bad parameter value: " << pn << ", " << val << endl;
+	    std::cerr << "Bad parameter value: " << pn << ", " << val << std::endl;
     else
-      cerr << "Unknown parameter file entry: " << pn << "; ignored" << endl;
+      std::cerr << "Unknown parameter file entry: " << pn << "; ignored" << std::endl;
   }
 }
 
@@ -197,25 +197,25 @@ void read_cmnd_line(double *pb, int argc, char *argv[]) {
 
   for (i = 1; i < argc; i++) {
     for (j = 0; j < NParams; j++)
-      if (strcmp(argv[i],ParamTable[j].cmnd) == 0) {
-	i = i+1;
-	valid = 1;
-	if (!numberp(argv[i]))
-	  valid = 0;
-	else {
-	  x = atof(argv[i]);
-	  if ((x < ParamTable[j].min) || (x > ParamTable[j].max))
-	    valid = 0;
-	}
-	break;
+      if (strcmp(argv[i],ParamTable[j].cmnd.c_str()) == 0) {
+	    i = i+1;
+	    valid = 1;
+	    if (!numberp(argv[i]))
+	      valid = 0;
+	    else {
+	      x = atof(argv[i]);
+	      if ((x < ParamTable[j].min) || (x > ParamTable[j].max))
+	        valid = 0;
+	    }
+	    break;
       }
     if (j < NParams)
       if (valid)
-	pb[ParamTable[j].key] = x;
+	    pb[ParamTable[j].key] = x;
       else
-	cerr << "Bad parameter value: " << argv[i-1] << ", " << argv[i] << endl;
+	    std::cerr << "Bad parameter value: " << argv[i-1] << ", " << argv[i] << std::endl;
     else
-      cerr << "Unknown command: " << argv[i] << "; ignored" << endl;
+      std::cerr << "Unknown command: " << argv[i] << "; ignored" << std::endl;
   }
 }
 
@@ -239,15 +239,15 @@ void print_param(double *pb, paramtype p, int cr) {
       break;
 
   if (cr)
-    cout << endl << ParamTable[i].desc << pb[p];
+    std::cout << std::endl << ParamTable[i].desc << pb[p];
   else
-    cout << " \261 " << pb[p];
+    std::cout << " \261 " << pb[p];
 }
 
 void print_parameters(double *pb) {
   int i;
 
-  cout << "MAS 3.0 [" << CDATE << "]" << endl;
+  std::cout << "MAS 3.0 [" << CDATE << "]" << std::endl;
 
   print_param(pb,NPopulations,1);
   print_param(pb,MaxGenerations,1);
@@ -262,7 +262,7 @@ void print_parameters(double *pb) {
   print_param(pb,NChromosomes,1);
   print_param(pb,NCrossovers,1);
 
-  cout << endl << endl;
+  std::cout << std::endl << std::endl;
 }
 
 // init() -- miscellaneous initializations.
@@ -314,21 +314,21 @@ void run(double *params) {
     delete the_population;
     delete r;
     if (((i+1) % stars) == 0)
-      cerr << "*";
+      std::cerr << "*";
     if (((i+1) % (stars * 80)) == 0)
-      cerr << endl;
+      std::cerr << std::endl;
   }
 
-  cerr << endl << endl;
+  std::cerr << std::endl << std::endl;
 
   StatsBlock *sr = s.get_results();
-  cout << "N................................ " << sr->n << endl;
-  cout << "Mean extinction time (te)........ " << sr->mean << endl;
-  cout << "Standard deviation of te......... " << sr->sd << endl;
-  cout << "Coefficient of variation ........ " << sr->cv << endl;
-  cout << "Min generations to extinction.... " << sr->min << endl;
-  cout << "Max generations to extinction.... " << sr->max << endl;
-  cout << endl;
+  std::cout << "N................................ " << sr->n << std::endl;
+  std::cout << "Mean extinction time (te)........ " << sr->mean << std::endl;
+  std::cout << "Standard deviation of te......... " << sr->sd << std::endl;
+  std::cout << "Coefficient of variation ........ " << sr->cv << std::endl;
+  std::cout << "Min generations to extinction.... " << sr->min << std::endl;
+  std::cout << "Max generations to extinction.... " << sr->max << std::endl;
+  std::cout << std::endl;
 }
 
 int main(int argc, char *argv[]) {

@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 /*
-  population.C -- implementation of class Population.  This class
+  population.cpp -- implementation of class Population.  This class
   is basically just a place to collect all the odds 'n ends and
   run the simulation of a single population (the user interface
   coordinates simulation of multiple populations, possibly on
@@ -15,7 +15,7 @@
 
 #include <stddef.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "population.h"
 #include "generation.h"
@@ -92,15 +92,15 @@ int Population::step() {
   return nsur;
 }
 
-ostream &operator <<(ostream &s, Population &p) {
-  s << "Population info: " << endl;
+std::ostream &operator <<(std::ostream &s, Population &p) {
+  s << "Population info: " << std::endl;
   s << "  cur = " << p.cur;
   if (p.cur) 
     s << " [n = " << p.cur->size() << "]";
   s << ", old = " << p.old;
   if (p.old)
     s << " [n = " << p.old->size() << "]";
-  s << ",  ngen = " << p.ngen << ", kmax = " << p.kmax << ", maxkmax = " << p.maxkmax << endl;
+  s << ",  ngen = " << p.ngen << ", kmax = " << p.kmax << ", maxkmax = " << p.maxkmax << std::endl;
   return s;
 }
 

@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 // 
-// infgenome.C -- implementation of the "infinite genome" representation
+// infgenome.cpp -- implementation of the "infinite genome" representation
 //
 // Each locus is a pair of bits; an individual will have two arrays of
 // bits.  The bits are stored as arrays of unsigned chars to make it easier
@@ -14,11 +14,11 @@
 //
 
 
-#include <string.h>
+#include <string>
 #include <stdlib.h>
 #include <stddef.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "individual.h"		// needed for definition of ISet
 #include "infgenome.h"
@@ -26,6 +26,8 @@
 
 // function prototypes of local functions
 
+fitness_t fitness_function(int n1, int n2);
+fitness_t fitness_function(int n);
 strand build_free_locus_map(int maxgl);
 unsigned short *build_bit_count();
 char *strand_string(char *s, strand ps, int n);
@@ -68,7 +70,7 @@ InfiniteGenome::InfiniteGenome() {
 }
  
 InfiniteGenome::~InfiniteGenome() {
-  //  cout << "      deleting genome" << endl;
+  //  cout << "      deleting genome" << std::endl;
   delete s1;
   delete s2;
   if (prev)
@@ -114,7 +116,7 @@ fitness_t InfiniteGenome::combine(Genome *p1, Genome *p2) {
 }
 
 fitness_t InfiniteGenome::set_locus(int i, mutation_t xs[]) {
-  cerr << "InfiniteGenome::set_locus not implemented" << endl;
+    std::cerr << "InfiniteGenome::set_locus not implemented" << std::endl;
   return 0.0;
 }
 
@@ -188,7 +190,7 @@ fitness_t InfiniteGenome::add_mutations(int nm) {
       continue;
     }
 
-    cerr << "genome::add_mutations: fatal error: out of loci\n";
+    std::cerr << "genome::add_mutations: fatal error: out of loci\n";
     exit(1);
   }
 }
@@ -206,7 +208,7 @@ fitness_t InfiniteGenome::fitness() {
 
 Genome* InfiniteGenome::operator =(Genome *x) {
   //  return this;
-  cerr << "deep copy not implemented in InfiniteGenome" << endl;
+    std::cerr << "deep copy not implemented in InfiniteGenome" << std::endl;
   return NULL;
 }
 
@@ -218,21 +220,21 @@ Genome* InfiniteGenome::operator =(Genome *x) {
 // This function and the class status function share a local constant named
 // "indent" that tells how far to indent the bit vector.
 
-static char *indent = "        ";	// spaces to indent each strand
+static const std::string& indent = "        ";	// spaces to indent each strand
 static const int linesize = 99;		// max cols to print in each strand
 static const int nbytes = linesize/9; 	// print a byte and a space
 
-void InfiniteGenome::print(ostream &sout) {
+void InfiniteGenome::print(std::ostream &sout) {
   char sbuf[linesize+2];
-  char *smindent = "  ";	// sigh -- set by hand to fill after fitness
+  const std::string& smindent = "  ";	// sigh -- set by hand to fill after fitness
 
-  sout.setf(ios::fixed, ios::floatfield);
+  sout.setf(std::ios::fixed, std::ios::floatfield);
   sout.precision(4);
 
   sout << w << smindent << strand_string(sbuf,s1,(gl>nbytes)?(nbytes):(gl));
-  sout << endl;
+  sout << std::endl;
   sout << indent << strand_string(sbuf,s2,(gl>nbytes)?(nbytes):(gl));
-  sout << endl;
+  sout << std::endl;
 }
 
 // InfiniteGenome class static functions -- 
@@ -286,10 +288,10 @@ void InfiniteGenome::set_parameters(InfGenomeParamBlock *p) {
 // "ancestral" mutations. 
 
 void InfiniteGenome::init_mutations(ISet &is) {
-  cerr << "Initial mutations not defined for InfiniteGenome class" << endl;
+    std::cerr << "Initial mutations not defined for InfiniteGenome class" << std::endl;
 }
 
-void InfiniteGenome::class_status(ostream &sout) {
+void InfiniteGenome::class_status(std::ostream &sout) {
   int i, j;
   char sbuf[linesize+2];
 
@@ -298,10 +300,10 @@ void InfiniteGenome::class_status(ostream &sout) {
   sout << "gl = " << gl << ", ";
   sout << "flp = " << flp << ", ";
   sout << "s = " << s;
-  sout << endl;
+  sout << std::endl;
 
   sout << indent << strand_string(sbuf,free_loci,(gl>nbytes)?(nbytes):(gl));
-  sout << endl;
+  sout << std::endl;
 }
 
 
@@ -449,19 +451,19 @@ fitness_t fitness_function(int n) {
 void InfiniteGenome::audit() {
   int i;
 
-  cerr << "Audit: " << endl;
+  std::cerr << "Audit: " << std::endl;
 
-  cerr << "Checking global arrays..." << endl;
+  std::cerr << "Checking global arrays..." << std::endl;
   for (i = 0; i < 256; i++) {
     if (audit_count[i] != bit_count[i]) {
-      cerr << "error: bit_count[" << i << "] = " << bit_count[i] << endl;
+        std::cerr << "error: bit_count[" << i << "] = " << bit_count[i] << std::endl;
     }
   }
-  cerr << "done" << endl;
+  std::cerr << "done" << std::endl;
 
-  cerr << "Counters: " << endl;
-  cerr << "  objects in use:       " << count << endl;
-  cerr << "  objects allocated:    " << num_allocated << endl;
-  cerr << "  objects deallocated:  " << num_deallocated << endl;
+  std::cerr << "Counters: " << std::endl;
+  std::cerr << "  objects in use:       " << count << std::endl;
+  std::cerr << "  objects allocated:    " << num_allocated << std::endl;
+  std::cerr << "  objects deallocated:  " << num_deallocated << std::endl;
 }
 

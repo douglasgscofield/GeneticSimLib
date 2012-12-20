@@ -67,7 +67,7 @@ You should now have a directory named GSL.  Under this
 directory you will find all or some of the following 
 subdirectories, depending on which tar files you downloaded:
 
-    src		Contains all the .C files for the classes
+    src		Contains all the .cpp files for the classes
 		in the class library
     include	The .h files for the class library
     lib		Contains libgen.a, the compiled library

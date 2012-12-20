@@ -24,4 +24,4 @@
 #include "rng.h"
 #include "statistics.h"
 
-#endif
+#endif  // _gsl_h_

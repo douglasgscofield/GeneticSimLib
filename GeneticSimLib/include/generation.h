@@ -34,5 +34,5 @@ private:
   ISet *is;
 };
 
-#endif
+#endif  // _generation_h_
 

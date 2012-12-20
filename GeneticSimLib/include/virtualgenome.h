@@ -17,9 +17,9 @@
 #ifndef _virtualgenome_h_
 #define _virtualgenome_h_
 
+#include <iostream>
 #include "genome.h"
 
-class ostream;			/* <iostream.h> */
 class ISet;			/* "individual.h" */
 class RNG;			/* "rng.h" */
 
@@ -37,18 +37,18 @@ public:
   fitness_t set_locus(int i, mutation_t s[]);
   fitness_t add_mutations(int n);
   fitness_t fitness();
-  void print(ostream &s);
+  void print(std::ostream &s);
   Genome* operator =(Genome *x);
   // functions specific to this class (must be defined in all classes derived from Genome):
   static void reset_class();
   static void set_parameters(VirtualGenomeParamBlock *p);
   static void init_mutations(ISet &s);
-  static void class_status(ostream &s);
+  static void class_status(std::ostream &s);
 protected:
   Genome *new_genome();		// "virtual constructor"
   fitness_t w;			// fitness of this individual
   static RNG *R;		// RNG used to draw fitness values
 };
 
-#endif
+#endif  // _virtualgenome_h_
 

@@ -23,8 +23,9 @@
 #ifndef _genome_h_
 #define _genome_h_
 
+#include <iostream>
+
 class ISet;
-class ostream;
 
 // Use "mutation_t" in the definition of the effects of a single mutation.
 // Use "fitness_t" for the cumulative effects of several mutations.  Both
@@ -73,7 +74,7 @@ public:
   virtual fitness_t set_locus(int i, mutation_t s[]) =0;
   virtual fitness_t add_mutations(int n) =0;
   virtual fitness_t fitness() =0;
-  virtual void print(ostream &s) =0;
+  virtual void print(std::ostream &s) =0;
   virtual Genome* operator =(Genome *x) =0;
 };
 
@@ -87,15 +88,15 @@ public:
 //     (sets params that are implementation-dependant)
 //  static void init_mutations(ISet &s);
 //     (puts "ancestral" mutations in objects in set s)
-//  static void class_status(ostream &s);
+//  static void class_status(std::ostream &s);
 //     (prints status of class on stream s)
 
 // This operator is a "wrapper" that invoked the print member function:
 
-inline ostream &operator <<(ostream &s, Genome *g) {
+inline std::ostream &operator <<(std::ostream &s, Genome *g) {
   g->print(s);
   return s;
 }
 
-#endif
+#endif  // _genome_h_
 

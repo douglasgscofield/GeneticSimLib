@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 /*
-  gbase.C -- genotype database class
+  gbase.cpp -- genotype database class
 
   The constructor opens a text file created by 'mkgbase' and reads a
   subset of the genotypes.  Member functions select an item in the
@@ -14,7 +14,7 @@
   currently selected item.
 */
 
-#include <fstream.h>
+#include <fstream>
 
 #include "gsl.h"		// genetic simulation library 
 #include "gbase.h"		// genotype database structure definition
@@ -34,16 +34,16 @@ GBase::GBase() {
   clx = 0;
 }
 
-int read_header(ifstream &f, gb_param p[]);
-gb_mutation *read_fitness(ifstream &f, gb_param p[]);
-gb_genotype *read_genotypes(ifstream &f, int &n, gb_param p[], gb_mutation sv[]);
+int read_header(std::ifstream &f, gb_param p[]);
+gb_mutation *read_fitness(std::ifstream &f, gb_param p[]);
+gb_genotype *read_genotypes(std::ifstream &f, int &n, gb_param p[], gb_mutation sv[]);
 
 GBase::GBase(int n, char *gfn) {
-  ifstream f(gfn);
+  std::ifstream f(gfn);
   char bigline[1024];
 
   if (f.bad()) 
-    cerr << "GBase: Can't open " << gfn << endl;
+    std::cerr << "GBase: Can't open " << gfn << std::endl;
   else {
     //    f.setbuf(bigline,sizeof(bigline));
     params = new gb_param[GB_NPARAMS];
@@ -57,14 +57,14 @@ GBase::GBase(int n, char *gfn) {
   }
 }
 
-int read_header(ifstream &f, gb_param p[]) {
+int read_header(std::ifstream &f, gb_param p[]) {
   char line[80];
   int sizes[GB_NSEGS];
   int i;
 
   f.getline(line,sizeof(line));
   if (strcmp(line,GBTAG) != 0) {
-    cerr << "GBase: incorrect tag in genotype database file" << endl;
+    std::cerr << "GBase: incorrect tag in genotype database file" << std::endl;
     return 0;
   }
 
@@ -77,7 +77,7 @@ int read_header(ifstream &f, gb_param p[]) {
   return 1;
 }
 
-gb_mutation *read_fitness(ifstream &f, gb_param p[]) {
+gb_mutation *read_fitness(std::ifstream &f, gb_param p[]) {
   int gl = p[GB_GL];
   gb_mutation *sv = new gb_mutation[gl];
 
@@ -137,31 +137,31 @@ int *make_sample(int N, int M) {
   return a;
 }
 
-void skip(ifstream &f, int n) {
+void skip(std::ifstream &f, int n) {
   int i, j, nm;
   gb_locus l;
 
   for (i = 0; i < n; i++) {
-    f >> dec >> nm;
+    f >> std::dec >> nm;
     for (j = 0; j < nm; j++)
-      f >> hex >> l.x;
+      f >> std::hex >> l.x;
   }
 }
 
-void read_one(ifstream &f, gb_genotype *g) {
+void read_one(std::ifstream &f, gb_genotype *g) {
   int i, nm;
   gb_locus l;
 
-  f >> dec >> nm;
+  f >> std::dec >> nm;
   g->n = nm;
   g->m = new gb_locus[nm];
   for (i = 0; i < nm; i++) {
-    f >> hex >> l.x;
+    f >> std::hex >> l.x;
     g->m[i] = l;
   }
 }
 
-void read_all(ifstream &f, int n, gb_genotype g[]) {
+void read_all(std::ifstream &f, int n, gb_genotype g[]) {
   int i;
   gb_genotype x;
 
@@ -173,7 +173,7 @@ void read_all(ifstream &f, int n, gb_genotype g[]) {
 
 // Read n random genotypes from the file f, put them in g
 
-void read_selected(ifstream &f, int n, int ng, gb_genotype g[]) {
+void read_selected(std::ifstream &f, int n, int ng, gb_genotype g[]) {
   int i, j;
   gb_genotype x;
   int *a = make_sample(n,ng);		// n random indices
@@ -187,7 +187,7 @@ void read_selected(ifstream &f, int n, int ng, gb_genotype g[]) {
   }
 }
 
-gb_genotype *read_genotypes(ifstream &f, int &n, gb_param p[], gb_mutation sv[]) {
+gb_genotype *read_genotypes(std::ifstream &f, int &n, gb_param p[], gb_mutation sv[]) {
   int ng = p[GB_NG];
   int i, j;
   int nm;
@@ -195,7 +195,7 @@ gb_genotype *read_genotypes(ifstream &f, int &n, gb_param p[], gb_mutation sv[])
   gb_genotype *g;
 
   if (ng < n)
-    cerr << "GBase: request greater than GBase size" << endl;
+    std::cerr << "GBase: request greater than GBase size" << std::endl;
 
   if (ng <= n)
     n = ng;			// note: n is a reference parameter...

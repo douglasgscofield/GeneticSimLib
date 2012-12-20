@@ -23,9 +23,10 @@
 #ifndef _infgenome_h_
 #define _infgenome_h_
 
+#include <iostream>
+
 #include "genome.h"
 
-class ostream;			/* <iostream.h> */
 class ISet;			/* "individual.h" */
 
 class InfGenomeParamBlock : public GenomeParamBlock {
@@ -45,13 +46,13 @@ public:
   fitness_t set_locus(int i, mutation_t s[]);
   fitness_t add_mutations(int n);
   fitness_t fitness();
-  void print(ostream &s);
+  void print(std::ostream &s);
   Genome* operator =(Genome *x);
   // functions specific to this class (must be defined in all classes derived from Genome):
   static void reset_class();
   static void set_parameters(InfGenomeParamBlock *p);
   static void init_mutations(ISet &s);
-  static void class_status(ostream &s);
+  static void class_status(std::ostream &s);
   static void audit();
 protected:
   // "virtual constructor"
@@ -77,5 +78,5 @@ protected:
   friend fitness_t fitness_function(int n);
 };
 
-#endif
+#endif  // _infgenome_h_
 

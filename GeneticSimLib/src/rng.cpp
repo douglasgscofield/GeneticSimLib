@@ -7,7 +7,7 @@
 
 
 //
-// rng.C -- implementation of random number generator classes.
+// rng.cpp -- implementation of random number generator classes.
 //
 //  Note: the binomial and poisson functions use the math library
 //  routine 'lgamma' to compute the Gamma function; according to the
@@ -21,8 +21,8 @@
 #include <sys/time.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <fstream.h>
-#include <string.h>
+#include <fstream>
+#include <string>
 #include <stdio.h>
 
 // Define a global seed to be used by stand-alone functions
@@ -52,14 +52,15 @@ RNGSeed::RNGSeed() {
   x = new unsigned short[3];
   x[0] = 0;
   x[1] = (unsigned short)((t.tv_usec) >> 16);
-  x[2] = (unsigned short)((t.tv_usec) && 0xFFFF);
+  x[2] = (unsigned short)((t.tv_usec) & 0xFFFF);
 }
 
 RNGSeed::RNGSeed(unsigned int x0) {
   x = new unsigned short[3];
-  x[0] = (x0 >> 32) && 0xFFFF;
-  x[1] = (x0 >> 16) && 0xFFFF;
-  x[2] = x0 && 0xFFFF;
+  // the (x0 >> 32) may cause a warning when unsigned int is 4 bytes
+  x[0] = sizeof(x0) > 4 ? (x0 >> 32) & 0xFFFF : 0;
+  x[1] = (x0 >> 16) & 0xFFFF;
+  x[2] = x0 & 0xFFFF;
 }
 
 RNGSeed::~RNGSeed() {
@@ -177,7 +178,7 @@ double rbinomial(double pp, int n, RNGSeed *s) {
   return binomial_f(n,p,pp,b,m,g,logp,logq,sq,sp->x);
 }
 
-// CDF(char *f) -- read a probability density function (in the form
+// CDF(const std::string& f) -- read a probability density function (in the form
 // of a histogram) from file f; use it to build a cumulative density
 // function, and return random deviates from the CDF.
 
@@ -190,8 +191,10 @@ double rbinomial(double pp, int n, RNGSeed *s) {
 // is given on a comment line, e.g. "# N 100", that must occur before
 // any data line.
 
-CDFRNG::CDFRNG(char *fn, RNGSeed *s) {
-  ifstream in(fn);
+//CDFRNG::CDFRNG(const std::string& CDFFileName, RNGSeed *s) {
+//CDFRNG::CDFRNG(const char* CDFFileName, RNGSeed *s = NULL) {
+CDFRNG::CDFRNG(const char* CDFFileName, RNGSeed *s) {
+  std::ifstream in(CDFFileName);
   char line[100];
   int i;
   int n;

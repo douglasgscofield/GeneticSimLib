@@ -40,9 +40,9 @@
 #ifndef _sparsegenome_h_
 #define _sparsegenome_h_
 
+#include <iostream>
 #include "genome.h"
 
-class ostream;			/* <iostream.h> */
 class ISet;			/* "individual.h" */
 class RNG;			/* "rng.h" */
 
@@ -65,12 +65,12 @@ public:
   fitness_t set_locus(int i, mutation_t s[]);
   fitness_t add_mutations(int n);
   fitness_t fitness();
-  void print(ostream &s);
+  void print(std::ostream &s);
   Genome* operator =(Genome *x);
   // functions specific to this class (must be defined in all classes derived from Genome):
   static void reset_class();
   static void set_parameters(SparseGenomeParamBlock *p);
-  static void class_status(ostream &s);
+  static void class_status(std::ostream &s);
   static void init_mutations(ISet &is);
 protected:
   // "virtual constructor"
@@ -91,5 +91,5 @@ protected:
   friend mutation_t new_mutation_value();
 };
 
-#endif
+#endif  // _sparsegenome_h_
 

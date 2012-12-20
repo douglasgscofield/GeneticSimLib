@@ -6,13 +6,13 @@
 /*--------------------------------------------------------------*/
 
 //
-// strand.C -- vector representation of strand
+// strand.cpp -- vector representation of strand
 //
 
-#include <string.h>
+#include <string>
 #include <stdlib.h>
 #include <math.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "strand.h"
 #include "rng.h"
@@ -47,7 +47,7 @@ Strand::Strand() {
 
 Strand::~Strand() {
   if (v) {
-    //    cerr << "deleting " << (void *)v << " [destructor]" << endl;
+    //    std::cerr << "deleting " << (void *)v << " [destructor]" << std::endl;
     delete v;
   }
 }
@@ -78,7 +78,7 @@ fitness_t Strand::set_gene(int x, int y, mutation_t sj) {
 
   if (v == NULL) {
     v = new Locus[lseg];
-    //    cerr << "new " << (void *)v << " [set_gene]" << endl;
+    //    std::cerr << "new " << (void *)v << " [set_gene]" << std::endl;
   }
 
   for (i = 0, match = 0; i < nl; i++) {
@@ -105,7 +105,7 @@ fitness_t Strand::set_gene(int x, int y, mutation_t sj) {
   }
   else {
     wi = 1.0;
-    //    cerr << "set: ml = " << ml << ", nl = " << nl << ", i = " << i << endl;
+    //    std::cerr << "set: ml = " << ml << ", nl = " << nl << ", i = " << i << std::endl;
     move_down(i);
     v[i].s[0] = v[i].s[1] = 0.0;
     v[i].x = x;
@@ -117,7 +117,7 @@ fitness_t Strand::set_gene(int x, int y, mutation_t sj) {
   // from the new mutation at this location
 
   wj = locus_fitness(v[i].s[0],v[i].s[1]);
-  //  cout << "set: w = " << wj/wi << endl;
+  //  cout << "set: w = " << wj/wi << std::endl;
   return wj/wi;
 }
 
@@ -128,11 +128,11 @@ void Strand::extend_vector() {
   Locus *vt = v;
 
   v = new Locus[ml+lseg];
-  //  cerr << "new " << (void *)v << " [extend]" << endl;
-  //  cerr << "copying " << ml*sizeof(Locus)
-  //       << " from " << (void *)vt << " to " << (void *)v << endl;
+  //  std::cerr << "new " << (void *)v << " [extend]" << std::endl;
+  //  std::cerr << "copying " << ml*sizeof(Locus)
+  //       << " from " << (void *)vt << " to " << (void *)v << std::endl;
   memmove(v,vt,ml*sizeof(Locus));
-  //  cerr << "deleting " << (void *)vt << " [extend]" << endl;
+  //  std::cerr << "deleting " << (void *)vt << " [extend]" << std::endl;
   delete vt;
   ml += lseg;
 }
@@ -147,10 +147,10 @@ void Strand::move_down(int i) {
   Locus *dest = &v[i+1];
 
   int x = (nl-i);		// number of places to move
-  //  cerr << "x = " << x
+  //  std::cerr << "x = " << x
   //       << "#bytes = " << x*sizeof(Locus) 
   //       << " from " << (void *)src 
-  //       << " to " << (void *)dest << endl;
+  //       << " to " << (void *)dest << std::endl;
   if (x) {
     memmove(dest,src,x*sizeof(Locus));
   }
@@ -222,23 +222,23 @@ Strand *Strand::unravel(int n, int y) {
   // vector:
 
   Locus *rv = new Locus[ml];
-  //  cerr << "new " << (void *)rv << " [unravel]" << endl;
+  //  std::cerr << "new " << (void *)rv << " [unravel]" << std::endl;
 
   // Scan the list of loci, starting from the head.  As we scan, apply the
   // cross-overs by switching strands at each cross-over index.  When the
   // gene on the current strand is non-zero, copy that locus to the return
   // vector
 
-  //  cout << "-----" << endl;
+  //  cout << "-----" << std::endl;
   //  print(cout,10);
-  //  cout << "unravel cs = " << cs << ", n = " << n << endl;
+  //  cout << "unravel cs = " << cs << ", n = " << n << std::endl;
 
   i = 0;
   k = 0;
   for (j = 0; j < nl; j++) {
     while (v[j].x > xx[i]) {	// do cross-overs until we reach this locus
       cs ^= 1;			// (note: if A is 0 or 1, XOR(A,1) is the opposite)
-      //      cout << "switch to " << cs << " " << xx[i] << " " << v[j].x << endl;
+      //      cout << "switch to " << cs << " " << xx[i] << " " << v[j].x << std::endl;
       i++;
     }
     if (v[j].s[cs] != 0.0) {	// is the non-zero mutation on current strand?
@@ -246,7 +246,7 @@ Strand *Strand::unravel(int n, int y) {
       rv[k].s[0] = 0.0;
       rv[k].s[1] = 0.0;
       rv[k].s[y] = v[j].s[cs];
-      //      cout << "copy k = " << k << ", x = " << rv[k].x << ", s" << y << " = " << rv[k].s[y] << endl;
+      //      cout << "copy k = " << k << ", x = " << rv[k].x << ", s" << y << " = " << rv[k].s[y] << std::endl;
       k++;
     }
   }
@@ -292,12 +292,12 @@ fitness_t Strand::merge(Strand *s1, Strand *s2) {
   //  cout << "s1: ";
   //  for (int j = 0; j < n1; j++)
   //    cout << " " << v1[j].x;
-  //  cout << endl;
+  //  cout << std::endl;
   //
   //  cout << "s2: ";
   //  for (j = 0; j < n2; j++)
   //    cout << " " << v2[j].x;
-  //  cout << endl;
+  //  cout << std::endl;
 
   fitness_t w0;
 
@@ -307,7 +307,7 @@ fitness_t Strand::merge(Strand *s1, Strand *s2) {
 	//	cout << "[1] copy " << v2[i2].x;
 	w0 = copy_locus(i++,v2,i2++);
 	w *= w0;
-	//	cout << " " << w0 << endl;
+	//	cout << " " << w0 << std::endl;
       }
       break;
     }
@@ -316,7 +316,7 @@ fitness_t Strand::merge(Strand *s1, Strand *s2) {
 	//	cout << "[2] copy " << v1[i1].x;
 	w0 = copy_locus(i++,v1,i1++);
 	w *= w0;
-	//	cout << " " << w0 << endl;
+	//	cout << " " << w0 << std::endl;
       }
       break;
     }
@@ -324,27 +324,27 @@ fitness_t Strand::merge(Strand *s1, Strand *s2) {
       //      cout << "[3] merge " << v1[i1].x;
       w0 = merge_locus(i++,v1,i1++,v2,i2++);
       w *= w0;
-      //      cout << " " << w0 << endl;
+      //      cout << " " << w0 << std::endl;
       continue;
     }
     if (v1[i1].x < v2[i2].x) {
       //      cout << "[4] copy " << v1[i1].x;
       w0 = copy_locus(i++,v1,i1++);
       w *= w0;
-      //      cout << " " << w0 << endl;
+      //      cout << " " << w0 << std::endl;
       continue;
     }
     //    cout << "[5] copy " << v2[i2].x;
     w0 = copy_locus(i++,v2,i2++);
     w *= w0;
-    //    cout << " " << w0 << endl;
+    //    cout << " " << w0 << std::endl;
   }
   
   nl = i;
   delete s1;
   delete s2;
 
-  //  cout << "** " << w << endl;
+  //  cout << "** " << w << std::endl;
   return w;
 }
 
@@ -371,7 +371,7 @@ fitness_t Strand::merge_locus(int i, Locus *p1, int j, Locus *p2, int k) {
 
 // Print the loci in order; 'limit' is the maximum number to print
 
-void Strand::print(ostream &sout, int limit) {
+void Strand::print(std::ostream &sout, int limit) {
   int i;
 
   sout << "[" << nl << "/" << ml << "]";
@@ -382,7 +382,7 @@ void Strand::print(ostream &sout, int limit) {
   if (i < nl)
     sout << "...";
 
-  sout << endl;
+  sout << std::endl;
 }
 
 

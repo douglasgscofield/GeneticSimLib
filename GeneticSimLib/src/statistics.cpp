@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 /*
-  statistics.C -- parametric statistics calculation
+  statistics.cpp -- parametric statistics calculation
 */
 
 #include <stdlib.h>

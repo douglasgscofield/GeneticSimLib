@@ -45,5 +45,5 @@ protected:
   double cv;
 };
 
-#endif
+#endif  // _statistics_h_
 

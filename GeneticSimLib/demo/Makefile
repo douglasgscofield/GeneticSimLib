@@ -13,6 +13,7 @@ FORMSDIR=/local/apps/xforms/FORMS
 XINCLUDE=/usr/openwin/share/include
 XLIB=/lib/X11
 
+CPPFLAGS=-I$(FORMSDIR) -I$(XINCLUDE) -I$(GSLINCL) -O3
 CCFLAGS=-I$(FORMSDIR) -I$(XINCLUDE) -I$(GSLINCL) -O3
 LDFLAGS=-L$(FORMSDIR) -L$(XLIB) -L$(GSLLIB)
 LIBS=-lm -lforms -lX -lgen

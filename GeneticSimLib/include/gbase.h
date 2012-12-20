@@ -130,4 +130,4 @@ protected:
   int clx;			/* current locus index */
 };
 
-#endif
+#endif  // _gbase_h_

@@ -36,9 +36,9 @@ typedef enum {
 
 typedef struct {
   paramtype key;
-  char *name;
-  char *cmnd;
-  char *desc;
+  const std::string& name;
+  const std::string& cmnd;
+  const std::string& desc;
   double val;
   double min;
   double max;

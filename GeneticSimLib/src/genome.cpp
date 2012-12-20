@@ -5,7 +5,7 @@
 /*  to use and distribute this software.			*/
 /*--------------------------------------------------------------*/
 
-// Genome.C -- procedures and data structures common to all genome classes.
+// Genome.cpp -- procedures and data structures common to all genome classes.
 
 // Implementation of the "virtual constructor" -- The examplar is an object 
 // created by one of the derived types. The user must call the set_parameters()
@@ -15,8 +15,9 @@
 // simply forwards the request to the new_genome() function of the
 // current derived class.
 
-#include "genome.h"
 #include <stddef.h>
+
+#include "genome.h"
 
 Genome *Genome::exemplar = NULL;
 

@@ -19,7 +19,7 @@
 //						a coho population
 
 #include <stddef.h>
-#include "gsl.h"
+#include "gsl.hpp"
 
 // The extra data member that defines a salmon object is a "return_year"
 // that determines when the individual will return to spawn.  Both the sex 
@@ -61,7 +61,7 @@ class CohoPopulation : public Population {
 public:
   CohoPopulation(CohoParamBlock *pb, int *as, char *id);
   ~CohoPopulation();
-  friend ostream &operator <<(ostream &s, CohoPopulation &p);
+  friend std::ostream &operator <<(std::ostream &s, CohoPopulation &p);
 private:
   int build_next_generation();
   void new_generation();

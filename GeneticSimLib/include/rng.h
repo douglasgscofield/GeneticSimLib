@@ -108,8 +108,8 @@
                                                                              
 */
 
-#ifndef _RNG_h_
-#define _RNG_h_
+#ifndef _rng_h_
+#define _rng_h_
 
 #include <stddef.h>
 
@@ -123,7 +123,7 @@ class RNGSeed {
 public:
   RNGSeed();			// creates seed val from system clock
   RNGSeed(unsigned int x0);	// creates seed from integer
-  ~RNGSeed();
+  virtual ~RNGSeed();
   unsigned short *x;	   	// 48 bits of state for erand48 et al
 };
 
@@ -149,6 +149,7 @@ unsigned int rword(int n, RNGSeed *s = NULL);
 
 class RNG {
 public:
+  virtual ~RNG();
   virtual double operator ++() =0;
   operator const double();
   RNGSeed *get_seed();			// return pointer to seed
@@ -186,7 +187,7 @@ typedef enum {CDF_OK, CDF_OPEN_ERR, CDF_FORMAT_ERR} CDFStatus;
 
 class CDFRNG : public RNG {
 public:
-  CDFRNG(char *CDFFileName, RNGSeed *s = NULL);
+  CDFRNG(const char* CDFFileName, RNGSeed *s = NULL);
   ~CDFRNG();
   int bad();
   double min();
@@ -262,4 +263,4 @@ private:
   double range;
 };
 
-#endif
+#endif  // _rng_h_

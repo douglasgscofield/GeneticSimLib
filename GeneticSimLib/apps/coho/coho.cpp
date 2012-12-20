@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 /*
-  coho.C -- implementation of classes used in the Coho salmon genetic
+  coho.cpp -- implementation of classes used in the Coho salmon genetic
   simulations.  Classes defined here are derived from the Individual, 
   Population, and PopulationParamBlock classes of the Genetic
   Simulation Library.  Each derived class inherits all the
@@ -22,8 +22,8 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <math.h>
-#include <iostream.h>
-#include <iomanip.h>
+#include <iostream>
+#include <iomanip>
 #include <time.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -52,7 +52,7 @@ int Coho::return_year() {
 }
 
 // Every instance of a CohoPopulation will have 4 generations,
-// named g[0] to g[3] (to keep it general, the .h file defines
+// named g[0] to g[3] (to keep it general, the .hpp file defines
 // a constant NYEARS = 4).  g[0] will be the new generation built by
 // a call to build_next_generation, and g[n], 1 <= n <= 3, will be the
 // generation of n-year olds.  
@@ -141,48 +141,48 @@ CohoPopulation::~CohoPopulation() {
   delete pid;
 }
 
-ostream &operator <<(ostream &s, CohoPopulation &p) {
+std::ostream &operator <<(std::ostream &s, CohoPopulation &p) {
   int i, k;
   Generation *g;
   ISet *ip;
 
   for (i = 0; i < NYEARS; i++) {
-    s << i << "-year olds:" << endl;
+    s << i << "-year olds:" << std::endl;
     s << "  M: ";
     if (g = p.m[i]) {
       for (k = 0; k < g->size(); k++)
-	s << setw(4) << (*g)[k]->get_id();
+	s << std::setw(4) << (*g)[k]->get_id();
     }
-    s << endl;
+    s << std::endl;
     s << "  F: ";
     if (g = p.f[i]) {
       for (k = 0; k < g->size(); k++)
-	s << setw(4) << (*g)[k]->get_id();
+	s << std::setw(4) << (*g)[k]->get_id();
     }
-    s << endl;
+    s << std::endl;
     s << "  J: ";
     if (g = p.j[i]) {
       for (k = 0; k < g->size(); k++)
-	s << setw(4) << (*g)[k]->get_id();
+	s << std::setw(4) << (*g)[k]->get_id();
     }
-    s << endl;
+    s << std::endl;
   }
 
-  s << endl;
+  s << std::endl;
   if (p.mp && p.fp) {
-    s << "Parent set:" << endl;
+    s << "Parent set:" << std::endl;
     s << "  M: ";
     ip = p.mp;
     for (k = 0; k < ip->size(); k++)
-      s << setw(4) << (*ip)[k]->get_id();
-    s << endl;
+      s << std::setw(4) << (*ip)[k]->get_id();
+    s << std::endl;
     s << "  F: ";
     ip = p.fp;
     for (k = 0; k < ip->size(); k++)
-      s << setw(4) << (*ip)[k]->get_id();
-    s << endl;
+      s << std::setw(4) << (*ip)[k]->get_id();
+    s << std::endl;
   }
-  s << endl;
+  s << std::endl;
 
   return s;
 }
@@ -234,7 +234,7 @@ int CohoPopulation::build_next_generation() {
   static char obuf[obufsize];
   sprintf(obuf,"%s G%03d %5d %5d %5d %5d %6.2f %5d %5d %5d %5d %5.3f %5.3f %5.3f %5.3f %5.3f",
 	  pid, genx, px, kx, pmx, pfx, rx, lx, fx, mx, jx, awx, wx, vwx, cvx, t);
-  cout << obuf << endl;
+  std::cout << obuf << std::endl;
 
   // The simulation is now "between generations" -- everything is
   // set for the next call to build_next_generations:  all generations
@@ -357,7 +357,7 @@ void CohoPopulation::create_offspring() {
   mx = jx = fx = 0;
 
   //  static int gcount = 1;			// @@@
-  //  cout << "Gen " << gcount++ << endl; 		// @@@
+  //  std::cout << "Gen " << gcount++ << std::endl; 		// @@@
 
   //  mlockall(MCL_CURRENT | MCL_FUTURE);
 
@@ -372,7 +372,7 @@ void CohoPopulation::create_offspring() {
       //      w = child->genes->add_mutations(++(*ru));
       amw += w;
       if (w > ++r) {
-	// cout << w << endl;			// @@@
+	// std::cout << w << std::endl;			// @@@
 	mw += w;
 	vw += w*w;
 	if (child->get_sex() == MALE)

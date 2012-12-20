@@ -14,10 +14,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <iostream.h>
-#include <fstream.h>
+#include <iostream>
+#include <fstream>
 #include <math.h>
-#include <string.h>
+#include <string>
 
 #include "gsl.h"
 #include "coho.h"
@@ -43,7 +43,7 @@ int numberp(char *s) {
 
 void read_rcfile(double pb[]) {
   char line[100];
-  ifstream rcfile(".cmasrc");
+  std::ifstream rcfile(".cmasrc");
   double x;
   char *pn, *val;
   int i, valid;
@@ -55,7 +55,7 @@ void read_rcfile(double pb[]) {
 
   rcfile.getline(line,sizeof(line));
   if (strcmp(line,tagline)) {
-    cerr << "Corrupt .cmasrc file?  First line must be '" << tagline << "'" << endl;
+    std::cerr << "Corrupt .cmasrc file?  First line must be '" << tagline << "'" << std::endl;
     return;
   }
 
@@ -70,24 +70,24 @@ void read_rcfile(double pb[]) {
       val = strtok(NULL,whitespace);
 
     for (i = 0; i < NParams; i++)
-      if (strcmp(ParamTable[i].name,pn) == 0) {
-	valid = 1;
-	if (!numberp(val))
-	  valid = 0;
-	else {
-	  x = atof(val);
-	  if ((x < ParamTable[i].min) || (x > ParamTable[i].max))
-	    valid = 0;
-	}
-	break;
+      if (strcmp(ParamTable[i].name.c_str(),pn) == 0) {
+	    valid = 1;
+	    if (!numberp(val))
+	      valid = 0;
+	    else {
+	      x = atof(val);
+	      if ((x < ParamTable[i].min) || (x > ParamTable[i].max))
+	        valid = 0;
+	    }
+	    break;
       }
     if (i < NParams)
       if (valid)
 	pb[ParamTable[i].key] = x;
       else
-	cerr << "Bad parameter value: " << pn << ", " << val << endl;
+	std::cerr << "Bad parameter value: " << pn << ", " << val << std::endl;
     else
-      cerr << "Unknown parameter file entry: " << pn << "; ignored" << endl;
+      std::cerr << "Unknown parameter file entry: " << pn << "; ignored" << std::endl;
   }
 }
 
@@ -98,25 +98,25 @@ void read_cmnd_line(int argc, char *argv[], double pb[]) {
 
   for (i = 1; i < argc; i++) {
     for (j = 0; j < NParams; j++)
-      if (strcmp(argv[i],ParamTable[j].cmnd) == 0) {
-	i = i+1;
-	valid = 1;
-	if (!numberp(argv[i]))
-	  valid = 0;
-	else {
-	  x = atof(argv[i]);
-	  if ((x < ParamTable[j].min) || (x > ParamTable[j].max))
-	    valid = 0;
-	}
-	break;
+      if (strcmp(argv[i],ParamTable[j].cmnd.c_str()) == 0) {
+	    i = i+1;
+	    valid = 1;
+	    if (!numberp(argv[i]))
+	      valid = 0;
+	    else {
+	      x = atof(argv[i]);
+	      if ((x < ParamTable[j].min) || (x > ParamTable[j].max))
+	        valid = 0;
+	    }
+	    break;
       }
     if (j < NParams)
       if (valid)
-	pb[ParamTable[j].key] = x;
+	    pb[ParamTable[j].key] = x;
       else
-	cerr << "Bad parameter value: " << argv[i-1] << ", " << argv[i] << endl;
+	    std::cerr << "Bad parameter value: " << argv[i-1] << ", " << argv[i] << std::endl;
     else
-      cerr << "Unknown command: " << argv[i] << "; ignored" << endl;
+      std::cerr << "Unknown command: " << argv[i] << "; ignored" << std::endl;
   }
 }
 
@@ -140,13 +140,13 @@ void print_param(double pb[], paramtype p, int cr) {
       break;
 
   if (cr)
-    cout << endl << ParamTable[i].desc << pb[p];
+    std::cout << std::endl << ParamTable[i].desc << pb[p];
   else
-    cout << " \261 " << pb[p];
+    std::cout << " \261 " << pb[p];
 }
 
 void print_parameters(double pb[]) {
-  cout << "CMAS 2.0" << endl;
+  std::cout << "CMAS 2.0" << std::endl;
 
   print_param(pb,NPopulations,1);
   print_param(pb,MaxGenerations,1);
@@ -158,7 +158,7 @@ void print_parameters(double pb[]) {
   print_param(pb,MaleP,1);
   print_param(pb,JackP,1);
 
-  cout << endl << endl;
+  std::cout << std::endl << std::endl;
 }
 
 int AGSize[NYEARS-1];		// sizes of ancestral generations
@@ -179,7 +179,7 @@ void init(double pb[]) {
 
   vpb.R = r;
   VirtualGenome::set_parameters(&vpb);
-  VirtualGenome::class_status(cout);
+  VirtualGenome::class_status(std::cout);
 
   LogNormalLogRNG rk(pb[PopSizeM],pb[PopSizeSD]);
 
@@ -246,17 +246,17 @@ int main(int argc, char *argv[]) {
 
   catch (COHO_ALLOC_ERROR e) {
     switch (e) {
-    case COHO_INIT_ERROR:		cerr << "Initialization error" << endl; break;
-    case COHO_NO_COHO:			cerr << "Couldn't allocate individual" << endl; break;
-    case COHO_NO_NEW_GENERATION:	cerr << "Couldn't allocate generation" << endl; break;
-    case COHO_NO_PARENTS:		cerr << "Couldn't allocate parent set" << endl; break;
-    case COHO_NO_CHILD:			cerr << "Couldn't allocate new child" << endl; break;
+    case COHO_INIT_ERROR:		std::cerr << "Initialization error" << std::endl; break;
+    case COHO_NO_COHO:			std::cerr << "Couldn't allocate individual" << std::endl; break;
+    case COHO_NO_NEW_GENERATION:	std::cerr << "Couldn't allocate generation" << std::endl; break;
+    case COHO_NO_PARENTS:		std::cerr << "Couldn't allocate parent set" << std::endl; break;
+    case COHO_NO_CHILD:			std::cerr << "Couldn't allocate new child" << std::endl; break;
     default:
-      cerr << "Unknown runtime error" << endl;
+      std::cerr << "Unknown runtime error" << std::endl;
     }
   }
 
   catch (...) {
-    cerr << "Unknown (non-integer) runtime error" << endl;
+    std::cerr << "Unknown (non-integer) runtime error" << std::endl;
   }
 }

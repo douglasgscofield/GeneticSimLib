@@ -3,8 +3,8 @@
 #                                                                            	
 # The source files are								
 #										
-#  mas.C	the main simulation program					
-#  scmas.C	sequential simulator source					
+#  mas.cpp	the main simulation program					
+#  scmas.cpp	sequential simulator source					
 #  coho.*	the definition of class Coho, derived from the Population	
 #		  class of the genetic simulation library			
 #										
@@ -14,7 +14,8 @@ GSLINCL=$(GSL)/include
 GSLLIB=$(GSL)/lib
 
 # C++ compiler flags for Sun:
-CCFLAGS=-O3 -I$(GSLINCL)
+#CPPFLAGS=-O3 -I$(GSLINCL)
+CPPFLAGS=-g -I$(GSLINCL)
 
 # libraries:
 SUNLIBS=-lgen -lm
@@ -23,11 +24,11 @@ SUNLIBS=-lgen -lm
 SUNLDFLAGS=-L$(GSLLIB)
 
 scmas:	scmas.o coho.o
-	CC $(SUNLDFLAGS) -o scmas scmas.o coho.o $(SUNLIBS)
+	g++ $(SUNLDFLAGS) -o scmas scmas.o coho.o $(SUNLIBS)
 
-scmas.o:	scmas.C coho.h cparams.h
-coho.o:	coho.C coho.h
+scmas.o:	scmas.cpp coho.h cparams.h
+coho.o:	coho.cpp coho.h
 
 clean:
-	/bin/rm -f core *.o *~ *.bak
+	/bin/rm -f scmas core.* core *.o *~ *.bak
 

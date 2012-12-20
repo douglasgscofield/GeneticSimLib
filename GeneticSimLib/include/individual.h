@@ -12,7 +12,8 @@
 #ifndef _individual_h_
 #define _individual_h_
 
-class ostream;
+#include <iostream>
+
 class Genome;
 class GBase;
 
@@ -27,7 +28,7 @@ public:
   ~Individual();
   static void reset_class();
   static void set_parameters(IndividualParamBlock *pb);
-  void print(ostream &s);
+  void print(std::ostream &s);
   void set_sex(sex_t sex);
   sex_t get_sex();
   int get_id();
@@ -39,7 +40,7 @@ protected:
   static int id;
 };
 
-inline ostream &operator <<(ostream &sout, Individual &x) {
+inline std::ostream &operator <<(std::ostream &sout, Individual &x) {
   x.print(sout);
   return sout;
 }
@@ -67,4 +68,4 @@ private:
 };
 
 
-#endif
+#endif  // _individual_h_

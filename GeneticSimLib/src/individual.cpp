@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 //
-// Individual.C -- In this very basic implementation, an individual has
+// Individual.cpp -- In this very basic implementation, an individual has
 // a set of genes and a sex.  It also has a unique ID (or "tag") that is
 // used mainly in debugging and demo programs.  Any more complex attributes 
 // are left for derived classes to define.
@@ -16,7 +16,7 @@
 // the current size of the set.
 //
 
-#include <iostream.h>
+#include <iostream>
 #include <stddef.h>
 #include "genome.h"
 #include "infgenome.h"
@@ -24,6 +24,8 @@
 #include "individual.h"
 #include "rng.h"
 #include "gbase.h"
+
+Genome *make_genome();
 
 // This class variable is used to give each individual a unique ID:
 
@@ -49,14 +51,14 @@ Individual::~Individual() {
   delete genes;
 }
 
-void Individual::print(ostream &sout) {
+void Individual::print(std::ostream &sout) {
   if (d_sex == NONE)
     sout << "[?]  ";
   else if (d_sex == MALE)
     sout << "[M]  ";
   else 
     sout << "[F]  ";
-  sout << endl << genes;
+  sout << std::endl << genes;
 }
 
 

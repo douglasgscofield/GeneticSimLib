@@ -6,7 +6,7 @@
 /*--------------------------------------------------------------*/
 
 //
-// generation.C -- implementation of the Generation class.
+// generation.cpp -- implementation of the Generation class.
 //
 // A generation is a collection of individuals.  Operations insert
 // a new individual, return a pointer to an individual, remove an
@@ -19,7 +19,7 @@
 //
 
 #include <stddef.h>
-#include <iostream.h>
+#include <iostream>
 #include "generation.h"
 #include "individual.h"
 
@@ -34,7 +34,7 @@ Generation::Generation() {
 Generation::~Generation() {
   Individual *pi;
 
-  while (pi = is->remove(0)) {
+  while ((pi = is->remove(0))) {
     delete pi;
   }
 
