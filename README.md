@@ -48,8 +48,9 @@ List of Directories
 **version-1.0/**     : The version 1.0 source code
 
 
-* * *
-
+License
+--------
+<pre>
 Copyright (c) 1997 by the University of Oregon.  
 ALL RIGHTS RESERVED. 
 
@@ -67,6 +68,4 @@ license agreement.
 
 This software is provided "as is" without expressed or 
 implied warranty of any kind.
-
-* * *
-
+</pre>
