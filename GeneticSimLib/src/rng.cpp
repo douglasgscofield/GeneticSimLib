@@ -23,6 +23,7 @@
 #include <assert.h>
 #include <fstream>
 #include <string>
+#include <cstring>
 
 // Define a global seed to be used by stand-alone functions
 // and objects that do not use a seed passed by the user.  Seeds

@@ -15,6 +15,7 @@
 */
 
 #include <fstream>
+#include <cstring>
 
 #include "gsl.h"		// genetic simulation library 
 #include "gbase.h"		// genotype database structure definition
